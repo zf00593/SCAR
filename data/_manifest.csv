@@ -1,0 +1,6 @@
+source,file,rows,description,fetched_utc
+ons,ons_catalogue.csv,337,Index of every dataset on the ONS API,2026-08-17T13:40:21.198949+00:00
+ons,ons_cpih01.csv,5000,"ONS cpih01, latest version",2026-08-17T13:40:21.199091+00:00
+ons,ons_index_private_housing_rental_prices.csv,5000,"ONS index-private-housing-rental-prices, latest version",2026-08-17T13:40:21.199202+00:00
+nomis,nomis_ashe_workplace.csv,24,"ASHE ashe workplace (NM_99_1), latest year",2026-08-17T13:40:27.093410+00:00
+nomis,nomis_ashe_resident.csv,24,"ASHE ashe resident (NM_30_1), latest year",2026-08-17T13:40:27.093524+00:00
