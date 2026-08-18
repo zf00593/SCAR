@@ -1,0 +1,351 @@
+{
+  "id": "str:database:PI_SURVEY",
+  "label": "PI - Data to 2021/22 (unlinked)",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:PI_SURVEY",
+  "type": "DATABASE",
+  "lastModified": 1787060139044,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:PI_SURVEY:V_F_PI_SURVEY",
+      "label": "Pensioner Income distribution - whole population",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:PI_SURVEY:V_F_PI_SURVEY",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pigrosbu",
+      "label": "Gross income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pigrosbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pibenibu",
+      "label": "Benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pibenibu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:piretben",
+      "label": "State Pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:piretben",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:piirbbu",
+      "label": "Income-related benefits income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:piirbbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pidisben",
+      "label": "Disability benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pidisben",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pigoccbu",
+      "label": "Occupational pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pigoccbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pippenbu",
+      "label": "Personal pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pippenbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:piginvbu",
+      "label": "Investment income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:piginvbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pigernbu",
+      "label": "Earnings income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pigernbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:piothibu",
+      "label": "Other income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:piothibu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pinincbu",
+      "label": "Net income before housing costs",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pinincbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:pinahcbu",
+      "label": "Net income after housing costs",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:pinahcbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_SURVEY:V_F_PI_SURVEY:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:gvtregn",
+      "label": "Geographical Region (please calculate three-year averages)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:gvtregn",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:finyear",
+      "label": "Financial year",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:finyear",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:agehd",
+      "label": "Age of head of pensioner unit",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:agehd",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:sexhd",
+      "label": "Sex of head of pensioner unit",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:sexhd",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:newfambu",
+      "label": "Family type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:newfambu",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:quincoup",
+      "label": "Quintile of the BHC pensioner couples income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:quincoup",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:quinsing",
+      "label": "Quintile of the BHC pensioner singles income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:quinsing",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:quinacou",
+      "label": "Quintile of the AHC pensioner couples income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:quinacou",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:quinasin",
+      "label": "Quintile of the AHC pensioner singles income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:quinasin",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:ben",
+      "label": "In receipt of benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:ben",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:ret",
+      "label": "In receipt of state pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:ret",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:irb",
+      "label": "In receipt of income-related benefits income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:irb",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:dis",
+      "label": "In receipt of disability benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:dis",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:occ",
+      "label": "In receipt of occupational pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:occ",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:ppen",
+      "label": "In receipt of personal pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:ppen",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:inv",
+      "label": "In receipt of investment income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:inv",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:earn",
+      "label": "In receipt of earnings income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:earn",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_SURVEY:V_F_PI_SURVEY:eth",
+      "label": "Ethnicity (please calculate three-year averages)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_SURVEY:V_F_PI_SURVEY:eth",
+      "type": "FIELD"
+    }
+  ]
+}

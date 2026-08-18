@@ -1,0 +1,351 @@
+{
+  "id": "str:database:PI_ADMIN",
+  "label": "PI - Data from 2021/22 (admin-linked)",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:PI_ADMIN",
+  "type": "DATABASE",
+  "lastModified": 1787060138097,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:PI_ADMIN:V_F_PI_ADMIN",
+      "label": "Pensioner Income distribution - whole population",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:PI_ADMIN:V_F_PI_ADMIN",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pigrosbu",
+      "label": "Gross income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pigrosbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pibenibu",
+      "label": "Benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pibenibu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:piretben",
+      "label": "State Pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:piretben",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:piirbbu",
+      "label": "Income-related benefits income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:piirbbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pidisben",
+      "label": "Disability benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pidisben",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pigoccbu",
+      "label": "Occupational pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pigoccbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pippenbu",
+      "label": "Personal pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pippenbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:piginvbu",
+      "label": "Investment income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:piginvbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pigernbu",
+      "label": "Earnings income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pigernbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:piothibu",
+      "label": "Other income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:piothibu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pinincbu",
+      "label": "Net income before housing costs",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pinincbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:pinahcbu",
+      "label": "Net income after housing costs",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:pinahcbu",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "label": "Weighted Sum of Pensioner Income distribution - whole population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:PI_ADMIN:V_F_PI_ADMIN:gs_newbu_ind",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:gvtregn",
+      "label": "Geographical Region (please calculate three-year averages)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:gvtregn",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:finyear",
+      "label": "Financial year",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:finyear",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:agehd",
+      "label": "Age of head of pensioner unit",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:agehd",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:sexhd",
+      "label": "Sex of head of pensioner unit",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:sexhd",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:newfambu",
+      "label": "Family type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:newfambu",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:quincoup",
+      "label": "Quintile of the BHC pensioner couples income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:quincoup",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:quinsing",
+      "label": "Quintile of the BHC pensioner singles income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:quinsing",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:quinacou",
+      "label": "Quintile of the AHC pensioner couples income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:quinacou",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:quinasin",
+      "label": "Quintile of the AHC pensioner singles income distribution",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:quinasin",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:ben",
+      "label": "In receipt of benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:ben",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:ret",
+      "label": "In receipt of state pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:ret",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:irb",
+      "label": "In receipt of income-related benefits income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:irb",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:dis",
+      "label": "In receipt of disability benefit income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:dis",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:occ",
+      "label": "In receipt of occupational pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:occ",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:ppen",
+      "label": "In receipt of personal pension income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:ppen",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:inv",
+      "label": "In receipt of investment income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:inv",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:earn",
+      "label": "In receipt of earnings income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:earn",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:PI_ADMIN:V_F_PI_ADMIN:eth",
+      "label": "Ethnicity (please calculate three-year averages)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:PI_ADMIN:V_F_PI_ADMIN:eth",
+      "type": "FIELD"
+    }
+  ]
+}

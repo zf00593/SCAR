@@ -177,7 +177,7 @@ NOMIS_ASHE = {
 # sex=8 all, item=2 median, pay=1 gross weekly, measures=20100 value + 20701 CV
 NOMIS_PARAMS = {
     "geography": "TYPE480",
-    "date": "latest",
+    "date": "first,latest",
     "sex": "8",
     "item": "2",
     "pay": "1",
@@ -185,16 +185,20 @@ NOMIS_PARAMS = {
 }
 
 
-def fetch_nomis(dataset: str, rows: int) -> pd.DataFrame:
+def fetch_nomis(dataset: str) -> pd.DataFrame:
     params = dict(NOMIS_PARAMS)
     uid = os.environ.get("NOMIS_UID")
     if uid:
         params["uid"] = uid
+
     url = f"{NOMIS_BASE}/{dataset}.data.csv"
+
     r = _get(url, params=params)
+
     df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
     df.insert(0, "nomis_dataset", dataset)
-    return df.head(rows)
+
+    return df
 
 
 def fetch_nomis_structure(dataset: str) -> pd.DataFrame:
@@ -240,173 +244,115 @@ def source_nomis(rows: int):
         time.sleep(PAUSE)
     return written
 
-
-# --------------------------------------------------------------------------- #
-# 3. HM Land Registry Price Paid — transaction-level house prices.  No key.
-# --------------------------------------------------------------------------- #
-
-LR_ENDPOINT = "https://landregistry.data.gov.uk/landregistry/query"
-
-LR_QUERY = """
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX lrppi: <http://landregistry.data.gov.uk/def/ppi/>
-PREFIX lrcommon: <http://landregistry.data.gov.uk/def/common/>
-PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
-
-SELECT ?paon ?street ?town ?county ?postcode ?amount ?date ?category
-WHERE {
-  ?transx lrppi:pricePaid ?amount ;
-          lrppi:transactionDate ?date ;
-          lrppi:propertyAddress ?addr ;
-          lrppi:transactionCategory/skos:prefLabel ?category .
-  ?addr lrcommon:postcode ?postcode ;
-        lrcommon:town ?town .
-  OPTIONAL { ?addr lrcommon:county ?county }
-  OPTIONAL { ?addr lrcommon:paon ?paon }
-  OPTIONAL { ?addr lrcommon:street ?street }
-  FILTER (?date > "%(since)s"^^xsd:date)
-}
-ORDER BY DESC(?date)
-LIMIT %(limit)d
-"""
-
-
-def source_land_registry(rows: int):
-    """Recent residential sales. Transaction-level, not person-level."""
-    q = LR_QUERY % {"since": "2025-01-01", "limit": min(rows, 10_000)}
-    r = requests.get(
-        LR_ENDPOINT,
-        params={"query": q},
-        headers={"Accept": "text/csv", "User-Agent": UA},
-        timeout=TIMEOUT,
-    )
-    r.raise_for_status()
-    df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
-    return [(_write(df, "land_registry_price_paid"), len(df),
-             "Residential sales, England & Wales, transaction-level")]
-
-
-# --------------------------------------------------------------------------- #
-# 4. Adzuna — job adverts with salary and location.  Free key.
-# --------------------------------------------------------------------------- #
-
-ADZUNA_BASE = "https://api.adzuna.com/v1/api/jobs/gb"
-
-
-def source_adzuna(rows: int):
-    app_id = os.environ.get("ADZUNA_APP_ID")
-    app_key = os.environ.get("ADZUNA_APP_KEY")
-    if not (app_id and app_key):
-        raise Skip("set ADZUNA_APP_ID and ADZUNA_APP_KEY (free, instant, "
-                   "developer.adzuna.com)")
-
-    auth = {"app_id": app_id, "app_key": app_key}
-    per_page, page, records = 50, 1, []
-
-    while len(records) < rows and page <= 20:
-        r = _get(f"{ADZUNA_BASE}/search/{page}",
-                 params={**auth, "results_per_page": per_page,
-                         "content-type": "application/json"}).json()
-        results = r.get("results", [])
-        if not results:
-            break
-        for j in results:
-            loc = j.get("location") or {}
-            records.append({
-                "id": j.get("id"),
-                "title": j.get("title"),
-                "company": (j.get("company") or {}).get("display_name"),
-                "category": (j.get("category") or {}).get("label"),
-                "location": loc.get("display_name"),
-                "location_area": "|".join(loc.get("area") or []),
-                "latitude": j.get("latitude"),
-                "longitude": j.get("longitude"),
-                "salary_min": j.get("salary_min"),
-                "salary_max": j.get("salary_max"),
-                # Adzuna predicts a salary when the advert omits one. Filter on
-                # this before computing any average or you are averaging their
-                # model's output, not advertised pay.
-                "salary_is_predicted": j.get("salary_is_predicted"),
-                "contract_type": j.get("contract_type"),
-                "contract_time": j.get("contract_time"),
-                "created": j.get("created"),
-            })
-        page += 1
-        time.sleep(PAUSE)
-
-    written = [(_write(pd.DataFrame(records[:rows]), "adzuna_jobs"),
-                len(records[:rows]), "UK job adverts: salary, location, employer")]
-
-    time.sleep(PAUSE)
-    h = _get(f"{ADZUNA_BASE}/histogram", params={**auth, "what": ""}).json()
-    hist = pd.DataFrame(sorted((h.get("histogram") or {}).items()),
-                        columns=["salary_band_floor", "advert_count"])
-    written.append((_write(hist, "adzuna_salary_histogram"), len(hist),
-                    "Distribution of advertised salaries"))
-    return written
-
-
-# --------------------------------------------------------------------------- #
-# 5. Reed — job adverts with salary and location.  Free key.
-# --------------------------------------------------------------------------- #
-
-REED_BASE = "https://www.reed.co.uk/api/1.0/search"
-
-
-def source_reed(rows: int):
-    key = os.environ.get("REED_API_KEY")
-    if not key:
-        raise Skip("set REED_API_KEY (free, instant, reed.co.uk/developers)")
-
-    records, skip, take = [], 0, 100
-    while len(records) < rows and skip < 1000:
-        r = requests.get(REED_BASE, params={"resultsToTake": take, "resultsToSkip": skip},
-                         auth=(key, ""), headers={"User-Agent": UA}, timeout=TIMEOUT)
-        r.raise_for_status()
-        results = r.json().get("results", [])
-        if not results:
-            break
-        records.extend(results)
-        skip += take
-        time.sleep(PAUSE)
-
-    df = pd.DataFrame(records[:rows])
-    return [(_write(df, "reed_jobs"), len(df),
-             "UK job adverts: salary range, location, employer")]
-
-
 # --------------------------------------------------------------------------- #
 # 6. DWP Stat-Xplore — benefits and pensioner income.  Free key.
 # --------------------------------------------------------------------------- #
 
 STATX_BASE = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
 
+DATABASES = {
+    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
+    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
 
-def source_statxplore(rows: int):
-    key = os.environ.get("STATXPLORE_KEY")
-    if not key:
-        raise Skip("set STATXPLORE_KEY (free, instant, Stat-Xplore account page)")
+    "FRS_ADULT": "str:database:FRSAD",
+    "FRS_CHILD": "str:database:FRSCH",
+    "FRS_FAMILY": "str:database:FRSBU",
+    "FRS_HOUSEHOLD": "str:database:FRSHH",
+    "FRS_INDIVIDUAL": "str:database:FRSPP",
 
-    headers = {"APIKey": key, "User-Agent": UA}
-    schema = requests.get(f"{STATX_BASE}/schema", headers=headers,
-                          timeout=TIMEOUT)
-    schema.raise_for_status()
+    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
+    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
 
-    # The schema listing only, not a table query: /table needs dataset-specific
-    # measure and field ids, and guessing them produces confident nonsense.
-    # Browse this CSV, pick an id, then build your query from its /schema/{id}.
-    items = schema.json().get("children", [])
-    df = pd.DataFrame([{"id": i.get("id"), "label": i.get("label"),
-                        "type": i.get("type")} for i in items])
+    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
+    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
 
-    rate = requests.get(f"{STATX_BASE}/rate_limit", headers=headers, timeout=TIMEOUT)
-    if rate.ok:
-        print(f"    rate limit: {rate.json()}", file=sys.stderr)
+    "HOUSING_BENEFIT": "str:database:hb_new",
+}
 
-    return [(_write(df, "statxplore_schema"), len(df),
-             "Stat-Xplore dataset index — pick an id, then query /table")]
+API_KEY = os.environ.get("STATXPLORE_KEY")
+
+if not API_KEY:
+    raise ValueError("STATXPLORE_KEY is not set")
+
+HEADERS = {
+    "APIKey": API_KEY,
+    "User-Agent": "uk-cost-of-living-research/1.0"
+}
+
+
+DATABASES = {
+    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
+    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
+
+    "FRS_ADULT": "str:database:FRSAD",
+    "FRS_CHILD": "str:database:FRSCH",
+    "FRS_FAMILY": "str:database:FRSBU",
+    "FRS_HOUSEHOLD": "str:database:FRSHH",
+    "FRS_INDIVIDUAL": "str:database:FRSPP",
+
+    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
+    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
+
+    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
+    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
+
+    "HOUSING_BENEFIT": "str:database:hb_new",
+}
+
+
+def get_schema(database_id):
+
+    url = f"{STATX_BASE}/schema/{database_id}"
+
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=60
+    )
+
+    response.raise_for_status()
+
+    return response.json()
+
+
+# Get schemas for only the databases we care about
+for name, database_id in DATABASES.items():
+
+    print("\n" + "=" * 80)
+    print(name)
+    print(database_id)
+    print("=" * 80)
+
+    try:
+
+        schema = get_schema(database_id)
+
+        # Save raw schema
+        os.makedirs(
+            "data/statxplore_schemas",
+            exist_ok=True
+        )
+
+        with open(
+            f"data/statxplore_schemas/{name}.json",
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                schema,
+                f,
+                indent=2
+            )
+
+        # Print it
+        print(json.dumps(schema, indent=2))
+
+    except Exception as e:
+
+        print(
+            f"ERROR: {type(e).__name__}: {e}"
+        )
 
 
 # --------------------------------------------------------------------------- #
@@ -416,9 +362,6 @@ def source_statxplore(rows: int):
 SOURCES = {
     "ons": (source_ons, "ONS API — CPIH inflation, private rents", "no key"),
     "nomis": (source_nomis, "Nomis — ASHE earnings by area/workplace", "optional key"),
-    "landregistry": (source_land_registry, "HM Land Registry — house prices", "no key"),
-    "adzuna": (source_adzuna, "Adzuna — job adverts, salary + location", "free key"),
-    "reed": (source_reed, "Reed — job adverts, salary + location", "free key"),
     "statxplore": (source_statxplore, "DWP Stat-Xplore — benefits/income", "free key"),
 }
 

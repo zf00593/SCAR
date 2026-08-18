@@ -1,1 +1,3 @@
 .venv
+# LibreOffice lock files
+.~lock.*

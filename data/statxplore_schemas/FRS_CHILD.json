@@ -1,0 +1,93 @@
+{
+  "id": "str:database:FRSCH",
+  "label": "Child Dataset",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:FRSCH",
+  "type": "DATABASE",
+  "lastModified": 1787060132281,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:FRSCH:V_F_FRSCH",
+      "label": "Child Dataset",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:FRSCH:V_F_FRSCH",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:FRSCH:V_F_FRSCH:GROSS",
+          "label": "Weighted Sum of Child Dataset",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:FRSCH:V_F_FRSCH:GROSS",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:group:FRSCH:M_Household+Income+from+Employment+and+Self-Employment",
+      "label": "Household Income from Employment and Self-Employment",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:M_Household+Income+from+Employment+and+Self-Employment",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSCH:M_Household+Income+from+State+Support",
+      "label": "Household Income from State Support",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:M_Household+Income+from+State+Support",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSCH:M_Household+Income+from+Other+Sources",
+      "label": "Household Income from Other Sources",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:M_Household+Income+from+Other+Sources",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:FRSCH:V_F_FRSCH:YEAR",
+      "label": "Financial Year",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSCH:V_F_FRSCH:YEAR",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:FRSCH:X_Geography",
+      "label": "Geography",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:X_Geography",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:FRSCH:V_F_FRSCH:AGEBAND",
+      "label": "Age band of the Child",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSCH:V_F_FRSCH:AGEBAND",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSCH:V_F_FRSCH:SEX",
+      "label": "Gender of the Child",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSCH:V_F_FRSCH:SEX",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSCH:V_F_FRSCH:MAIN_SOURCE_INC",
+      "label": "Main source of Household's total, gross Income",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSCH:V_F_FRSCH:MAIN_SOURCE_INC",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSCH:V_F_FRSCH:TENURE",
+      "label": "Tenure type of the Household",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSCH:V_F_FRSCH:TENURE",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:FRSCH:X_Benefit+receipt",
+      "label": "Benefit receipt",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:X_Benefit+receipt",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSCH:X_Childcare",
+      "label": "Childcare",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSCH:X_Childcare",
+      "type": "GROUP"
+    }
+  ]
+}
