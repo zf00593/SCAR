@@ -1,0 +1,663 @@
+Lower tier local authorities Code,Lower tier local authorities,Sex (2 categories) Code,Sex (2 categories),Observation
+E06000001,Hartlepool,1,Female,47653
+E06000001,Hartlepool,2,Male,44685
+E06000002,Middlesbrough,1,Female,73040
+E06000002,Middlesbrough,2,Male,70884
+E06000003,Redcar and Cleveland,1,Female,70446
+E06000003,Redcar and Cleveland,2,Male,66085
+E06000004,Stockton-on-Tees,1,Female,100072
+E06000004,Stockton-on-Tees,2,Male,96523
+E06000005,Darlington,1,Female,55129
+E06000005,Darlington,2,Male,52670
+E06000006,Halton,1,Female,65547
+E06000006,Halton,2,Male,62931
+E06000007,Warrington,1,Female,106529
+E06000007,Warrington,2,Male,104445
+E06000008,Blackburn with Darwen,1,Female,78043
+E06000008,Blackburn with Darwen,2,Male,76696
+E06000009,Blackpool,1,Female,71410
+E06000009,Blackpool,2,Male,69626
+E06000010,Kingston upon Hull,1,Female,133781
+E06000010,Kingston upon Hull,2,Male,133233
+E06000011,East Riding of Yorkshire,1,Female,174368
+E06000011,East Riding of Yorkshire,2,Male,167847
+E06000012,North East Lincolnshire,1,Female,80154
+E06000012,North East Lincolnshire,2,Male,76812
+E06000013,North Lincolnshire,1,Female,85970
+E06000013,North Lincolnshire,2,Male,83710
+E06000014,York,1,Female,105298
+E06000014,York,2,Male,97523
+E06000015,Derby,1,Female,131854
+E06000015,Derby,2,Male,129510
+E06000016,Leicester,1,Female,186460
+E06000016,Leicester,2,Male,182112
+E06000017,Rutland,1,Female,19977
+E06000017,Rutland,2,Male,21072
+E06000018,Nottingham,1,Female,164628
+E06000018,Nottingham,2,Male,159004
+E06000019,Herefordshire,1,Female,95180
+E06000019,Herefordshire,2,Male,91854
+E06000020,Telford and Wrekin,1,Female,94206
+E06000020,Telford and Wrekin,2,Male,91335
+E06000021,Stoke-on-Trent,1,Female,129893
+E06000021,Stoke-on-Trent,2,Male,128476
+E06000022,Bath and North East Somerset,1,Female,99019
+E06000022,Bath and North East Somerset,2,Male,94390
+E06000023,Bristol,1,Female,237942
+E06000023,Bristol,2,Male,234523
+E06000024,North Somerset,1,Female,111422
+E06000024,North Somerset,2,Male,105306
+E06000025,South Gloucestershire,1,Female,146655
+E06000025,South Gloucestershire,2,Male,143769
+E06000026,Plymouth,1,Female,134784
+E06000026,Plymouth,2,Male,129911
+E06000027,Torbay,1,Female,71493
+E06000027,Torbay,2,Male,67831
+E06000030,Swindon,1,Female,117347
+E06000030,Swindon,2,Male,116063
+E06000031,Peterborough,1,Female,109067
+E06000031,Peterborough,2,Male,106606
+E06000032,Luton,1,Female,112438
+E06000032,Luton,2,Male,112824
+E06000033,Southend-on-Sea,1,Female,92773
+E06000033,Southend-on-Sea,2,Male,87913
+E06000034,Thurrock,1,Female,89787
+E06000034,Thurrock,2,Male,86213
+E06000035,Medway,1,Female,142646
+E06000035,Medway,2,Male,137127
+E06000036,Bracknell Forest,1,Female,63163
+E06000036,Bracknell Forest,2,Male,61444
+E06000037,West Berkshire,1,Female,81746
+E06000037,West Berkshire,2,Male,79701
+E06000038,Reading,1,Female,87382
+E06000038,Reading,2,Male,86842
+E06000039,Slough,1,Female,80005
+E06000039,Slough,2,Male,78495
+E06000040,Windsor and Maidenhead,1,Female,78080
+E06000040,Windsor and Maidenhead,2,Male,75416
+E06000041,Wokingham,1,Female,90281
+E06000041,Wokingham,2,Male,87221
+E06000042,Milton Keynes,1,Female,145486
+E06000042,Milton Keynes,2,Male,141574
+E06000043,Brighton and Hove,1,Female,141540
+E06000043,Brighton and Hove,2,Male,135563
+E06000044,Portsmouth,1,Female,104840
+E06000044,Portsmouth,2,Male,103163
+E06000045,Southampton,1,Female,123953
+E06000045,Southampton,2,Male,124969
+E06000046,Isle of Wight,1,Female,72370
+E06000046,Isle of Wight,2,Male,68089
+E06000047,County Durham,1,Female,266764
+E06000047,County Durham,2,Male,255304
+E06000049,Cheshire East,1,Female,203195
+E06000049,Cheshire East,2,Male,195577
+E06000050,Cheshire West and Chester,1,Female,182842
+E06000050,Cheshire West and Chester,2,Male,174308
+E06000051,Shropshire,1,Female,163923
+E06000051,Shropshire,2,Male,159683
+E06000052,Cornwall,1,Female,293685
+E06000052,Cornwall,2,Male,276620
+E06000053,Isles of Scilly,1,Female,1050
+E06000053,Isles of Scilly,2,Male,1004
+E06000054,Wiltshire,1,Female,258626
+E06000054,Wiltshire,2,Male,251704
+E06000055,Bedford,1,Female,94101
+E06000055,Bedford,2,Male,91124
+E06000056,Central Bedfordshire,1,Female,149123
+E06000056,Central Bedfordshire,2,Male,145129
+E06000057,Northumberland,1,Female,163989
+E06000057,Northumberland,2,Male,156578
+E06000058,"Bournemouth, Christchurch and Poole",1,Female,204826
+E06000058,"Bournemouth, Christchurch and Poole",2,Male,195370
+E06000059,Dorset,1,Female,195166
+E06000059,Dorset,2,Male,184413
+E06000060,Buckinghamshire,1,Female,282683
+E06000060,Buckinghamshire,2,Male,270395
+E06000061,North Northamptonshire,1,Female,182452
+E06000061,North Northamptonshire,2,Male,177070
+E06000062,West Northamptonshire,1,Female,215060
+E06000062,West Northamptonshire,2,Male,210665
+E07000008,Cambridge,1,Female,72693
+E07000008,Cambridge,2,Male,72981
+E07000009,East Cambridgeshire,1,Female,44712
+E07000009,East Cambridgeshire,2,Male,43050
+E07000010,Fenland,1,Female,52265
+E07000010,Fenland,2,Male,50197
+E07000011,Huntingdonshire,1,Female,91149
+E07000011,Huntingdonshire,2,Male,89684
+E07000012,South Cambridgeshire,1,Female,82562
+E07000012,South Cambridgeshire,2,Male,79557
+E07000026,Allerdale,1,Female,49062
+E07000026,Allerdale,2,Male,47093
+E07000027,Barrow-in-Furness,1,Female,33976
+E07000027,Barrow-in-Furness,2,Male,33431
+E07000028,Carlisle,1,Female,56145
+E07000028,Carlisle,2,Male,53879
+E07000029,Copeland,1,Female,33629
+E07000029,Copeland,2,Male,33447
+E07000030,Eden,1,Female,27594
+E07000030,Eden,2,Male,27141
+E07000031,South Lakeland,1,Female,53299
+E07000031,South Lakeland,2,Male,51151
+E07000032,Amber Valley,1,Female,64233
+E07000032,Amber Valley,2,Male,61973
+E07000033,Bolsover,1,Female,40693
+E07000033,Bolsover,2,Male,39580
+E07000034,Chesterfield,1,Female,52681
+E07000034,Chesterfield,2,Male,50888
+E07000035,Derbyshire Dales,1,Female,36601
+E07000035,Derbyshire Dales,2,Male,34939
+E07000036,Erewash,1,Female,57461
+E07000036,Erewash,2,Male,55445
+E07000037,High Peak,1,Female,46252
+E07000037,High Peak,2,Male,44680
+E07000038,North East Derbyshire,1,Female,52267
+E07000038,North East Derbyshire,2,Male,49734
+E07000039,South Derbyshire,1,Female,54665
+E07000039,South Derbyshire,2,Male,52543
+E07000040,East Devon,1,Female,78206
+E07000040,East Devon,2,Male,72622
+E07000041,Exeter,1,Female,67044
+E07000041,Exeter,2,Male,63665
+E07000042,Mid Devon,1,Female,42389
+E07000042,Mid Devon,2,Male,40463
+E07000043,North Devon,1,Female,50593
+E07000043,North Devon,2,Male,48018
+E07000044,South Hams,1,Female,45970
+E07000044,South Hams,2,Male,42657
+E07000045,Teignbridge,1,Female,69469
+E07000045,Teignbridge,2,Male,65334
+E07000046,Torridge,1,Female,34769
+E07000046,Torridge,2,Male,33345
+E07000047,West Devon,1,Female,29160
+E07000047,West Devon,2,Male,27936
+E07000061,Eastbourne,1,Female,53157
+E07000061,Eastbourne,2,Male,48532
+E07000062,Hastings,1,Female,46850
+E07000062,Hastings,2,Male,44146
+E07000063,Lewes,1,Female,51794
+E07000063,Lewes,2,Male,48111
+E07000064,Rother,1,Female,48889
+E07000064,Rother,2,Male,44221
+E07000065,Wealden,1,Female,83014
+E07000065,Wealden,2,Male,77137
+E07000066,Basildon,1,Female,96504
+E07000066,Basildon,2,Male,91067
+E07000067,Braintree,1,Female,79145
+E07000067,Braintree,2,Male,76123
+E07000068,Brentwood,1,Female,39587
+E07000068,Brentwood,2,Male,37460
+E07000069,Castle Point,1,Female,46225
+E07000069,Castle Point,2,Male,43362
+E07000070,Chelmsford,1,Female,92489
+E07000070,Chelmsford,2,Male,89034
+E07000071,Colchester,1,Female,98448
+E07000071,Colchester,2,Male,94267
+E07000072,Epping Forest,1,Female,69389
+E07000072,Epping Forest,2,Male,65591
+E07000073,Harlow,1,Female,47920
+E07000073,Harlow,2,Male,45408
+E07000074,Maldon,1,Female,33816
+E07000074,Maldon,2,Male,32392
+E07000075,Rochford,1,Female,44157
+E07000075,Rochford,2,Male,41504
+E07000076,Tendring,1,Female,76817
+E07000076,Tendring,2,Male,71475
+E07000077,Uttlesford,1,Female,46692
+E07000077,Uttlesford,2,Male,44649
+E07000078,Cheltenham,1,Female,60751
+E07000078,Cheltenham,2,Male,58085
+E07000079,Cotswold,1,Female,47060
+E07000079,Cotswold,2,Male,43772
+E07000080,Forest of Dean,1,Female,44441
+E07000080,Forest of Dean,2,Male,42563
+E07000081,Gloucester,1,Female,66916
+E07000081,Gloucester,2,Male,65500
+E07000082,Stroud,1,Female,61869
+E07000082,Stroud,2,Male,59235
+E07000083,Tewkesbury,1,Female,48795
+E07000083,Tewkesbury,2,Male,46089
+E07000084,Basingstoke and Deane,1,Female,93486
+E07000084,Basingstoke and Deane,2,Male,91668
+E07000085,East Hampshire,1,Female,64735
+E07000085,East Hampshire,2,Male,61011
+E07000086,Eastleigh,1,Female,69743
+E07000086,Eastleigh,2,Male,66700
+E07000087,Fareham,1,Female,58720
+E07000087,Fareham,2,Male,55793
+E07000088,Gosport,1,Female,41841
+E07000088,Gosport,2,Male,40111
+E07000089,Hart,1,Female,50263
+E07000089,Hart,2,Male,49145
+E07000090,Havant,1,Female,64230
+E07000090,Havant,2,Male,59978
+E07000091,New Forest,1,Female,91243
+E07000091,New Forest,2,Male,84542
+E07000092,Rushmoor,1,Female,49866
+E07000092,Rushmoor,2,Male,49888
+E07000093,Test Valley,1,Female,66608
+E07000093,Test Valley,2,Male,63884
+E07000094,Winchester,1,Female,65380
+E07000094,Winchester,2,Male,62065
+E07000095,Broxbourne,1,Female,51126
+E07000095,Broxbourne,2,Male,47881
+E07000096,Dacorum,1,Female,78952
+E07000096,Dacorum,2,Male,76129
+E07000098,Hertsmere,1,Female,56028
+E07000098,Hertsmere,2,Male,51799
+E07000099,North Hertfordshire,1,Female,68472
+E07000099,North Hertfordshire,2,Male,64738
+E07000102,Three Rivers,1,Female,48121
+E07000102,Three Rivers,2,Male,45650
+E07000103,Watford,1,Female,51901
+E07000103,Watford,2,Male,50345
+E07000105,Ashford,1,Female,68156
+E07000105,Ashford,2,Male,64591
+E07000106,Canterbury,1,Female,81846
+E07000106,Canterbury,2,Male,75583
+E07000107,Dartford,1,Female,59599
+E07000107,Dartford,2,Male,57154
+E07000108,Dover,1,Female,59609
+E07000108,Dover,2,Male,56801
+E07000109,Gravesham,1,Female,54667
+E07000109,Gravesham,2,Male,52233
+E07000110,Maidstone,1,Female,88818
+E07000110,Maidstone,2,Male,86964
+E07000111,Sevenoaks,1,Female,62306
+E07000111,Sevenoaks,2,Male,58208
+E07000112,Folkestone and Hythe,1,Female,56183
+E07000112,Folkestone and Hythe,2,Male,53575
+E07000113,Swale,1,Female,76361
+E07000113,Swale,2,Male,75316
+E07000114,Thanet,1,Female,72927
+E07000114,Thanet,2,Male,67660
+E07000115,Tonbridge and Malling,1,Female,67847
+E07000115,Tonbridge and Malling,2,Male,64354
+E07000116,Tunbridge Wells,1,Female,59364
+E07000116,Tunbridge Wells,2,Male,55947
+E07000117,Burnley,1,Female,47849
+E07000117,Burnley,2,Male,46797
+E07000118,Chorley,1,Female,59045
+E07000118,Chorley,2,Male,58687
+E07000119,Fylde,1,Female,41517
+E07000119,Fylde,2,Male,39858
+E07000120,Hyndburn,1,Female,41756
+E07000120,Hyndburn,2,Male,40478
+E07000121,Lancaster,1,Female,73002
+E07000121,Lancaster,2,Male,69929
+E07000122,Pendle,1,Female,48396
+E07000122,Pendle,2,Male,47361
+E07000123,Preston,1,Female,74101
+E07000123,Preston,2,Male,73734
+E07000124,Ribble Valley,1,Female,31357
+E07000124,Ribble Valley,2,Male,30204
+E07000125,Rossendale,1,Female,36106
+E07000125,Rossendale,2,Male,34765
+E07000126,South Ribble,1,Female,56734
+E07000126,South Ribble,2,Male,54301
+E07000127,West Lancashire,1,Female,61002
+E07000127,West Lancashire,2,Male,56427
+E07000128,Wyre,1,Female,57516
+E07000128,Wyre,2,Male,54430
+E07000129,Blaby,1,Female,52478
+E07000129,Blaby,2,Male,50448
+E07000130,Charnwood,1,Female,91931
+E07000130,Charnwood,2,Male,92040
+E07000131,Harborough,1,Female,49276
+E07000131,Harborough,2,Male,48349
+E07000132,Hinckley and Bosworth,1,Female,57607
+E07000132,Hinckley and Bosworth,2,Male,56033
+E07000133,Melton,1,Female,26496
+E07000133,Melton,2,Male,25256
+E07000134,North West Leicestershire,1,Female,53071
+E07000134,North West Leicestershire,2,Male,51634
+E07000135,Oadby and Wigston,1,Female,29754
+E07000135,Oadby and Wigston,2,Male,27993
+E07000136,Boston,1,Female,35806
+E07000136,Boston,2,Male,34696
+E07000137,East Lindsey,1,Female,72771
+E07000137,East Lindsey,2,Male,69525
+E07000138,Lincoln,1,Female,52410
+E07000138,Lincoln,2,Male,51403
+E07000139,North Kesteven,1,Female,60220
+E07000139,North Kesteven,2,Male,57854
+E07000140,South Holland,1,Female,48367
+E07000140,South Holland,2,Male,46755
+E07000141,South Kesteven,1,Female,73896
+E07000141,South Kesteven,2,Male,69508
+E07000142,West Lindsey,1,Female,48464
+E07000142,West Lindsey,2,Male,46689
+E07000143,Breckland,1,Female,71352
+E07000143,Breckland,2,Male,70124
+E07000144,Broadland,1,Female,67458
+E07000144,Broadland,2,Male,64263
+E07000145,Great Yarmouth,1,Female,50853
+E07000145,Great Yarmouth,2,Male,48892
+E07000146,King's Lynn and West Norfolk,1,Female,78964
+E07000146,King's Lynn and West Norfolk,2,Male,75361
+E07000147,North Norfolk,1,Female,52681
+E07000147,North Norfolk,2,Male,50298
+E07000148,Norwich,1,Female,72851
+E07000148,Norwich,2,Male,71071
+E07000149,South Norfolk,1,Female,72709
+E07000149,South Norfolk,2,Male,69238
+E07000163,Craven,1,Female,29309
+E07000163,Craven,2,Male,27618
+E07000164,Hambleton,1,Female,46456
+E07000164,Hambleton,2,Male,44234
+E07000165,Harrogate,1,Female,83007
+E07000165,Harrogate,2,Male,79663
+E07000166,Richmondshire,1,Female,24311
+E07000166,Richmondshire,2,Male,25465
+E07000167,Ryedale,1,Female,28023
+E07000167,Ryedale,2,Male,26684
+E07000168,Scarborough,1,Female,55899
+E07000168,Scarborough,2,Male,52836
+E07000169,Selby,1,Female,46806
+E07000169,Selby,2,Male,45182
+E07000170,Ashfield,1,Female,64441
+E07000170,Ashfield,2,Male,61859
+E07000171,Bassetlaw,1,Female,59391
+E07000171,Bassetlaw,2,Male,58413
+E07000172,Broxtowe,1,Female,56542
+E07000172,Broxtowe,2,Male,54398
+E07000173,Gedling,1,Female,60384
+E07000173,Gedling,2,Male,56879
+E07000174,Mansfield,1,Female,56089
+E07000174,Mansfield,2,Male,54393
+E07000175,Newark and Sherwood,1,Female,62458
+E07000175,Newark and Sherwood,2,Male,60498
+E07000176,Rushcliffe,1,Female,60729
+E07000176,Rushcliffe,2,Male,58348
+E07000177,Cherwell,1,Female,81112
+E07000177,Cherwell,2,Male,79904
+E07000178,Oxford,1,Female,82419
+E07000178,Oxford,2,Male,79622
+E07000179,South Oxfordshire,1,Female,75528
+E07000179,South Oxfordshire,2,Male,73557
+E07000180,Vale of White Horse,1,Female,69961
+E07000180,Vale of White Horse,2,Male,68952
+E07000181,West Oxfordshire,1,Female,58106
+E07000181,West Oxfordshire,2,Male,56131
+E07000187,Mendip,1,Female,59703
+E07000187,Mendip,2,Male,56386
+E07000188,Sedgemoor,1,Female,63266
+E07000188,Sedgemoor,2,Male,62077
+E07000189,South Somerset,1,Female,88162
+E07000189,South Somerset,2,Male,84509
+E07000192,Cannock Chase,1,Female,51007
+E07000192,Cannock Chase,2,Male,49512
+E07000193,East Staffordshire,1,Female,61985
+E07000193,East Staffordshire,2,Male,62034
+E07000194,Lichfield,1,Female,53993
+E07000194,Lichfield,2,Male,52443
+E07000195,Newcastle-under-Lyme,1,Female,62840
+E07000195,Newcastle-under-Lyme,2,Male,60459
+E07000196,South Staffordshire,1,Female,55164
+E07000196,South Staffordshire,2,Male,55308
+E07000197,Stafford,1,Female,69235
+E07000197,Stafford,2,Male,67632
+E07000198,Staffordshire Moorlands,1,Female,48566
+E07000198,Staffordshire Moorlands,2,Male,47279
+E07000199,Tamworth,1,Female,39912
+E07000199,Tamworth,2,Male,38735
+E07000200,Babergh,1,Female,47527
+E07000200,Babergh,2,Male,44811
+E07000202,Ipswich,1,Female,70326
+E07000202,Ipswich,2,Male,69316
+E07000203,Mid Suffolk,1,Female,52063
+E07000203,Mid Suffolk,2,Male,50636
+E07000207,Elmbridge,1,Female,71741
+E07000207,Elmbridge,2,Male,67013
+E07000208,Epsom and Ewell,1,Female,41736
+E07000208,Epsom and Ewell,2,Male,39202
+E07000209,Guildford,1,Female,72929
+E07000209,Guildford,2,Male,70720
+E07000210,Mole Valley,1,Female,44885
+E07000210,Mole Valley,2,Male,42501
+E07000211,Reigate and Banstead,1,Female,77019
+E07000211,Reigate and Banstead,2,Male,73827
+E07000212,Runnymede,1,Female,45545
+E07000212,Runnymede,2,Male,42534
+E07000213,Spelthorne,1,Female,52335
+E07000213,Spelthorne,2,Male,50621
+E07000214,Surrey Heath,1,Female,46000
+E07000214,Surrey Heath,2,Male,44453
+E07000215,Tandridge,1,Female,45542
+E07000215,Tandridge,2,Male,42332
+E07000216,Waverley,1,Female,66031
+E07000216,Waverley,2,Male,62198
+E07000217,Woking,1,Female,52304
+E07000217,Woking,2,Male,51639
+E07000218,North Warwickshire,1,Female,33121
+E07000218,North Warwickshire,2,Male,31914
+E07000219,Nuneaton and Bedworth,1,Female,68285
+E07000219,Nuneaton and Bedworth,2,Male,65912
+E07000220,Rugby,1,Female,57412
+E07000220,Rugby,2,Male,56951
+E07000221,Stratford-on-Avon,1,Female,69351
+E07000221,Stratford-on-Avon,2,Male,65374
+E07000222,Warwick,1,Female,74605
+E07000222,Warwick,2,Male,73847
+E07000223,Adur,1,Female,33329
+E07000223,Adur,2,Male,31215
+E07000224,Arun,1,Female,85430
+E07000224,Arun,2,Male,79459
+E07000225,Chichester,1,Female,64553
+E07000225,Chichester,2,Male,59515
+E07000226,Crawley,1,Female,59492
+E07000226,Crawley,2,Male,59001
+E07000227,Horsham,1,Female,75145
+E07000227,Horsham,2,Male,71633
+E07000228,Mid Sussex,1,Female,78500
+E07000228,Mid Sussex,2,Male,74066
+E07000229,Worthing,1,Female,57509
+E07000229,Worthing,2,Male,53829
+E07000234,Bromsgrove,1,Female,50730
+E07000234,Bromsgrove,2,Male,48453
+E07000235,Malvern Hills,1,Female,40849
+E07000235,Malvern Hills,2,Male,38637
+E07000236,Redditch,1,Female,44049
+E07000236,Redditch,2,Male,42987
+E07000237,Worcester,1,Female,52999
+E07000237,Worcester,2,Male,50873
+E07000238,Wychavon,1,Female,67499
+E07000238,Wychavon,2,Male,64993
+E07000239,Wyre Forest,1,Female,51785
+E07000239,Wyre Forest,2,Male,49822
+E07000240,St Albans,1,Female,75871
+E07000240,St Albans,2,Male,72296
+E07000241,Welwyn Hatfield,1,Female,60930
+E07000241,Welwyn Hatfield,2,Male,58907
+E07000242,East Hertfordshire,1,Female,76655
+E07000242,East Hertfordshire,2,Male,73503
+E07000243,Stevenage,1,Female,45337
+E07000243,Stevenage,2,Male,44158
+E07000244,East Suffolk,1,Female,126223
+E07000244,East Suffolk,2,Male,119835
+E07000245,West Suffolk,1,Female,89834
+E07000245,West Suffolk,2,Male,90114
+E07000246,Somerset West and Taunton,1,Female,80970
+E07000246,Somerset West and Taunton,2,Male,76475
+E08000001,Bolton,1,Female,150056
+E08000001,Bolton,2,Male,145907
+E08000002,Bury,1,Female,98741
+E08000002,Bury,2,Male,95110
+E08000003,Manchester,1,Female,277877
+E08000003,Manchester,2,Male,274061
+E08000004,Oldham,1,Female,123766
+E08000004,Oldham,2,Male,118323
+E08000005,Rochdale,1,Female,114055
+E08000005,Rochdale,2,Male,109718
+E08000006,Salford,1,Female,134389
+E08000006,Salford,2,Male,135534
+E08000007,Stockport,1,Female,151373
+E08000007,Stockport,2,Male,143400
+E08000008,Tameside,1,Female,117797
+E08000008,Tameside,2,Male,113276
+E08000009,Trafford,1,Female,120644
+E08000009,Trafford,2,Male,114408
+E08000010,Wigan,1,Female,166333
+E08000010,Wigan,2,Male,162997
+E08000011,Knowsley,1,Female,80668
+E08000011,Knowsley,2,Male,73849
+E08000012,Liverpool,1,Female,249460
+E08000012,Liverpool,2,Male,236628
+E08000013,St. Helens,1,Female,93334
+E08000013,St. Helens,2,Male,89914
+E08000014,Sefton,1,Female,143990
+E08000014,Sefton,2,Male,135243
+E08000015,Wirral,1,Female,165122
+E08000015,Wirral,2,Male,155077
+E08000016,Barnsley,1,Female,124293
+E08000016,Barnsley,2,Male,120279
+E08000017,Doncaster,1,Female,155280
+E08000017,Doncaster,2,Male,152826
+E08000018,Rotherham,1,Female,135547
+E08000018,Rotherham,2,Male,130260
+E08000019,Sheffield,1,Female,282327
+E08000019,Sheffield,2,Male,274194
+E08000021,Newcastle upon Tyne,1,Female,151802
+E08000021,Newcastle upon Tyne,2,Male,148323
+E08000022,North Tyneside,1,Female,107630
+E08000022,North Tyneside,2,Male,101337
+E08000023,South Tyneside,1,Female,76062
+E08000023,South Tyneside,2,Male,71714
+E08000024,Sunderland,1,Female,141078
+E08000024,Sunderland,2,Male,133093
+E08000025,Birmingham,1,Female,584496
+E08000025,Birmingham,2,Male,560423
+E08000026,Coventry,1,Female,173137
+E08000026,Coventry,2,Male,172187
+E08000027,Dudley,1,Female,164471
+E08000027,Dudley,2,Male,159017
+E08000028,Sandwell,1,Female,173577
+E08000028,Sandwell,2,Male,168255
+E08000029,Solihull,1,Female,111280
+E08000029,Solihull,2,Male,104960
+E08000030,Walsall,1,Female,145467
+E08000030,Walsall,2,Male,138657
+E08000031,Wolverhampton,1,Female,134175
+E08000031,Wolverhampton,2,Male,129552
+E08000032,Bradford,1,Female,278968
+E08000032,Bradford,2,Male,267444
+E08000033,Calderdale,1,Female,105901
+E08000033,Calderdale,2,Male,100730
+E08000034,Kirklees,1,Female,220870
+E08000034,Kirklees,2,Male,212346
+E08000035,Leeds,1,Female,415579
+E08000035,Leeds,2,Male,396374
+E08000036,Wakefield,1,Female,179539
+E08000036,Wakefield,2,Male,173831
+E08000037,Gateshead,1,Female,99952
+E08000037,Gateshead,2,Male,96199
+E09000001,City of London,1,Female,3861
+E09000001,City of London,2,Male,4722
+E09000002,Barking and Dagenham,1,Female,112288
+E09000002,Barking and Dagenham,2,Male,106581
+E09000003,Barnet,1,Female,200799
+E09000003,Barnet,2,Male,188545
+E09000004,Bexley,1,Female,127970
+E09000004,Bexley,2,Male,118502
+E09000005,Brent,1,Female,173121
+E09000005,Brent,2,Male,166695
+E09000006,Bromley,1,Female,171733
+E09000006,Bromley,2,Male,158258
+E09000007,Camden,1,Female,110652
+E09000007,Camden,2,Male,99484
+E09000008,Croydon,1,Female,203086
+E09000008,Croydon,2,Male,187633
+E09000009,Ealing,1,Female,186205
+E09000009,Ealing,2,Male,180910
+E09000010,Enfield,1,Female,172473
+E09000010,Enfield,2,Male,157511
+E09000011,Greenwich,1,Female,148570
+E09000011,Greenwich,2,Male,140498
+E09000012,Hackney,1,Female,135303
+E09000012,Hackney,2,Male,123843
+E09000013,Hammersmith and Fulham,1,Female,97214
+E09000013,Hammersmith and Fulham,2,Male,85943
+E09000014,Haringey,1,Female,136994
+E09000014,Haringey,2,Male,127244
+E09000015,Harrow,1,Female,132406
+E09000015,Harrow,2,Male,128797
+E09000016,Havering,1,Female,135668
+E09000016,Havering,2,Male,126384
+E09000017,Hillingdon,1,Female,154860
+E09000017,Hillingdon,2,Male,151049
+E09000018,Hounslow,1,Female,144979
+E09000018,Hounslow,2,Male,143202
+E09000019,Islington,1,Female,113291
+E09000019,Islington,2,Male,103298
+E09000020,Kensington and Chelsea,1,Female,76312
+E09000020,Kensington and Chelsea,2,Male,67063
+E09000021,Kingston upon Thames,1,Female,87047
+E09000021,Kingston upon Thames,2,Male,81016
+E09000022,Lambeth,1,Female,163713
+E09000022,Lambeth,2,Male,153941
+E09000023,Lewisham,1,Female,157820
+E09000023,Lewisham,2,Male,142733
+E09000024,Merton,1,Female,110531
+E09000024,Merton,2,Male,104656
+E09000025,Newham,1,Female,175723
+E09000025,Newham,2,Male,175313
+E09000026,Redbridge,1,Female,156929
+E09000026,Redbridge,2,Male,153331
+E09000027,Richmond upon Thames,1,Female,101317
+E09000027,Richmond upon Thames,2,Male,93961
+E09000028,Southwark,1,Female,158633
+E09000028,Southwark,2,Male,149004
+E09000029,Sutton,1,Female,108156
+E09000029,Sutton,2,Male,101483
+E09000030,Tower Hamlets,1,Female,154437
+E09000030,Tower Hamlets,2,Male,155869
+E09000031,Waltham Forest,1,Female,141951
+E09000031,Waltham Forest,2,Male,136474
+E09000032,Wandsworth,1,Female,172253
+E09000032,Wandsworth,2,Male,155253
+E09000033,Westminster,1,Female,105327
+E09000033,Westminster,2,Male,98909
+W06000001,Isle of Anglesey,1,Female,35219
+W06000001,Isle of Anglesey,2,Male,33659
+W06000002,Gwynedd,1,Female,59868
+W06000002,Gwynedd,2,Male,57525
+W06000003,Conwy,1,Female,59156
+W06000003,Conwy,2,Male,55585
+W06000004,Denbighshire,1,Female,49209
+W06000004,Denbighshire,2,Male,46609
+W06000005,Flintshire,1,Female,79059
+W06000005,Flintshire,2,Male,75903
+W06000006,Wrexham,1,Female,68241
+W06000006,Wrexham,2,Male,66876
+W06000008,Ceredigion,1,Female,36512
+W06000008,Ceredigion,2,Male,34963
+W06000009,Pembrokeshire,1,Female,63289
+W06000009,Pembrokeshire,2,Male,60071
+W06000010,Carmarthenshire,1,Female,96212
+W06000010,Carmarthenshire,2,Male,91685
+W06000011,Swansea,1,Female,120966
+W06000011,Swansea,2,Male,117524
+W06000012,Neath Port Talbot,1,Female,72410
+W06000012,Neath Port Talbot,2,Male,69879
+W06000013,Bridgend,1,Female,73625
+W06000013,Bridgend,2,Male,71863
+W06000014,Vale of Glamorgan,1,Female,68345
+W06000014,Vale of Glamorgan,2,Male,63594
+W06000015,Cardiff,1,Female,185460
+W06000015,Cardiff,2,Male,176850
+W06000016,Rhondda Cynon Taf,1,Female,121321
+W06000016,Rhondda Cynon Taf,2,Male,116330
+W06000018,Caerphilly,1,Female,89987
+W06000018,Caerphilly,2,Male,85965
+W06000019,Blaenau Gwent,1,Female,34065
+W06000019,Blaenau Gwent,2,Male,32839
+W06000020,Torfaen,1,Female,47409
+W06000020,Torfaen,2,Male,44867
+W06000021,Monmouthshire,1,Female,47417
+W06000021,Monmouthshire,2,Male,45540
+W06000022,Newport,1,Female,81166
+W06000022,Newport,2,Male,78421
+W06000023,Powys,1,Female,67467
+W06000023,Powys,2,Male,65702
+W06000024,Merthyr Tydfil,1,Female,30086
+W06000024,Merthyr Tydfil,2,Male,28753
