@@ -175,30 +175,115 @@ NOMIS_ASHE = {
 
 # geography TYPE480 = local authorities (districts, unitary, boroughs)
 # sex=8 all, item=2 median, pay=1 gross weekly, measures=20100 value + 20701 CV
+#
+# date: "latest" gives one year only. Use "*" for EVERY year Nomis holds.
+# Verified against the live time codelists:
+#   NM_99_1 (workplace) 1997-2025 = 29 periods
+#   NM_30_1 (resident)  2002-2025 = 24 periods
+# Other accepted forms: "latestMINUS5", "2015-2025", "2019,2020,2021".
 NOMIS_PARAMS = {
     "geography": "TYPE480",
-    "date": "first,latest",
+    "date": "*",
     "sex": "8",
     "item": "2",
     "pay": "1",
     "measures": "20100,20701",
 }
 
+# Row caps per call: ~25,000 as a guest, ~100,000 with a free uid key. Asking
+# for every year x every local authority exceeds the guest cap, so paginate.
+NOMIS_PAGE = 24_000
+NOMIS_DETAIL = False
 
-def fetch_nomis(dataset: str) -> pd.DataFrame:
-    params = dict(NOMIS_PARAMS)
+# Rough row count for a full pull, so you can see before you fetch whether the
+# guest cap will force many pages:
+#   periods x geographies x sex x item x pay x measures
+# 29 x ~380 local authorities x 1 x 1 x 1 x 2 = ~22,000 rows for workplace.
+# Widening sex/item/pay multiplies that fast — see NOMIS_PARAMS_DETAIL below.
+GEOG_COUNT_ESTIMATE = {"TYPE480": 380, "TYPE499": 12, "TYPE460": 220}
+
+# Wider pull: all sexes (5 male, 6 female, 8 total), all pay measures, all
+# items (mean/median/percentiles). Roughly 40x the rows — only worth it with a
+# NOMIS_UID key, and expect ~25 pages.
+NOMIS_PARAMS_DETAIL = {
+    "geography": "TYPE480",
+    "date": "*",
+    "sex": "5,6,8",
+    "item": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+    "pay": "1,2,3,4,5,6,7",
+    "measures": "20100,20701",
+}
+
+
+def fetch_nomis_dates(dataset: str) -> pd.DataFrame:
+    """Every time period the dataset holds.
+
+    Call this before a big pull so you know what "*" is about to return, and so
+    you can slice it into year ranges if the full series is too large.
+    """
+    r = _get(f"{NOMIS_BASE}/{dataset}/time.def.sdmx.json").json()
+    out = []
+    try:
+        codes = r["structure"]["codelists"]["codelist"][0]["code"]
+    except (KeyError, IndexError, TypeError):
+        return pd.DataFrame()
+    for c in codes:
+        out.append({"dataset": dataset, "date": c.get("value"),
+                    "description": (c.get("description") or {}).get("value")})
+    return pd.DataFrame(out)
+
+
+def fetch_nomis(dataset: str, rows: int, date: str | None = None,
+                detail: bool = False) -> pd.DataFrame:
+    """Fetch a Nomis dataset, paginating until the server stops returning rows.
+
+    Nomis truncates silently at the row cap — you get a valid CSV that is simply
+    incomplete, with no error and no warning. Paginating with RecordOffset is
+    the only way to know you have everything.
+    """
+    params = dict(NOMIS_PARAMS_DETAIL if detail else NOMIS_PARAMS)
+    if date:
+        params["date"] = date
     uid = os.environ.get("NOMIS_UID")
     if uid:
         params["uid"] = uid
 
-    url = f"{NOMIS_BASE}/{dataset}.data.csv"
+    page_size = min(NOMIS_PAGE if not uid else 95_000, rows)
+    frames, offset = [], 0
 
-    r = _get(url, params=params)
+    while offset < rows:
+        params["RecordLimit"] = min(page_size, rows - offset)
+        params["RecordOffset"] = offset
+        r = _get(f"{NOMIS_BASE}/{dataset}.data.csv", params=params)
+        if not r.content.strip():
+            # Nomis returns HTTP 200 with an EMPTY BODY when a dimension code is
+            # invalid — no error, no message. Surface the request so the bad
+            # code is visible instead of a bare EmptyDataError.
+            raise RuntimeError(
+                f"Nomis returned an empty body — usually an invalid dimension "
+                f"code.\n      URL: {r.url}\n"
+                f"      Run: python fetch_data.py --nomis-probe {dataset}")
+        try:
+            chunk = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+        except pd.errors.EmptyDataError:
+            raise RuntimeError(
+                f"Nomis body had no parseable CSV.\n      URL: {r.url}\n"
+                f"      First bytes: {r.content[:200]!r}")
+        if chunk.empty:
+            break
+        frames.append(chunk)
+        got = len(chunk)
+        print(f"      offset {offset:,} -> {got:,} rows")
+        if got < params["RecordLimit"]:
+            break                      # short page = last page
+        offset += got
+        time.sleep(PAUSE)
 
-    df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+    if not frames:
+        return pd.DataFrame()
+    df = pd.concat(frames, ignore_index=True)
     df.insert(0, "nomis_dataset", dataset)
-
-    return df
+    return df.head(rows)
 
 
 def fetch_nomis_structure(dataset: str) -> pd.DataFrame:
@@ -224,145 +309,110 @@ def fetch_nomis_structure(dataset: str) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
+def nomis_probe(dataset: str):
+    """Find which dimension code is making Nomis return an empty body.
+
+    Strategy: start from the minimum query that must work (geography + one date
+    + measures), then add filters one at a time. The first addition that empties
+    the response is the culprit. Also prints the valid codes for each dimension
+    so you can pick a real one.
+    """
+    uid = os.environ.get("NOMIS_UID")
+    base = {"geography": "TYPE480", "date": "latest", "measures": "20100"}
+    if uid:
+        base["uid"] = uid
+
+    print(f"\n=== probing {dataset} ===")
+    st = fetch_nomis_structure(dataset)
+    if not st.empty:
+        for cl, grp in st.groupby("codelist"):
+            if any(k in cl.upper() for k in ("SEX", "ITEM", "PAY", "MEASURE")):
+                codes = grp.head(12)[["code_value", "description"]].values.tolist()
+                print(f"\n  {cl}:")
+                for v, d in codes:
+                    print(f"      {v:<6} {d}")
+                if len(grp) > 12:
+                    print(f"      ... {len(grp) - 12} more")
+
+    def try_params(label, params):
+        try:
+            r = _get(f"{NOMIS_BASE}/{dataset}.data.csv", params=params)
+            n = len(r.content.strip().splitlines())
+            status = f"{max(n - 1, 0):,} rows" if n > 1 else "EMPTY BODY"
+            print(f"  {label:<38} {status}")
+            return n > 1
+        except Exception as e:
+            print(f"  {label:<38} {type(e).__name__}: {str(e)[:60]}")
+            return False
+
+    print("\n  building the query up one filter at a time:")
+    ok = try_params("geography + date + measures", base)
+    if not ok:
+        print("\n  Even the minimal query is empty — check the geography code "
+              "(TYPE480) and that the dataset id is right.")
+        return
+
+    for key, value in (("sex", NOMIS_PARAMS["sex"]),
+                       ("item", NOMIS_PARAMS["item"]),
+                       ("pay", NOMIS_PARAMS["pay"])):
+        trial = dict(base)
+        trial[key] = value
+        if not try_params(f"+ {key}={value}", trial):
+            print(f"\n  >>> '{key}={value}' is the invalid code. "
+                  f"Pick a valid one from the codelist above and update "
+                  f"NOMIS_PARAMS['{key}'].")
+            return
+
+    full = dict(base, **{k: v for k, v in NOMIS_PARAMS.items() if k != "date"})
+    if try_params("all filters together", full):
+        print("\n  All filters valid individually and together — the original "
+              "failure was probably date='*' plus these filters. Try "
+              "date='latest' first, then widen.")
+
+
 def source_nomis(rows: int):
     written = []
     if not os.environ.get("NOMIS_UID"):
         print("    note: NOMIS_UID unset — capped at ~25,000 rows per call "
               "(free key raises this to ~100,000)", file=sys.stderr)
     for name, ds in NOMIS_ASHE.items():
+        # Codes and dates first: if the data query fails, these are exactly what
+        # you need to work out why, so they must not share its try block.
         try:
-            df = fetch_nomis(ds, rows)
-            written.append((_write(df, f"nomis_{name}"), len(df),
-                            f"ASHE {name.replace('_', ' ')} ({ds}), latest year"))
-            time.sleep(PAUSE)
             st = fetch_nomis_structure(ds)
             if not st.empty:
                 written.append((_write(st, f"nomis_{name}_codes"), len(st),
                                 f"Dimension code lookup for {ds}"))
         except Exception as e:
+            print(f"    ! codes for {ds}: {type(e).__name__}: {e}", file=sys.stderr)
+        time.sleep(PAUSE)
+
+        try:
+            dates = fetch_nomis_dates(ds)
+            if not dates.empty:
+                written.append((_write(dates, f"nomis_{name}_dates"), len(dates),
+                                f"Every time period available in {ds}"))
+                print(f"    {ds}: {len(dates)} periods "
+                      f"({dates['date'].iloc[0]}..{dates['date'].iloc[-1]})")
+            n_periods = len(dates) if not dates.empty else 1
+            geo = NOMIS_PARAMS.get("geography", "")
+            est = n_periods * GEOG_COUNT_ESTIMATE.get(geo, 380) * 2
+            print(f"    estimated ~{est:,} rows for a full pull "
+                  f"(--rows is currently {rows:,})")
+            if rows < est:
+                print(f"    WARNING: --rows {rows:,} will cut this short. "
+                      f"Use --rows {est * 2:,} to be safe.")
+            df = fetch_nomis(ds, rows, detail=NOMIS_DETAIL)
+            written.append((_write(df, f"nomis_{name}"), len(df),
+                            f"ASHE {name.replace('_', ' ')} ({ds}), all years"))
+        except Exception as e:
             print(f"    ! {ds}: {type(e).__name__}: {e}", file=sys.stderr)
         time.sleep(PAUSE)
     return written
 
-# --------------------------------------------------------------------------- #
-# 6. DWP Stat-Xplore — benefits and pensioner income.  Free key.
-# --------------------------------------------------------------------------- #
-
-STATX_BASE = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
-
-DATABASES = {
-    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
-    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
-
-    "FRS_ADULT": "str:database:FRSAD",
-    "FRS_CHILD": "str:database:FRSCH",
-    "FRS_FAMILY": "str:database:FRSBU",
-    "FRS_HOUSEHOLD": "str:database:FRSHH",
-    "FRS_INDIVIDUAL": "str:database:FRSPP",
-
-    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
-    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
-
-    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
-    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
-
-    "HOUSING_BENEFIT": "str:database:hb_new",
-}
-
-API_KEY = os.environ.get("STATXPLORE_KEY")
-
-if not API_KEY:
-    raise ValueError("STATXPLORE_KEY is not set")
-
-HEADERS = {
-    "APIKey": API_KEY,
-    "User-Agent": "uk-cost-of-living-research/1.0"
-}
-
-
-DATABASES = {
-    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
-    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
-
-    "FRS_ADULT": "str:database:FRSAD",
-    "FRS_CHILD": "str:database:FRSCH",
-    "FRS_FAMILY": "str:database:FRSBU",
-    "FRS_HOUSEHOLD": "str:database:FRSHH",
-    "FRS_INDIVIDUAL": "str:database:FRSPP",
-
-    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
-    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
-
-    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
-    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
-
-    "HOUSING_BENEFIT": "str:database:hb_new",
-}
-
-
-def get_schema(database_id):
-
-    url = f"{STATX_BASE}/schema/{database_id}"
-
-    response = requests.get(
-        url,
-        headers=HEADERS,
-        timeout=60
-    )
-
-    response.raise_for_status()
-
-    return response.json()
-
-
-# Get schemas for only the databases we care about
-for name, database_id in DATABASES.items():
-
-    print("\n" + "=" * 80)
-    print(name)
-    print(database_id)
-    print("=" * 80)
-
-    try:
-
-        schema = get_schema(database_id)
-
-        # Save raw schema
-        os.makedirs(
-            "data/statxplore_schemas",
-            exist_ok=True
-        )
-
-        with open(
-            f"data/statxplore_schemas/{name}.json",
-            "w",
-            encoding="utf-8"
-        ) as f:
-
-            json.dump(
-                schema,
-                f,
-                indent=2
-            )
-
-        # Print it
-        print(json.dumps(schema, indent=2))
-
-    except Exception as e:
-
-        print(
-            f"ERROR: {type(e).__name__}: {e}"
-        )
-
-
-# --------------------------------------------------------------------------- #
-# Registry
-# --------------------------------------------------------------------------- #
-
 SOURCES = {
     "ons": (source_ons, "ONS API — CPIH inflation, private rents", "no key"),
     "nomis": (source_nomis, "Nomis — ASHE earnings by area/workplace", "optional key"),
-    "statxplore": (source_statxplore, "DWP Stat-Xplore — benefits/income", "free key"),
 }
 
 
@@ -375,6 +425,10 @@ def main():
                    help="max rows to keep per source (default 1000)")
     p.add_argument("--out-dir", default="data")
     p.add_argument("--list", action="store_true", help="list sources and exit")
+    p.add_argument("--nomis-probe", metavar="DATASET",
+                   help="diagnose an empty Nomis response, e.g. NM_99_1")
+    p.add_argument("--nomis-detail", action="store_true",
+                   help="all sexes, items and pay measures (~40x rows; needs a key)")
     args = p.parse_args()
 
     if args.list:
@@ -383,8 +437,13 @@ def main():
             print(f"{k:<14}{key:<15}{desc}")
         return
 
-    global OUT_DIR
+    global OUT_DIR, NOMIS_DETAIL
     OUT_DIR = args.out_dir
+    NOMIS_DETAIL = args.nomis_detail
+
+    if args.nomis_probe:
+        nomis_probe(args.nomis_probe)
+        return
 
     todo = args.only or list(SOURCES)
     manifest, skipped = [], []
