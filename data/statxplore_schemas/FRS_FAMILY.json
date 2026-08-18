@@ -1,0 +1,117 @@
+{
+  "id": "str:database:FRSBU",
+  "label": "Family (Benefit Unit) Dataset",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:FRSBU",
+  "type": "DATABASE",
+  "lastModified": 1787060133793,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:FRSBU:V_F_FRSBU",
+      "label": "Family (Benefit Unit) Dataset",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:FRSBU:V_F_FRSBU",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:FRSBU:V_F_FRSBU:GROSS",
+          "label": "Weighted Sum of Family (Benefit Unit) Dataset",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:FRSBU:V_F_FRSBU:GROSS",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:group:FRSBU:M_Family+%28Benefit+Unit%29+Income+received+from+State+Support",
+      "label": "Family (Benefit Unit) Income received from State Support",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:M_Family+%2528Benefit+Unit%2529+Income+received+from+State+Support",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:M_Family+%28Benefit+Unit%29+amount+of+savings+and+investments",
+      "label": "Family (Benefit Unit) amount of savings and investments",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:M_Family+%2528Benefit+Unit%2529+amount+of+savings+and+investments",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:FRSBU:V_F_FRSBU:YEAR",
+      "label": "Financial Year",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSBU:V_F_FRSBU:YEAR",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:FRSBU:X_Geography",
+      "label": "Geography",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Geography",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:FRSBU:V_F_FRSBU:AGEBAND",
+      "label": "Age band of the Head of the Family (Benefit Unit)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSBU:V_F_FRSBU:AGEBAND",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSBU:V_F_FRSBU:BU_YOUNGCH",
+      "label": "Age band of the Youngest Child in the Family (Benefit Unit)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSBU:V_F_FRSBU:BU_YOUNGCH",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSBU:V_F_FRSBU:BU_DIS_STAT",
+      "label": "Disability Status of the Family (Benefit Unit)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSBU:V_F_FRSBU:BU_DIS_STAT",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:FRSBU:V_F_FRSBU:TENURE",
+      "label": "Tenure type of the Household",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:FRSBU:V_F_FRSBU:TENURE",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:FRSBU:X_Benefit+receipt",
+      "label": "Benefit receipt",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Benefit+receipt",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Ethnicity",
+      "label": "Ethnicity",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Ethnicity",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Family+%28Benefit+Unit%29+Type",
+      "label": "Family (Benefit Unit) Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Family+%2528Benefit+Unit%2529+Type",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Economic+Status+of+the+Family+%28Benefit+Unit%29",
+      "label": "Economic Status of the Family (Benefit Unit)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Economic+Status+of+the+Family+%2528Benefit+Unit%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Income+from+State+Support",
+      "label": "Income from State Support",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Income+from+State+Support",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Savings+and+Investments",
+      "label": "Savings and Investments",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Savings+and+Investments",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:FRSBU:X_Childcare",
+      "label": "Childcare",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:FRSBU:X_Childcare",
+      "type": "GROUP"
+    }
+  ]
+}
