@@ -1,665 +1,881 @@
-import pandas as pd
-import requests
+import os
 import json
 import time
-from datetime import datetime
-import os
+from itertools import product
 
-# Create data/statxplore directory
-OUTPUT_DIR = 'data/statxplore'
+import pandas as pd
+import requests
+
+
+# =============================================================================
+# CONFIGURATION
+# =============================================================================
+
+BASE_URL = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
+OUTPUT_DIR = "data/statxplore"
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+# =============================================================================
+# STAT-XPLORE CLIENT
+# =============================================================================
 
 class StatXploreClient:
     """
-    Client for DWP Stat-Xplore API
+    Client for the DWP Stat-Xplore REST API.
     """
+
     def __init__(self, api_key=None):
-        self.base_url = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
         self.api_key = api_key
+
         self.session = requests.Session()
+
+        self.session.headers.update({
+            "Accept": "application/json",
+            "Accept-Language": "en",
+        })
+
         if api_key:
-            self.session.headers.update({'Authorization': f'Bearer {api_key}'})
-    
-    def get_schema(self, database_id):
-        """Get schema for a database"""
-        url = f"{self.base_url}/schema/{database_id}"
+            self.session.headers.update({
+                "APIKey": api_key,
+            })
+
+    # -------------------------------------------------------------------------
+    # GET
+    # -------------------------------------------------------------------------
+
+    def get(self, path):
+        url = f"{BASE_URL}{path}"
+
         response = self.session.get(url)
+
+        print(f"GET {url}")
+        print(f"Status: {response.status_code}")
+
         response.raise_for_status()
+
         return response.json()
-    
-    def query_table(self, database_id, dimensions, measures, filters=None):
+
+    # -------------------------------------------------------------------------
+    # SCHEMA
+    # -------------------------------------------------------------------------
+
+    def get_schema(self, schema_id):
         """
-        Query a table from Stat-Xplore
-        
-        Parameters:
-        - database_id: e.g., 'HBAI_ADMIN'
-        - dimensions: list of dimension IDs (fields)
-        - measures: list of measure IDs
-        - filters: dict of dimension filters
+        Retrieve a schema object.
+
+        schema_id can be:
+
+            str:database:FRSPP
+            str:group:FRSPP:X_Ethnicity
+            str:field:FRSPP:...
         """
-        url = f"{self.base_url}/table/{database_id}"
-        
+
+        url = f"{BASE_URL}/schema/{schema_id}"
+
+        response = self.session.get(url)
+
+        response.raise_for_status()
+
+        return response.json()
+
+    # -------------------------------------------------------------------------
+    # TABLE QUERY
+    # -------------------------------------------------------------------------
+
+    def query_table(self, database, dimensions, measures):
+        """
+        Execute a Stat-Xplore table query.
+
+        dimensions must be a list of lists:
+
+            [
+                ["field_uri"],
+                ["field_uri"]
+            ]
+
+        measures must be:
+
+            ["measure_uri"]
+        """
+
         payload = {
-            "dimensions": dimensions,
+            "database": database,
             "measures": measures,
-            "filters": filters or {}
+            "dimensions": dimensions,
         }
-        
-        response = self.session.post(url, json=payload)
-        response.raise_for_status()
-        return response.json()
-    
-    def fetch_yearly_data(self, database_id, dimensions, measures, years, filters=None):
-        """
-        Fetch data for multiple years and combine
-        """
-        all_data = []
-        
-        for year in years:
-            year_filters = filters.copy() if filters else {}
-            year_filters['YEAR'] = year
-            
-            try:
-                data = self.query_table(database_id, dimensions, measures, year_filters)
-                df = self._parse_response(data)
-                df['YEAR'] = year
-                all_data.append(df)
-                time.sleep(0.5)  # Be respectful to API
-            except Exception as e:
-                print(f"Error fetching year {year}: {e}")
-                continue
-        
-        if all_data:
-            return pd.concat(all_data, ignore_index=True)
-        return pd.DataFrame()
-    
-    def _parse_response(self, response):
-        """
-        Parse Stat-Xplore table response into DataFrame
-        """
-        rows = []
-        
-        # Assuming response has 'rows' structure
-        for row in response.get('rows', []):
-            row_data = {}
-            
-            # Extract dimension values
-            for dim in row.get('dimensions', []):
-                row_data[dim['id']] = dim['value']
-            
-            # Extract measure values
-            for measure in row.get('measures', []):
-                row_data[measure['id']] = measure['value']
-            
-            rows.append(row_data)
-        
-        return pd.DataFrame(rows)
 
+        print("\n" + "=" * 80)
+        print("STAT-XPLORE TABLE QUERY")
+        print("=" * 80)
 
-def fetch_hbai_with_ethnicity(client, years):
-    """
-    Fetch HBAI data with ethnicity, region, sex, age
-    Note: Requires three-year averaging
-    """
-    print("Fetching HBAI_ADMIN data...")
-    
-    dimensions = [
-        'GVTREGN_LON',      # Region
-        'SEX',              # Sex
-        'AGEBAND_CHLOW',    # Age band
-        'ETHNICITY'         # Ethnicity (check exact field name)
-    ]
-    
-    measures = [
-        'S_OE_BHC',         # Net income before housing costs
-        'S_OE_AHC',         # Net income after housing costs
-        'S_OE_HC'           # Housing costs
-    ]
-    
-    # Fetch data for each year
-    df = client.fetch_yearly_data(
-        database_id='HBAI_ADMIN',
-        dimensions=dimensions,
-        measures=measures,
-        years=years
-    )
-    
-    if not df.empty:
-        # Calculate three-year averages
-        df_avg = df.groupby(
-            ['GVTREGN_LON', 'SEX', 'AGEBAND_CHLOW', 'ETHNICITY']
-        )[measures].mean().reset_index()
-        
-        df_avg['AVERAGE_PERIOD'] = f"{years[0]}-{years[-1]}"
-        df_avg['AVERAGE_TYPE'] = '3-year average'
-        
-        # Save to file
-        filename = os.path.join(OUTPUT_DIR, 'HBAI_ADMIN_ethnicity_3yr_avg.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for HBAI_ADMIN")
-    return pd.DataFrame()
+        print(json.dumps(payload, indent=2))
 
+        url = f"{BASE_URL}/table"
 
-def fetch_frs_with_ethnicity(client, years):
-    """
-    Fetch FRS data with ethnicity
-    """
-    print("Fetching FRS Individual data...")
-    
-    # FRS Individual dataset has ethnicity
-    dimensions = [
-        'GVTREGN_LON',      # Region
-        'SEX',              # Sex
-        'AGEBAND',          # Age band
-        'HARMONISED_ETHNIC' # Harmonised Ethnic Group
-    ]
-    
-    measures = [
-        'PIPERSONAL_INC',   # Personal income
-        'PIHOUSEHOLD_INC'   # Household income
-    ]
-    
-    df = client.fetch_yearly_data(
-        database_id='FRSPP',  # Individual dataset
-        dimensions=dimensions,
-        measures=measures,
-        years=years
-    )
-    
-    if not df.empty:
-        # Calculate three-year averages
-        df_avg = df.groupby(
-            ['GVTREGN_LON', 'SEX', 'AGEBAND', 'HARMONISED_ETHNIC']
-        )[measures].mean().reset_index()
-        
-        df_avg['AVERAGE_PERIOD'] = f"{years[0]}-{years[-1]}"
-        df_avg['AVERAGE_TYPE'] = '3-year average'
-        
-        # Save to file
-        filename = os.path.join(OUTPUT_DIR, 'FRS_INDIVIDUAL_ethnicity_3yr_avg.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for FRS Individual")
-    return pd.DataFrame()
-
-
-def fetch_frs_adult_with_ethnicity(client, years):
-    """
-    Fetch FRS Adult dataset with ethnicity
-    """
-    print("Fetching FRS Adult data...")
-    
-    dimensions = [
-        'GVTREGN_LON',      # Region
-        'SEX',              # Sex
-        'AGEBAND',          # Age band
-        'HARMONISED_ETHNIC' # Harmonised Ethnic Group
-    ]
-    
-    measures = [
-        'ADULT_INCOME_EMPLOYMENT',
-        'ADULT_INCOME_ALL_SOURCES'
-    ]
-    
-    df = client.fetch_yearly_data(
-        database_id='FRSAD',  # Adult dataset
-        dimensions=dimensions,
-        measures=measures,
-        years=years
-    )
-    
-    if not df.empty:
-        df_avg = df.groupby(
-            ['GVTREGN_LON', 'SEX', 'AGEBAND', 'HARMONISED_ETHNIC']
-        )[measures].mean().reset_index()
-        
-        df_avg['AVERAGE_PERIOD'] = f"{years[0]}-{years[-1]}"
-        df_avg['AVERAGE_TYPE'] = '3-year average'
-        
-        filename = os.path.join(OUTPUT_DIR, 'FRS_ADULT_ethnicity_3yr_avg.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for FRS Adult")
-    return pd.DataFrame()
-
-
-def fetch_frs_household_with_ethnicity(client, years):
-    """
-    Fetch FRS Household dataset with ethnicity
-    """
-    print("Fetching FRS Household data...")
-    
-    dimensions = [
-        'GVTREGN_LON',      # Region
-        'AGEBAND',          # Age band of head
-        'ETHNICITY'         # Ethnicity of head
-    ]
-    
-    measures = [
-        'HOUSEHOLD_INCOME_ALL_SOURCES',
-        'HOUSEHOLD_INCOME_EMPLOYMENT'
-    ]
-    
-    df = client.fetch_yearly_data(
-        database_id='FRSHH',  # Household dataset
-        dimensions=dimensions,
-        measures=measures,
-        years=years
-    )
-    
-    if not df.empty:
-        df_avg = df.groupby(
-            ['GVTREGN_LON', 'AGEBAND', 'ETHNICITY']
-        )[measures].mean().reset_index()
-        
-        df_avg['AVERAGE_PERIOD'] = f"{years[0]}-{years[-1]}"
-        df_avg['AVERAGE_TYPE'] = '3-year average'
-        
-        filename = os.path.join(OUTPUT_DIR, 'FRS_HOUSEHOLD_ethnicity_3yr_avg.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for FRS Household")
-    return pd.DataFrame()
-
-
-def fetch_pensioner_income_with_ethnicity(client, years):
-    """
-    Fetch Pensioner Income data with ethnicity
-    """
-    print("Fetching Pensioner Income data...")
-    
-    dimensions = [
-        'gvtregn',      # Region
-        'sexhd',        # Sex
-        'agehd',        # Age
-        'eth'           # Ethnicity
-    ]
-    
-    measures = [
-        'pinincbu',     # Net income before housing costs
-        'pinahcbu'      # Net income after housing costs
-    ]
-    
-    df = client.fetch_yearly_data(
-        database_id='PI_ADMIN',
-        dimensions=dimensions,
-        measures=measures,
-        years=years
-    )
-    
-    if not df.empty:
-        df_avg = df.groupby(
-            ['gvtregn', 'sexhd', 'agehd', 'eth']
-        )[measures].mean().reset_index()
-        
-        df_avg['AVERAGE_PERIOD'] = f"{years[0]}-{years[-1]}"
-        df_avg['AVERAGE_TYPE'] = '3-year average'
-        
-        filename = os.path.join(OUTPUT_DIR, 'PENSIONER_INCOME_ethnicity_3yr_avg.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for Pensioner Income")
-    return pd.DataFrame()
-
-
-def fetch_housing_benefit(client, months):
-    """
-    Fetch Housing Benefit data
-    """
-    print("Fetching Housing Benefit data...")
-    
-    dimensions = [
-        'GEOGRAPHY',
-        'SINGLE_GEN',       # Gender (single claimants)
-        'FAMILY_PUB',       # Family type
-        'AGE_BAND'
-    ]
-    
-    measures = ['LAHBAMT']  # Weekly award amount
-    
-    # HB is monthly
-    all_data = []
-    for month in months:
-        try:
-            # For HB, we need to use the date field
-            df = client.fetch_yearly_data(
-                database_id='hb_new',
-                dimensions=dimensions + ['NEW_DATE_NAME'],
-                measures=measures,
-                years=[month]  # HB uses months
-            )
-            if not df.empty:
-                all_data.append(df)
-            time.sleep(0.5)
-        except Exception as e:
-            print(f"  Error fetching month {month}: {e}")
-    
-    if all_data:
-        df = pd.concat(all_data, ignore_index=True)
-        # Aggregate to averages
-        df_avg = df.groupby(
-            ['GEOGRAPHY', 'SINGLE_GEN', 'FAMILY_PUB', 'AGE_BAND']
-        )['LAHBAMT'].mean().reset_index()
-        
-        df_avg['PERIOD'] = f"{months[0]}-{months[-1]}"
-        
-        filename = os.path.join(OUTPUT_DIR, 'HOUSING_BENEFIT_average.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for Housing Benefit")
-    return pd.DataFrame()
-
-
-def fetch_uc_households(client, months):
-    """
-    Fetch Universal Credit Household data
-    """
-    print("Fetching Universal Credit Household data...")
-    
-    dimensions = [
-        'GEOGRAPHY',
-        'hnfamily_type'
-    ]
-    
-    measures = ['HNTOTAL_PAYMENT_AMOUNT']
-    
-    all_data = []
-    for month in months:
-        try:
-            df = client.fetch_yearly_data(
-                database_id='UC_Households',
-                dimensions=dimensions + ['DATE_NAME'],
-                measures=measures,
-                years=[month]
-            )
-            if not df.empty:
-                all_data.append(df)
-            time.sleep(0.5)
-        except Exception as e:
-            print(f"  Error fetching month {month}: {e}")
-    
-    if all_data:
-        df = pd.concat(all_data, ignore_index=True)
-        df_avg = df.groupby(
-            ['GEOGRAPHY', 'hnfamily_type']
-        )['HNTOTAL_PAYMENT_AMOUNT'].mean().reset_index()
-        
-        df_avg['PERIOD'] = f"{months[0]}-{months[-1]}"
-        
-        filename = os.path.join(OUTPUT_DIR, 'UNIVERSAL_CREDIT_HOUSEHOLDS_average.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for Universal Credit")
-    return pd.DataFrame()
-
-
-def fetch_uc_people(client, months):
-    """
-    Fetch Universal Credit People data
-    """
-    print("Fetching Universal Credit People data...")
-    
-    dimensions = [
-        'GEOGRAPHY',
-        'GENDER_CODE',
-        'AGE_CODE',
-        'EMPLOYMENT_CODE'
-    ]
-    
-    df = client.fetch_yearly_data(
-        database_id='UC_Monthly',
-        dimensions=dimensions + ['DATE_NAME'],
-        measures=[],  # Count is default
-        years=months
-    )
-    
-    if not df.empty:
-        # Get count from the data
-        if 'COUNT' in df.columns:
-            df_avg = df.groupby(
-                ['GEOGRAPHY', 'GENDER_CODE', 'AGE_CODE', 'EMPLOYMENT_CODE']
-            )['COUNT'].mean().reset_index()
-        else:
-            # Count is implicit
-            df_avg = df.groupby(
-                ['GEOGRAPHY', 'GENDER_CODE', 'AGE_CODE', 'EMPLOYMENT_CODE']
-            ).size().reset_index(name='AVG_COUNT')
-        
-        df_avg['PERIOD'] = f"{months[0]}-{months[-1]}"
-        
-        filename = os.path.join(OUTPUT_DIR, 'UNIVERSAL_CREDIT_PEOPLE_average.csv')
-        df_avg.to_csv(filename, index=False)
-        print(f"  ✓ Saved {len(df_avg)} rows to {filename}")
-        
-        return df_avg
-    
-    print("  ⚠ No data returned for Universal Credit People")
-    return pd.DataFrame()
-
-
-def verify_field_names(client):
-    """
-    Helper function to verify actual field names in schemas
-    """
-    print("\n" + "=" * 60)
-    print("VERIFYING FIELD NAMES")
-    print("=" * 60)
-    
-    databases = ['HBAI_ADMIN', 'FRSPP', 'FRSAD', 'FRSHH', 'PI_ADMIN', 'hb_new', 'UC_Households', 'UC_Monthly']
-    
-    field_info = {}
-    
-    for db in databases:
-        try:
-            schema = client.get_schema(db)
-            field_info[db] = {
-                'fields': [],
-                'measures': [],
-                'groups': []
+        response = self.session.post(
+            url,
+            json=payload,
+            headers={
+                "Content-Type": "application/json"
             }
-            
-            for child in schema.get('children', []):
-                if child['type'] == 'FIELD':
-                    field_info[db]['fields'].append({
-                        'id': child['id'],
-                        'label': child['label']
-                    })
-                elif child['type'] == 'MEASURE':
-                    field_info[db]['measures'].append({
-                        'id': child['id'],
-                        'label': child['label'],
-                        'functions': child.get('functions', [])
-                    })
-                elif child['type'] == 'GROUP':
-                    field_info[db]['groups'].append({
-                        'id': child['id'],
-                        'label': child['label']
-                    })
-            
-            print(f"\n{db}:")
-            print(f"  Fields: {len(field_info[db]['fields'])}")
-            print(f"  Measures: {len(field_info[db]['measures'])}")
-            print(f"  Groups: {len(field_info[db]['groups'])}")
-            
-            # Show ethnicity-related fields
-            ethnic_fields = [f for f in field_info[db]['fields'] 
-                           if 'ethn' in f['id'].lower() or 'ethn' in f['label'].lower()]
-            if ethnic_fields:
-                print(f"  Ethnicity fields: {ethnic_fields}")
-            
-            time.sleep(0.3)
-            
-        except Exception as e:
-            print(f"Error fetching schema for {db}: {e}")
-    
-    # Save field info
-    with open(os.path.join(OUTPUT_DIR, '_schema_fields.json'), 'w') as f:
-        json.dump(field_info, f, indent=2, default=str)
-    print(f"\n✓ Schema information saved to {OUTPUT_DIR}/_schema_fields.json")
-    
-    return field_info
+        )
+
+        print(f"\nHTTP status: {response.status_code}")
+
+        response.raise_for_status()
+
+        result = response.json()
+
+        return result
 
 
-def create_combined_dataset(datasets):
+# =============================================================================
+# SCHEMA HELPERS
+# =============================================================================
+
+def save_json(data, filename):
+    path = os.path.join(OUTPUT_DIR, filename)
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+    print(f"Saved: {path}")
+
+
+def inspect_schema(client, schema_id, filename=None):
     """
-    Create a combined dataset from all extracted data
+    Print a schema and return it.
     """
-    print("\n" + "=" * 60)
-    print("CREATING COMBINED DATASET")
-    print("=" * 60)
-    
-    combined_df = pd.DataFrame()
-    
-    for name, df in datasets.items():
-        if not df.empty:
-            # Add source column
-            df_copy = df.copy()
-            df_copy['SOURCE'] = name
-            
-            # Try to standardize column names for merging
-            # This is complex due to different schemas
-            # For now, just collect everything
-            
-            if combined_df.empty:
-                combined_df = df_copy
-            else:
-                # Find common columns for merging
-                common_cols = set(combined_df.columns).intersection(set(df_copy.columns))
-                if common_cols:
-                    # Merge on common columns
-                    combined_df = pd.merge(
-                        combined_df, df_copy, 
-                        on=list(common_cols), 
-                        how='outer',
-                        suffixes=('', f'_{name}')
-                    )
-                else:
-                    # Just concatenate
-                    combined_df = pd.concat([combined_df, df_copy], ignore_index=True)
-    
-    if not combined_df.empty:
-        filename = os.path.join(OUTPUT_DIR, 'COMBINED_DATASET.csv')
-        combined_df.to_csv(filename, index=False)
-        print(f"✓ Combined dataset saved: {len(combined_df)} rows")
-        return combined_df
-    
-    print("⚠ No data to combine")
-    return pd.DataFrame()
 
+    print("\n" + "=" * 80)
+    print(f"SCHEMA")
+    print(schema_id)
+    print("=" * 80)
+
+    schema = client.get_schema(schema_id)
+
+    if filename:
+        save_json(schema, filename)
+
+    return schema
+
+
+def recursively_find_children(client, schema_id, seen=None):
+    """
+    Recursively walk a schema.
+
+    This is important because FRS ethnicity/geography are exposed as
+    GROUP objects at the database level.
+
+    Returns all FIELD and MEASURE objects found below the supplied schema.
+    """
+
+    if seen is None:
+        seen = set()
+
+    if schema_id in seen:
+        return []
+
+    seen.add(schema_id)
+
+    try:
+        schema = client.get_schema(schema_id)
+    except Exception as e:
+        print(f"Could not retrieve {schema_id}: {e}")
+        return []
+
+    results = []
+
+    for child in schema.get("children", []):
+        child_type = child.get("type")
+        child_id = child.get("id")
+
+        if not child_id:
+            continue
+
+        if child_type in ("FIELD", "MEASURE", "COUNT"):
+            results.append(child)
+
+        elif child_type == "GROUP":
+            results.extend(
+                recursively_find_children(
+                    client,
+                    child_id,
+                    seen
+                )
+            )
+
+    return results
+
+
+def find_by_text(items, text):
+    """
+    Search schema objects by ID or label.
+    """
+
+    text = text.lower()
+
+    matches = []
+
+    for item in items:
+        item_id = str(item.get("id", ""))
+        label = str(item.get("label", ""))
+
+        if text in item_id.lower() or text in label.lower():
+            matches.append(item)
+
+    return matches
+
+
+# =============================================================================
+# DATABASE INSPECTION
+# =============================================================================
+
+def inspect_database(client, database_id):
+    """
+    Inspect a database and recursively discover fields/measures.
+    """
+
+    print("\n" + "=" * 80)
+    print("INSPECTING DATABASE")
+    print(database_id)
+    print("=" * 80)
+
+    schema = client.get_schema(database_id)
+
+    filename = f"{database_id.replace(':', '_')}_schema_full.json"
+    save_json(schema, filename)
+
+    direct_fields = []
+    direct_measures = []
+    groups = []
+
+    for child in schema.get("children", []):
+
+        child_type = child.get("type")
+
+        if child_type == "FIELD":
+            direct_fields.append(child)
+
+        elif child_type == "MEASURE":
+            direct_measures.append(child)
+
+        elif child_type == "GROUP":
+            groups.append(child)
+
+    print(f"\nDirect fields:   {len(direct_fields)}")
+    print(f"Direct measures: {len(direct_measures)}")
+    print(f"Groups:          {len(groups)}")
+
+    print("\nDIRECT FIELDS")
+    print("-" * 80)
+
+    for field in direct_fields:
+        print(field["id"])
+        print(f"    {field.get('label', '')}")
+
+    print("\nDIRECT MEASURES")
+    print("-" * 80)
+
+    for measure in direct_measures:
+        print(measure["id"])
+        print(f"    {measure.get('label', '')}")
+
+    print("\nGROUPS")
+    print("-" * 80)
+
+    for group in groups:
+        print(group["id"])
+        print(f"    {group.get('label', '')}")
+
+    return schema
+
+
+# =============================================================================
+# CUBE PARSER
+# =============================================================================
+
+def get_field_items(field):
+    """
+    Get the values/items belonging to a dimension field.
+
+    In a table response, fields contain an `items` collection.
+    """
+
+    items = field.get("items", [])
+
+    result = []
+
+    for item in items:
+
+        if isinstance(item, dict):
+            result.append({
+                "id": item.get("id"),
+                "label": item.get("label", item.get("name", "")),
+                "uri": item.get("uri", item.get("id")),
+            })
+
+        else:
+            result.append({
+                "id": item,
+                "label": str(item),
+                "uri": item,
+            })
+
+    return result
+
+
+def flatten_cube(values, dimensions, depth=0, prefix=None):
+    """
+    Recursively flatten Stat-Xplore cube values.
+
+    Example cube:
+
+        [
+            [
+                [100, 200],
+                [300, 400]
+            ]
+        ]
+
+    becomes:
+
+        [
+            [100],
+            [200],
+            [300],
+            [400]
+        ]
+
+    where each row contains one cell value.
+
+    Returns tuples:
+
+        (dimension_indexes, value)
+    """
+
+    if prefix is None:
+        prefix = []
+
+    # Reached a scalar value
+    if not isinstance(values, list):
+
+        return [
+            (
+                prefix,
+                values
+            )
+        ]
+
+    rows = []
+
+    for index, child in enumerate(values):
+
+        rows.extend(
+            flatten_cube(
+                child,
+                dimensions,
+                depth + 1,
+                prefix + [index]
+            )
+        )
+
+    return rows
+
+
+def parse_table_response(response):
+    """
+    Convert a Stat-Xplore /table response into a pandas DataFrame.
+
+    This handles the actual response structure:
+
+        {
+            "fields": [...],
+            "cubes": {
+                "measure_uri": {
+                    "values": [...]
+                }
+            }
+        }
+    """
+
+    print("\n" + "=" * 80)
+    print("PARSING STAT-XPLORE RESPONSE")
+    print("=" * 80)
+
+    save_json(
+        response,
+        "last_table_response.json"
+    )
+
+    fields = response.get("fields", [])
+    cubes = response.get("cubes", {})
+
+    print(f"Fields: {len(fields)}")
+    print(f"Cubes:  {len(cubes)}")
+
+    if not fields:
+        raise RuntimeError(
+            "Stat-Xplore returned no dimension fields."
+        )
+
+    if not cubes:
+        raise RuntimeError(
+            "Stat-Xplore returned no cubes."
+        )
+
+    # -------------------------------------------------------------------------
+    # Build dimension metadata
+    # -------------------------------------------------------------------------
+
+    dimension_items = []
+
+    for field in fields:
+
+        label = field.get("label", field.get("id", "Unknown"))
+        uri = field.get("uri", field.get("id"))
+
+        items = get_field_items(field)
+
+        print(f"\nDimension:")
+        print(f"  Label: {label}")
+        print(f"  URI:   {uri}")
+        print(f"  Items: {len(items)}")
+
+        dimension_items.append({
+            "label": label,
+            "uri": uri,
+            "items": items
+        })
+
+    # -------------------------------------------------------------------------
+    # Build all possible coordinate combinations
+    # -------------------------------------------------------------------------
+
+    item_lists = [
+        dimension["items"]
+        for dimension in dimension_items
+    ]
+
+    combinations = list(product(*[
+        range(len(items))
+        for items in item_lists
+    ]))
+
+    print(f"\nExpected table cells: {len(combinations)}")
+
+    # -------------------------------------------------------------------------
+    # Parse every cube
+    # -------------------------------------------------------------------------
+
+    data = []
+
+    for measure_uri, cube in cubes.items():
+
+        print("\n" + "-" * 80)
+        print(f"MEASURE: {measure_uri}")
+        print("-" * 80)
+
+        if not isinstance(cube, dict):
+            print(
+                f"WARNING: cube is {type(cube).__name__}, "
+                "not a dictionary"
+            )
+            continue
+
+        values = cube.get("values")
+
+        if values is None:
+            print("WARNING: cube contains no values")
+            continue
+
+        print(
+            f"Cube value structure received."
+        )
+
+        flattened = flatten_cube(
+            values,
+            dimension_items
+        )
+
+        value_map = {
+            tuple(indexes): value
+            for indexes, value in flattened
+        }
+
+        # ---------------------------------------------------------------------
+        # Generate rows
+        # ---------------------------------------------------------------------
+
+        for coordinate in combinations:
+
+            row = {}
+
+            for dimension_number, item_index in enumerate(coordinate):
+
+                dimension = dimension_items[dimension_number]
+
+                items = dimension["items"]
+
+                if item_index >= len(items):
+                    continue
+
+                item = items[item_index]
+
+                row[dimension["label"]] = item["label"]
+                row[f"{dimension['label']}__URI"] = item["uri"]
+
+            row[measure_uri] = value_map.get(
+                coordinate
+            )
+
+            data.append(row)
+
+    df = pd.DataFrame(data)
+
+    # -------------------------------------------------------------------------
+    # Clean duplicate rows generated by multiple cubes
+    # -------------------------------------------------------------------------
+
+    if not df.empty:
+
+        dimension_labels = [
+            dimension["label"]
+            for dimension in dimension_items
+        ]
+
+        uri_columns = [
+            f"{label}__URI"
+            for label in dimension_labels
+        ]
+
+        measure_columns = [
+            column
+            for column in df.columns
+            if column not in dimension_labels
+            and column not in uri_columns
+        ]
+
+        # Group measure columns onto the same dimension rows
+        if measure_columns:
+
+            group_columns = dimension_labels + uri_columns
+
+            df = (
+                df.groupby(
+                    group_columns,
+                    dropna=False,
+                    as_index=False
+                )[measure_columns]
+                .first()
+            )
+
+    print("\n" + "=" * 80)
+    print("PARSER RESULT")
+    print("=" * 80)
+
+    print(f"Rows:    {len(df)}")
+    print(f"Columns: {len(df.columns)}")
+
+    print("\nColumns:")
+
+    for column in df.columns:
+        print(f"  {column}")
+
+    if not df.empty:
+
+        print("\nPreview:")
+        print(
+            df.head(20).to_string(index=False)
+        )
+
+    return df
+
+
+# =============================================================================
+# FRSPP TEST
+# =============================================================================
+
+def test_frsp_query(client):
+    """
+    Run a known-good FRSPP query.
+
+    This verifies that table querying + cube parsing works.
+    """
+
+    print("\n" + "=" * 80)
+    print("RUNNING FRSPP DATA TEST")
+    print("=" * 80)
+
+    database = "str:database:FRSPP"
+
+    dimensions = [
+        [
+            "str:field:FRSPP:V_F_FRSPP:YEAR"
+        ],
+        [
+            "str:field:FRSPP:V_F_FRSPP:AGEBAND"
+        ],
+        [
+            "str:field:FRSPP:V_F_FRSPP:SEX"
+        ],
+    ]
+
+    measures = [
+        "str:count:FRSPP:V_F_FRSPP"
+    ]
+
+    response = client.query_table(
+        database=database,
+        dimensions=dimensions,
+        measures=measures
+    )
+
+    save_json(
+        response,
+        "FRSPP_test_response.json"
+    )
+
+    df = parse_table_response(response)
+
+    filename = os.path.join(
+        OUTPUT_DIR,
+        "FRSPP_test.csv"
+    )
+
+    df.to_csv(
+        filename,
+        index=False
+    )
+
+    print("\n" + "=" * 80)
+    print("FRSPP TEST COMPLETE")
+    print("=" * 80)
+
+    print(f"Rows: {len(df)}")
+    print(f"Saved: {filename}")
+
+    return df
+
+
+# =============================================================================
+# FIND FIELDS INSIDE GROUPS
+# =============================================================================
+
+def find_database_fields(client, database_id):
+    """
+    Recursively discover all fields/measures below a database.
+
+    This is the important part for FRS because fields such as Ethnicity
+    and Geography are hidden inside GROUP objects.
+    """
+
+    print("\n" + "=" * 80)
+    print("RECURSIVELY DISCOVERING FIELDS")
+    print(database_id)
+    print("=" * 80)
+
+    objects = recursively_find_children(
+        client,
+        database_id
+    )
+
+    fields = [
+        obj for obj in objects
+        if obj.get("type") == "FIELD"
+    ]
+
+    measures = [
+        obj for obj in objects
+        if obj.get("type") == "MEASURE"
+    ]
+
+    counts = [
+        obj for obj in objects
+        if obj.get("type") == "COUNT"
+    ]
+
+    print(f"\nFields discovered:   {len(fields)}")
+    print(f"Measures discovered: {len(measures)}")
+    print(f"Counts discovered:   {len(counts)}")
+
+    print("\nALL FIELDS")
+    print("-" * 80)
+
+    for field in fields:
+
+        print(
+            f"{field.get('id')}\n"
+            f"    {field.get('label', '')}"
+        )
+
+    print("\nALL MEASURES")
+    print("-" * 80)
+
+    for measure in measures:
+
+        print(
+            f"{measure.get('id')}\n"
+            f"    {measure.get('label', '')}"
+        )
+
+    return {
+        "fields": fields,
+        "measures": measures,
+        "counts": counts,
+    }
+
+
+# =============================================================================
+# SEARCH
+# =============================================================================
+
+def search_database(client, database_id, search_term):
+    """
+    Search recursively through a database's schema.
+    """
+
+    discovered = find_database_fields(
+        client,
+        database_id
+    )
+
+    all_objects = (
+        discovered["fields"]
+        + discovered["measures"]
+        + discovered["counts"]
+    )
+
+    matches = find_by_text(
+        all_objects,
+        search_term
+    )
+
+    print("\n" + "=" * 80)
+    print(f"SEARCH RESULTS: {search_term}")
+    print("=" * 80)
+
+    if not matches:
+
+        print("No matches.")
+
+        return []
+
+    for item in matches:
+
+        print(
+            f"\nID:\n"
+            f"{item.get('id')}\n"
+            f"\nLABEL:\n"
+            f"{item.get('label', '')}\n"
+            f"\nTYPE:\n"
+            f"{item.get('type', '')}"
+        )
+
+    return matches
+
+
+# =============================================================================
+# MAIN
+# =============================================================================
 
 def main():
-    # Initialize client
-    api_key = os.environ.get('STATXPLORE_KEY')
+
+    print("=" * 80)
+    print("STAT-XPLORE API DATA EXTRACTION")
+    print("=" * 80)
+
+    # -------------------------------------------------------------------------
+    # Authentication
+    # -------------------------------------------------------------------------
+
+    api_key = os.environ.get(
+        "STATXPLORE_KEY"
+    )
+
     if not api_key:
-        print("⚠ WARNING: STATXPLORE_KEY environment variable not set")
-        print("  Please set it with: export STATXPLORE_KEY='your_key'")
-        print("  Continuing with unauthenticated access (may have limitations)")
-    
-    client = StatXploreClient(api_key)
-    
-    # First, verify field names
-    field_info = verify_field_names(client)
-    
-    # Define years for three-year averages
-    years = ['2021/22', '2022/23', '2023/24']  # Adjust as needed
-    months = ['2023-01', '2023-02', '2023-03']  # For monthly data
-    
-    print("\n" + "=" * 60)
-    print("STARTING DATA EXTRACTION")
-    print("=" * 60)
-    print(f"Years (3-year average): {years}")
-    print(f"Months: {months}")
-    print(f"Output directory: {OUTPUT_DIR}")
-    print("=" * 60)
-    
-    # Fetch all datasets
-    datasets = {}
-    
-    # 1. HBAI with ethnicity
-    datasets['HBAI_ADMIN'] = fetch_hbai_with_ethnicity(client, years)
-    
-    # 2. FRS datasets with ethnicity
-    datasets['FRS_INDIVIDUAL'] = fetch_frs_with_ethnicity(client, years)
-    datasets['FRS_ADULT'] = fetch_frs_adult_with_ethnicity(client, years)
-    datasets['FRS_HOUSEHOLD'] = fetch_frs_household_with_ethnicity(client, years)
-    
-    # 3. Pensioner Income with ethnicity
-    datasets['PENSIONER_INCOME'] = fetch_pensioner_income_with_ethnicity(client, years)
-    
-    # 4. Housing Benefit
-    datasets['HOUSING_BENEFIT'] = fetch_housing_benefit(client, months)
-    
-    # 5. Universal Credit
-    datasets['UNIVERSAL_CREDIT_HOUSEHOLDS'] = fetch_uc_households(client, months)
-    datasets['UNIVERSAL_CREDIT_PEOPLE'] = fetch_uc_people(client, months)
-    
-    # Create combined dataset
-    combined = create_combined_dataset(datasets)
-    datasets['COMBINED'] = combined
-    
-    # Create manifest
-    print("\n" + "=" * 60)
-    print("CREATING MANIFEST")
-    print("=" * 60)
-    
-    manifest = []
-    for name, df in datasets.items():
-        if not df.empty:
-            manifest.append({
-                'dataset': name,
-                'rows': len(df),
-                'columns': len(df.columns),
-                'column_names': ', '.join(df.columns[:10]) + ('...' if len(df.columns) > 10 else ''),
-                'file': f"{name.replace('_', '_')}.csv",
-                'saved_at': datetime.now().isoformat()
-            })
-    
-    if manifest:
-        manifest_df = pd.DataFrame(manifest)
-        manifest_filename = os.path.join(OUTPUT_DIR, '_manifest.csv')
-        manifest_df.to_csv(manifest_filename, index=False)
-        print(f"✓ Manifest saved to {manifest_filename}")
-        print(f"\nTotal datasets extracted: {len(manifest)}")
-        
-        # Print summary
-        print("\n" + "-" * 60)
-        print("EXTRACTION SUMMARY")
-        print("-" * 60)
-        for entry in manifest:
-            print(f"  {entry['dataset']}: {entry['rows']:,} rows")
-    else:
-        print("⚠ No data was extracted")
-    
-    print("\n" + "=" * 60)
-    print("EXTRACTION COMPLETE")
-    print("=" * 60)
-    print(f"Data saved to: {OUTPUT_DIR}/")
-    print("Files:")
-    for f in sorted(os.listdir(OUTPUT_DIR)):
-        if f.endswith('.csv'):
-            print(f"  - {f}")
+
+        raise RuntimeError(
+            "STATXPLORE_KEY is not set."
+        )
+
+    client = StatXploreClient(
+        api_key=api_key
+    )
+
+    print("\nTesting authentication...")
+
+    # Root schema
+    root_schema = client.get_schema(
+        "str:folder:ffrs"
+    )
+
+    print("Authentication successful.")
+    print("Root schema retrieved.")
+
+    save_json(
+        root_schema,
+        "root_schema.json"
+    )
+
+    # -------------------------------------------------------------------------
+    # FRSPP
+    # -------------------------------------------------------------------------
+
+    inspect_database(
+        client,
+        "str:database:FRSPP"
+    )
+
+    # -------------------------------------------------------------------------
+    # Recursively discover FRSPP fields
+    # -------------------------------------------------------------------------
+
+    frspp_objects = find_database_fields(
+        client,
+        "str:database:FRSPP"
+    )
+
+    # Search for ethnicity
+    ethnicity_matches = search_database(
+        client,
+        "str:database:FRSPP",
+        "ethnic"
+    )
+
+    # Search for geography
+    geography_matches = search_database(
+        client,
+        "str:database:FRSPP",
+        "geograph"
+    )
+
+    # -------------------------------------------------------------------------
+    # Known-good test
+    # -------------------------------------------------------------------------
+
+    df = test_frsp_query(
+        client
+    )
+
+    # -------------------------------------------------------------------------
+    # Save discovered fields
+    # -------------------------------------------------------------------------
+
+    discovered = {
+        "FRSPP": frspp_objects
+    }
+
+    save_json(
+        discovered,
+        "discovered_fields.json"
+    )
+
+    print("\n" + "=" * 80)
+    print("COMPLETE")
+    print("=" * 80)
 
 
 if __name__ == "__main__":
