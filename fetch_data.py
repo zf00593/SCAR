@@ -176,14 +176,22 @@ NOMIS_ASHE = {
 # geography TYPE480 = local authorities (districts, unitary, boroughs)
 # sex=8 all, item=2 median, pay=1 gross weekly, measures=20100 value + 20701 CV
 #
-# date: "latest" gives one year only. Use "*" for EVERY year Nomis holds.
-# Verified against the live time codelists:
+# date: LEAVE IT OUT to get every period. Nomis treats an omitted dimension as
+# "all values"; "*" is NOT valid for date and makes the server return HTTP 200
+# with an empty body — no error message. (Confirmed by --nomis-probe: every
+# filter validates with date=latest, and only date="*" empties the response.)
+#
+# This code fetches year by year using an explicit list from the time codelist,
+# which is more robust than omitting the parameter: each request stays small,
+# a bad year fails alone instead of killing the whole pull, and you can see
+# progress. Verified period counts:
 #   NM_99_1 (workplace) 1997-2025 = 29 periods
 #   NM_30_1 (resident)  2002-2025 = 24 periods
-# Other accepted forms: "latestMINUS5", "2015-2025", "2019,2020,2021".
+# Other valid forms: "latest", "latestMINUS5", "2019,2020,2021".
+NOMIS_YEARS_PER_REQUEST = 5
+
 NOMIS_PARAMS = {
     "geography": "TYPE480",
-    "date": "*",
     "sex": "8",
     "item": "2",
     "pay": "1",
@@ -207,7 +215,6 @@ GEOG_COUNT_ESTIMATE = {"TYPE480": 380, "TYPE499": 12, "TYPE460": 220}
 # NOMIS_UID key, and expect ~25 pages.
 NOMIS_PARAMS_DETAIL = {
     "geography": "TYPE480",
-    "date": "*",
     "sex": "5,6,8",
     "item": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
     "pay": "1,2,3,4,5,6,7",
@@ -231,6 +238,51 @@ def fetch_nomis_dates(dataset: str) -> pd.DataFrame:
         out.append({"dataset": dataset, "date": c.get("value"),
                     "description": (c.get("description") or {}).get("value")})
     return pd.DataFrame(out)
+
+
+def fetch_nomis_all_years(dataset: str, rows: int, detail: bool = False) -> pd.DataFrame:
+    """Every year Nomis holds, fetched in small explicit batches.
+
+    Reads the time codelist, then requests years in groups of
+    NOMIS_YEARS_PER_REQUEST. Batching rather than one big request means a single
+    unavailable year degrades that batch only, and each response stays well
+    under the row cap.
+    """
+    dates = fetch_nomis_dates(dataset)
+    if dates.empty:
+        print("      no time codelist — falling back to date=latest")
+        return fetch_nomis(dataset, rows, date="latest", detail=detail)
+
+    years = [str(y) for y in dates["date"].tolist()]
+    print(f"      {len(years)} periods: {years[0]}..{years[-1]}")
+
+    frames, failures = [], []
+    for i in range(0, len(years), NOMIS_YEARS_PER_REQUEST):
+        batch = years[i:i + NOMIS_YEARS_PER_REQUEST]
+        remaining = rows - sum(len(f) for f in frames)
+        if remaining <= 0:
+            print(f"      stopping at --rows {rows:,}; "
+                  f"{len(years) - i} periods not fetched")
+            break
+        try:
+            part = fetch_nomis(dataset, remaining, date=",".join(batch), detail=detail)
+            if not part.empty:
+                frames.append(part)
+                print(f"      {batch[0]}-{batch[-1]}: {len(part):,} rows")
+            else:
+                failures.append((batch, "empty"))
+        except Exception as e:
+            failures.append((batch, f"{type(e).__name__}: {str(e)[:60]}"))
+            print(f"      {batch[0]}-{batch[-1]}: FAILED {type(e).__name__}",
+                  file=sys.stderr)
+        time.sleep(PAUSE)
+
+    if failures:
+        print(f"      {len(failures)} batch(es) failed: "
+              f"{[b[0][0] + '-' + b[0][-1] for b in failures]}", file=sys.stderr)
+    if not frames:
+        return pd.DataFrame()
+    return pd.concat(frames, ignore_index=True).head(rows)
 
 
 def fetch_nomis(dataset: str, rows: int, date: str | None = None,
@@ -364,10 +416,20 @@ def nomis_probe(dataset: str):
             return
 
     full = dict(base, **{k: v for k, v in NOMIS_PARAMS.items() if k != "date"})
-    if try_params("all filters together", full):
-        print("\n  All filters valid individually and together — the original "
-              "failure was probably date='*' plus these filters. Try "
-              "date='latest' first, then widen.")
+    try_params("all filters together", full)
+
+    # The filters were never the problem in practice — the date form was.
+    print("\n  date forms:")
+    for label, value in (("date=latest", "latest"), ("date=* (all)", "*"),
+                         ("date omitted", None), ("date=2024,2025", "2024,2025")):
+        trial = dict(full)
+        if value is None:
+            trial.pop("date", None)
+        else:
+            trial["date"] = value
+        try_params(f"  {label}", trial)
+    print("\n  Use whichever returned rows. This code batches explicit years, "
+          "which works regardless of whether '*' is supported.")
 
 
 def source_nomis(rows: int):
@@ -402,7 +464,7 @@ def source_nomis(rows: int):
             if rows < est:
                 print(f"    WARNING: --rows {rows:,} will cut this short. "
                       f"Use --rows {est * 2:,} to be safe.")
-            df = fetch_nomis(ds, rows, detail=NOMIS_DETAIL)
+            df = fetch_nomis_all_years(ds, rows, detail=NOMIS_DETAIL)
             written.append((_write(df, f"nomis_{name}"), len(df),
                             f"ASHE {name.replace('_', ' ')} ({ds}), all years"))
         except Exception as e:
@@ -410,9 +472,186 @@ def source_nomis(rows: int):
         time.sleep(PAUSE)
     return written
 
+
+# --------------------------------------------------------------------------- #
+# 3. HM Land Registry Price Paid — transaction-level house prices.  No key.
+# --------------------------------------------------------------------------- #
+
+LR_ENDPOINT = "https://landregistry.data.gov.uk/landregistry/query"
+
+LR_QUERY = """
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX lrppi: <http://landregistry.data.gov.uk/def/ppi/>
+PREFIX lrcommon: <http://landregistry.data.gov.uk/def/common/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?paon ?street ?town ?county ?postcode ?amount ?date ?category
+WHERE {
+  ?transx lrppi:pricePaid ?amount ;
+          lrppi:transactionDate ?date ;
+          lrppi:propertyAddress ?addr ;
+          lrppi:transactionCategory/skos:prefLabel ?category .
+  ?addr lrcommon:postcode ?postcode ;
+        lrcommon:town ?town .
+  OPTIONAL { ?addr lrcommon:county ?county }
+  OPTIONAL { ?addr lrcommon:paon ?paon }
+  OPTIONAL { ?addr lrcommon:street ?street }
+  FILTER (?date > "%(since)s"^^xsd:date)
+}
+ORDER BY DESC(?date)
+LIMIT %(limit)d
+"""
+
+
+def source_land_registry(rows: int):
+    """Recent residential sales. Transaction-level, not person-level."""
+    q = LR_QUERY % {"since": "2025-01-01", "limit": min(rows, 10_000)}
+    r = requests.get(
+        LR_ENDPOINT,
+        params={"query": q},
+        headers={"Accept": "text/csv", "User-Agent": UA},
+        timeout=TIMEOUT,
+    )
+    r.raise_for_status()
+    df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+    return [(_write(df, "land_registry_price_paid"), len(df),
+             "Residential sales, England & Wales, transaction-level")]
+
+
+# --------------------------------------------------------------------------- #
+# 4. Adzuna — job adverts with salary and location.  Free key.
+# --------------------------------------------------------------------------- #
+
+ADZUNA_BASE = "https://api.adzuna.com/v1/api/jobs/gb"
+
+
+def source_adzuna(rows: int):
+    app_id = os.environ.get("ADZUNA_APP_ID")
+    app_key = os.environ.get("ADZUNA_APP_KEY")
+    if not (app_id and app_key):
+        raise Skip("set ADZUNA_APP_ID and ADZUNA_APP_KEY (free, instant, "
+                   "developer.adzuna.com)")
+
+    auth = {"app_id": app_id, "app_key": app_key}
+    per_page, page, records = 50, 1, []
+
+    while len(records) < rows and page <= 20:
+        r = _get(f"{ADZUNA_BASE}/search/{page}",
+                 params={**auth, "results_per_page": per_page,
+                         "content-type": "application/json"}).json()
+        results = r.get("results", [])
+        if not results:
+            break
+        for j in results:
+            loc = j.get("location") or {}
+            records.append({
+                "id": j.get("id"),
+                "title": j.get("title"),
+                "company": (j.get("company") or {}).get("display_name"),
+                "category": (j.get("category") or {}).get("label"),
+                "location": loc.get("display_name"),
+                "location_area": "|".join(loc.get("area") or []),
+                "latitude": j.get("latitude"),
+                "longitude": j.get("longitude"),
+                "salary_min": j.get("salary_min"),
+                "salary_max": j.get("salary_max"),
+                # Adzuna predicts a salary when the advert omits one. Filter on
+                # this before computing any average or you are averaging their
+                # model's output, not advertised pay.
+                "salary_is_predicted": j.get("salary_is_predicted"),
+                "contract_type": j.get("contract_type"),
+                "contract_time": j.get("contract_time"),
+                "created": j.get("created"),
+            })
+        page += 1
+        time.sleep(PAUSE)
+
+    written = [(_write(pd.DataFrame(records[:rows]), "adzuna_jobs"),
+                len(records[:rows]), "UK job adverts: salary, location, employer")]
+
+    time.sleep(PAUSE)
+    h = _get(f"{ADZUNA_BASE}/histogram", params={**auth, "what": ""}).json()
+    hist = pd.DataFrame(sorted((h.get("histogram") or {}).items()),
+                        columns=["salary_band_floor", "advert_count"])
+    written.append((_write(hist, "adzuna_salary_histogram"), len(hist),
+                    "Distribution of advertised salaries"))
+    return written
+
+
+# --------------------------------------------------------------------------- #
+# 5. Reed — job adverts with salary and location.  Free key.
+# --------------------------------------------------------------------------- #
+
+REED_BASE = "https://www.reed.co.uk/api/1.0/search"
+
+
+def source_reed(rows: int):
+    key = os.environ.get("REED_API_KEY")
+    if not key:
+        raise Skip("set REED_API_KEY (free, instant, reed.co.uk/developers)")
+
+    records, skip, take = [], 0, 100
+    while len(records) < rows and skip < 1000:
+        r = requests.get(REED_BASE, params={"resultsToTake": take, "resultsToSkip": skip},
+                         auth=(key, ""), headers={"User-Agent": UA}, timeout=TIMEOUT)
+        r.raise_for_status()
+        results = r.json().get("results", [])
+        if not results:
+            break
+        records.extend(results)
+        skip += take
+        time.sleep(PAUSE)
+
+    df = pd.DataFrame(records[:rows])
+    return [(_write(df, "reed_jobs"), len(df),
+             "UK job adverts: salary range, location, employer")]
+
+
+# --------------------------------------------------------------------------- #
+# 6. DWP Stat-Xplore — benefits and pensioner income.  Free key.
+# --------------------------------------------------------------------------- #
+
+STATX_BASE = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
+
+
+def source_statxplore(rows: int):
+    key = os.environ.get("STATXPLORE_KEY")
+    if not key:
+        raise Skip("set STATXPLORE_KEY (free, instant, Stat-Xplore account page)")
+
+    headers = {"APIKey": key, "User-Agent": UA}
+    schema = requests.get(f"{STATX_BASE}/schema", headers=headers,
+                          timeout=TIMEOUT)
+    schema.raise_for_status()
+
+    # The schema listing only, not a table query: /table needs dataset-specific
+    # measure and field ids, and guessing them produces confident nonsense.
+    # Browse this CSV, pick an id, then build your query from its /schema/{id}.
+    items = schema.json().get("children", [])
+    df = pd.DataFrame([{"id": i.get("id"), "label": i.get("label"),
+                        "type": i.get("type")} for i in items])
+
+    rate = requests.get(f"{STATX_BASE}/rate_limit", headers=headers, timeout=TIMEOUT)
+    if rate.ok:
+        print(f"    rate limit: {rate.json()}", file=sys.stderr)
+
+    return [(_write(df, "statxplore_schema"), len(df),
+             "Stat-Xplore dataset index — pick an id, then query /table")]
+
+
+# --------------------------------------------------------------------------- #
+# Registry
+# --------------------------------------------------------------------------- #
+
 SOURCES = {
     "ons": (source_ons, "ONS API — CPIH inflation, private rents", "no key"),
     "nomis": (source_nomis, "Nomis — ASHE earnings by area/workplace", "optional key"),
+    "landregistry": (source_land_registry, "HM Land Registry — house prices", "no key"),
+    "adzuna": (source_adzuna, "Adzuna — job adverts, salary + location", "free key"),
+    "reed": (source_reed, "Reed — job adverts, salary + location", "free key"),
+    "statxplore": (source_statxplore, "DWP Stat-Xplore — benefits/income", "free key"),
 }
 
 
