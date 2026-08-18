@@ -349,9 +349,6 @@ SOURCES = {
     "ons": (source_ons, "ONS API — CPIH inflation, private rents", "no key"),
     "nomis": (source_nomis, "Nomis — ASHE earnings by area/workplace", "optional key"),
     "landregistry": (source_land_registry, "HM Land Registry — house prices", "no key"),
-    "adzuna": (source_adzuna, "Adzuna — job adverts, salary + location", "free key"),
-    "reed": (source_reed, "Reed — job adverts, salary + location", "free key"),
-    "statxplore": (source_statxplore, "DWP Stat-Xplore — benefits/income", "free key"),
 }
 
 def main():
