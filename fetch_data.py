@@ -175,30 +175,79 @@ NOMIS_ASHE = {
 
 # geography TYPE480 = local authorities (districts, unitary, boroughs)
 # sex=8 all, item=2 median, pay=1 gross weekly, measures=20100 value + 20701 CV
+#
+# date: "latest" gives one year only. Use "*" for EVERY year Nomis holds —
+# ASHE workplace (NM_99_1) runs from 1998, resident (NM_30_1) from 2002.
+# Other accepted forms: "latestMINUS5", "2015-2025", "2019,2020,2021".
 NOMIS_PARAMS = {
     "geography": "TYPE480",
-    "date": "first,latest",
+    "date": "*",
     "sex": "8",
     "item": "2",
     "pay": "1",
     "measures": "20100,20701",
 }
 
+# Row caps per call: ~25,000 as a guest, ~100,000 with a free uid key. Asking
+# for every year x every local authority exceeds the guest cap, so paginate.
+NOMIS_PAGE = 24_000
 
-def fetch_nomis(dataset: str) -> pd.DataFrame:
+
+def fetch_nomis_dates(dataset: str) -> pd.DataFrame:
+    """Every time period the dataset holds.
+
+    Call this before a big pull so you know what "*" is about to return, and so
+    you can slice it into year ranges if the full series is too large.
+    """
+    r = _get(f"{NOMIS_BASE}/{dataset}/time.def.sdmx.json").json()
+    out = []
+    try:
+        codes = r["structure"]["codelists"]["codelist"][0]["code"]
+    except (KeyError, IndexError, TypeError):
+        return pd.DataFrame()
+    for c in codes:
+        out.append({"dataset": dataset, "date": c.get("value"),
+                    "description": (c.get("description") or {}).get("value")})
+    return pd.DataFrame(out)
+
+
+def fetch_nomis(dataset: str, rows: int, date: str | None = None) -> pd.DataFrame:
+    """Fetch a Nomis dataset, paginating until the server stops returning rows.
+
+    Nomis truncates silently at the row cap — you get a valid CSV that is simply
+    incomplete, with no error and no warning. Paginating with RecordOffset is
+    the only way to know you have everything.
+    """
     params = dict(NOMIS_PARAMS)
+    if date:
+        params["date"] = date
     uid = os.environ.get("NOMIS_UID")
     if uid:
         params["uid"] = uid
 
-    url = f"{NOMIS_BASE}/{dataset}.data.csv"
+    page_size = min(NOMIS_PAGE if not uid else 95_000, rows)
+    frames, offset = [], 0
 
-    r = _get(url, params=params)
+    while offset < rows:
+        params["RecordLimit"] = min(page_size, rows - offset)
+        params["RecordOffset"] = offset
+        r = _get(f"{NOMIS_BASE}/{dataset}.data.csv", params=params)
+        chunk = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+        if chunk.empty:
+            break
+        frames.append(chunk)
+        got = len(chunk)
+        print(f"      offset {offset:,} -> {got:,} rows")
+        if got < params["RecordLimit"]:
+            break                      # short page = last page
+        offset += got
+        time.sleep(PAUSE)
 
-    df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+    if not frames:
+        return pd.DataFrame()
+    df = pd.concat(frames, ignore_index=True)
     df.insert(0, "nomis_dataset", dataset)
-
-    return df
+    return df.head(rows)
 
 
 def fetch_nomis_structure(dataset: str) -> pd.DataFrame:
@@ -231,6 +280,12 @@ def source_nomis(rows: int):
               "(free key raises this to ~100,000)", file=sys.stderr)
     for name, ds in NOMIS_ASHE.items():
         try:
+            dates = fetch_nomis_dates(ds)
+            if not dates.empty:
+                written.append((_write(dates, f"nomis_{name}_dates"), len(dates),
+                                f"Every time period available in {ds}"))
+                print(f"    {ds}: {len(dates)} periods "
+                      f"({dates['date'].iloc[0]}..{dates['date'].iloc[-1]})")
             df = fetch_nomis(ds, rows)
             written.append((_write(df, f"nomis_{name}"), len(df),
                             f"ASHE {name.replace('_', ' ')} ({ds}), latest year"))
@@ -244,127 +299,60 @@ def source_nomis(rows: int):
         time.sleep(PAUSE)
     return written
 
+
 # --------------------------------------------------------------------------- #
-# 6. DWP Stat-Xplore — benefits and pensioner income.  Free key.
+# 3. HM Land Registry Price Paid — transaction-level house prices.  No key.
 # --------------------------------------------------------------------------- #
 
-STATX_BASE = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1"
+LR_ENDPOINT = "https://landregistry.data.gov.uk/landregistry/query"
 
-DATABASES = {
-    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
-    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
+LR_QUERY = """
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX lrppi: <http://landregistry.data.gov.uk/def/ppi/>
+PREFIX lrcommon: <http://landregistry.data.gov.uk/def/common/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
 
-    "FRS_ADULT": "str:database:FRSAD",
-    "FRS_CHILD": "str:database:FRSCH",
-    "FRS_FAMILY": "str:database:FRSBU",
-    "FRS_HOUSEHOLD": "str:database:FRSHH",
-    "FRS_INDIVIDUAL": "str:database:FRSPP",
-
-    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
-    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
-
-    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
-    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
-
-    "HOUSING_BENEFIT": "str:database:hb_new",
+SELECT ?paon ?street ?town ?county ?postcode ?amount ?date ?category
+WHERE {
+  ?transx lrppi:pricePaid ?amount ;
+          lrppi:transactionDate ?date ;
+          lrppi:propertyAddress ?addr ;
+          lrppi:transactionCategory/skos:prefLabel ?category .
+  ?addr lrcommon:postcode ?postcode ;
+        lrcommon:town ?town .
+  OPTIONAL { ?addr lrcommon:county ?county }
+  OPTIONAL { ?addr lrcommon:paon ?paon }
+  OPTIONAL { ?addr lrcommon:street ?street }
+  FILTER (?date > "%(since)s"^^xsd:date)
 }
-
-API_KEY = os.environ.get("STATXPLORE_KEY")
-
-if not API_KEY:
-    raise ValueError("STATXPLORE_KEY is not set")
-
-HEADERS = {
-    "APIKey": API_KEY,
-    "User-Agent": "uk-cost-of-living-research/1.0"
-}
+ORDER BY DESC(?date)
+LIMIT %(limit)d
+"""
 
 
-DATABASES = {
-    "HBAI_ADMIN": "str:database:HBAI_ADMIN",
-    "HBAI_SURVEY": "str:database:HBAI_SURVEY",
-
-    "FRS_ADULT": "str:database:FRSAD",
-    "FRS_CHILD": "str:database:FRSCH",
-    "FRS_FAMILY": "str:database:FRSBU",
-    "FRS_HOUSEHOLD": "str:database:FRSHH",
-    "FRS_INDIVIDUAL": "str:database:FRSPP",
-
-    "PENSIONERS_ADMIN": "str:database:PI_ADMIN",
-    "PENSIONERS_SURVEY": "str:database:PI_SURVEY",
-
-    "UNIVERSAL_CREDIT_HOUSEHOLDS": "str:database:UC_Households",
-    "UNIVERSAL_CREDIT_PEOPLE": "str:database:UC_Monthly",
-
-    "HOUSING_BENEFIT": "str:database:hb_new",
-}
-
-
-def get_schema(database_id):
-
-    url = f"{STATX_BASE}/schema/{database_id}"
-
-    response = requests.get(
-        url,
-        headers=HEADERS,
-        timeout=60
+def source_land_registry(rows: int):
+    """Recent residential sales. Transaction-level, not person-level."""
+    q = LR_QUERY % {"since": "2025-01-01", "limit": min(rows, 10_000)}
+    r = requests.get(
+        LR_ENDPOINT,
+        params={"query": q},
+        headers={"Accept": "text/csv", "User-Agent": UA},
+        timeout=TIMEOUT,
     )
-
-    response.raise_for_status()
-
-    return response.json()
-
-
-# Get schemas for only the databases we care about
-for name, database_id in DATABASES.items():
-
-    print("\n" + "=" * 80)
-    print(name)
-    print(database_id)
-    print("=" * 80)
-
-    try:
-
-        schema = get_schema(database_id)
-
-        # Save raw schema
-        os.makedirs(
-            "data/statxplore_schemas",
-            exist_ok=True
-        )
-
-        with open(
-            f"data/statxplore_schemas/{name}.json",
-            "w",
-            encoding="utf-8"
-        ) as f:
-
-            json.dump(
-                schema,
-                f,
-                indent=2
-            )
-
-        # Print it
-        print(json.dumps(schema, indent=2))
-
-    except Exception as e:
-
-        print(
-            f"ERROR: {type(e).__name__}: {e}"
-        )
-
-
-# --------------------------------------------------------------------------- #
-# Registry
-# --------------------------------------------------------------------------- #
-
+    r.raise_for_status()
+    df = pd.read_csv(io.BytesIO(r.content), low_memory=False)
+    return [(_write(df, "land_registry_price_paid"), len(df),
+             "Residential sales, England & Wales, transaction-level")]
 SOURCES = {
     "ons": (source_ons, "ONS API — CPIH inflation, private rents", "no key"),
     "nomis": (source_nomis, "Nomis — ASHE earnings by area/workplace", "optional key"),
+    "landregistry": (source_land_registry, "HM Land Registry — house prices", "no key"),
+    "adzuna": (source_adzuna, "Adzuna — job adverts, salary + location", "free key"),
+    "reed": (source_reed, "Reed — job adverts, salary + location", "free key"),
     "statxplore": (source_statxplore, "DWP Stat-Xplore — benefits/income", "free key"),
 }
-
 
 def main():
     p = argparse.ArgumentParser(description=__doc__,
