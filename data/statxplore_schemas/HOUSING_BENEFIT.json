@@ -1,0 +1,157 @@
+{
+  "id": "str:database:hb_new",
+  "label": "Housing Benefit - Data from April 2018",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:hb_new",
+  "type": "DATABASE",
+  "lastModified": 1787060142865,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:hb_new:V_F_HB_NEW",
+      "label": "Housing Benefit Claimants",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:hb_new:V_F_HB_NEW",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ]
+    },
+    {
+      "id": "str:measure:hb_new:V_F_HB_NEW:LAHBAMT",
+      "label": "Weekly Award Amount",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:hb_new:V_F_HB_NEW:LAHBAMT",
+      "type": "MEASURE",
+      "functions": [
+        "MEAN"
+      ]
+    },
+    {
+      "id": "str:measure:hb_new:V_F_HB_NEW:REDUC_AMT",
+      "label": "Weekly Spare Room Reduction Amount",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:hb_new:V_F_HB_NEW:REDUC_AMT",
+      "type": "MEASURE",
+      "functions": [
+        "MEAN"
+      ]
+    },
+    {
+      "id": "str:field:hb_new:F_HB_NEW_DATE:NEW_DATE_NAME",
+      "label": "Month",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:F_HB_NEW_DATE:NEW_DATE_NAME",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:hb_new:X_Geography+%28admin-based%29",
+      "label": "Geography (admin-based)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:hb_new:X_Geography+%2528admin-based%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:hb_new:X_Geography+%28residence-based%29",
+      "label": "Geography (residence-based)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:hb_new:X_Geography+%2528residence-based%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:AGE_YEAR",
+      "label": "Age of Claimant (years and bands)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:AGE_YEAR",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:AGE_BAND",
+      "label": "Age of Claimant (bands only)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:AGE_BAND",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:PENWORK",
+      "label": "Client Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:PENWORK",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:FAMILY_PUB",
+      "label": "Family Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:FAMILY_PUB",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:NUM_DEPS",
+      "label": "Number of Child-Dependants",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:NUM_DEPS",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:NUM_NDEPS",
+      "label": "Number of Non-Dependants",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:NUM_NDEPS",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:SINGLE_GEN",
+      "label": "Gender (single claimants only)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:SINGLE_GEN",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:TENURE_PUB",
+      "label": "Private or Social Rented",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:TENURE_PUB",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:SECTOR_PUB",
+      "label": "Detailed Housing Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:SECTOR_PUB",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:LHAROOM",
+      "label": "Entitled Bedrooms (LHA only)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:LHAROOM",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:PASSPORTIND",
+      "label": "Passported Benefit Status",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:PASSPORTIND",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:EMP",
+      "label": "Employment Status",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:EMP",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:AMT_BAND_LOW",
+      "label": "Weekly Award Amount (bands)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:AMT_BAND_LOW",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:CCPAYDEST",
+      "label": "Pay Destination",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:CCPAYDEST",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:SHORTFALL",
+      "label": "Gap between HB and Rent",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:SHORTFALL",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:hb_new:V_F_HB_NEW:SATA",
+      "label": "Accommodation Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:hb_new:V_F_HB_NEW:SATA",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:hb_new:X_Removal+of+Spare+Room+Subsidy",
+      "label": "Removal of Spare Room Subsidy",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:hb_new:X_Removal+of+Spare+Room+Subsidy",
+      "type": "GROUP"
+    }
+  ]
+}

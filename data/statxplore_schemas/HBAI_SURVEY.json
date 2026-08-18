@@ -1,0 +1,393 @@
+{
+  "id": "str:database:HBAI_SURVEY",
+  "label": "HBAI - Data to 2021/22 (unlinked)",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:HBAI_SURVEY",
+  "type": "DATABASE",
+  "lastModified": 1787060128740,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:HBAI_SURVEY:V_F_HBAI_SURVEY",
+      "label": "Income Distribution - Whole Population",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:HBAI_SURVEY:V_F_HBAI_SURVEY",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011BHC",
+      "label": "Net 2010-11 Absolute Median Household Income (BHC) in latest prices (weekly, equivalised, SPI-adjusted in CPI-adjusted real terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011BHC",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011BHC_INYR",
+      "label": "Net 2010-11 Absolute Median Household Income (BHC) in year prices (weekly, equivalised, SPI-adjusted in nominal terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011BHC_INYR",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011AHC",
+      "label": "Net 2010-11 Absolute Median Household Income (AHC) in latest prices (weekly, equivalised, SPI-adjusted in CPI-adjusted real terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011AHC",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011AHC_INYR",
+      "label": "Net 2010-11 Absolute Median Household Income (AHC) in year prices (weekly, equivalised, SPI-adjusted in nominal terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:ABS1011AHC_INYR",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_BHC",
+      "label": "Net Household Income (BHC) in latest prices (weekly, equivalised, SPI-adjusted in CPI-adjusted real terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_BHC",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_BHC_INYR",
+      "label": "Net Household Income (BHC) in year prices (weekly, equivalised, SPI-adjusted in nominal terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_BHC_INYR",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_AHC",
+      "label": "Net Household Income (AHC) in latest prices (weekly, equivalised, SPI-adjusted in CPI-adjusted real terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_AHC",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_AHC_INYR",
+      "label": "Net Household Income (AHC) in year prices (weekly, equivalised, SPI-adjusted in nominal terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_AHC_INYR",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_HC",
+      "label": "Net Household Housing Costs in latest prices (weekly, equivalised, SPI-adjusted in CPI-adjusted real terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_HC",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_HC_INYR",
+      "label": "Net Household Housing Costs in year prices (weekly, equivalised, SPI-adjusted in nominal terms)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:S_OE_HC_INYR",
+      "type": "MEASURE",
+      "functions": [
+        "MEDIAN",
+        "MEAN"
+      ],
+      "weights": [
+        {
+          "id": "str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "label": "Weighted Sum of Income Distribution - Whole Population",
+          "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:HBAI_SURVEY:V_F_HBAI_SURVEY:GS_INDPP",
+          "type": "MEASURE"
+        }
+      ]
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:YEAR",
+      "label": "Financial Year",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:YEAR",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:AGEBAND_CHLOW",
+      "label": "Age-band of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:AGEBAND_CHLOW",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:TYPE_AGECAT",
+      "label": "Type of Individual by Age Category",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:TYPE_AGECAT",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:SEX",
+      "label": "Gender of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:SEX",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:DIS",
+      "label": "Disability Status of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:DIS",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:EDATTAIN",
+      "label": "Educational Attainment of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:EDATTAIN",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Net+Household+Income+Threshold+Before+Housing+Costs+%28BHC%29+for+the+Household+of+the+Individual%3A",
+      "label": "Net Household Income Threshold Before Housing Costs (BHC) for the Household of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Net+Household+Income+Threshold+Before+Housing+Costs+%2528BHC%2529+for+the+Household+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Net+Household+Income+Threshold+After+Housing+Costs+%28AHC%29+for+the+Household+of+the+Individual%3A",
+      "label": "Net Household Income Threshold After Housing Costs (AHC) for the Household of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Net+Household+Income+Threshold+After+Housing+Costs+%2528AHC%2529+for+the+Household+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Decile+and+Quintile+group+of+the+Household+of+the+Individual%3A",
+      "label": "Decile and Quintile group of the Household of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Decile+and+Quintile+group+of+the+Household+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Combined+Low+Income+Before+Housing+Costs+%28BHC%29+and+Child+Material+Deprivation+group+of+the+Individual%3A",
+      "label": "Combined Low Income Before Housing Costs (BHC) and Child Material Deprivation group of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Combined+Low+Income+Before+Housing+Costs+%2528BHC%2529+and+Child+Material+Deprivation+group+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Combined+Low+Income+After+Housing+Costs+%28AHC%29+and+Child+Material+Deprivation+group+of+the+Individual%3A",
+      "label": "Combined Low Income After Housing Costs (AHC) and Child Material Deprivation group of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Combined+Low+Income+After+Housing+Costs+%2528AHC%2529+and+Child+Material+Deprivation+group+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Combined+Low+Income+Before+Housing+Costs+%28BHC%29+and+Working-Age+Adult+Material+Deprivation+group+of+the+Individual%3A",
+      "label": "Combined Low Income Before Housing Costs (BHC) and Working-Age Adult Material Deprivation group of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Combined+Low+Income+Before+Housing+Costs+%2528BHC%2529+and+Working-Age+Adult+Material+Deprivation+group+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Combined+Low+Income+After+Housing+Costs+%28AHC%29+and+Working-Age+Adult+Material+Deprivation+group+of+the+Individual%3A",
+      "label": "Combined Low Income After Housing Costs (AHC) and Working-Age Adult Material Deprivation group of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Combined+Low+Income+After+Housing+Costs+%2528AHC%2529+and+Working-Age+Adult+Material+Deprivation+group+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Material+Deprivation+group+of+the+Individual%3A",
+      "label": "Material Deprivation group of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Material+Deprivation+group+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_State+Support+received+by+the+Family+of+the+Individual%3A",
+      "label": "State Support received by the Family of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_State+Support+received+by+the+Family+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:NEWFAMBU_UC",
+      "label": "Universal Credit (UC) Applicable Family for the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:NEWFAMBU_UC",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Disability+in+the+Family+of+the+Individual%3A",
+      "label": "Disability in the Family of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Disability+in+the+Family+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Economic+Status+categories+for+the+Individual%3A",
+      "label": "Economic Status categories for the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Economic+Status+categories+for+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:COUPLE",
+      "label": "Marital Status of Adults and Type of Couple in the Family of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:COUPLE",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:CAPITAL",
+      "label": "Savings and Investments of Adults in the Family of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:CAPITAL",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Occupational+Pensions+or+Personal+Pensions+or+both+received+by+the+Family+of+the+Individual%3A",
+      "label": "Occupational Pensions or Personal Pensions or both received by the Family of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Occupational+Pensions+or+Personal+Pensions+or+both+received+by+the+Family+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Family+Type+categories+for+the+Individual%3A",
+      "label": "Family Type categories for the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Family+Type+categories+for+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:NUMBKIDS",
+      "label": "Number of Children in the Family of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:NUMBKIDS",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:YOUNGCH",
+      "label": "Age of the Youngest Child in the Family of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:YOUNGCH",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Ethnicity+of+the+Head+of+the+Household+of+the+Individual%3A",
+      "label": "Ethnicity of the Head of the Household of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Ethnicity+of+the+Head+of+the+Household+of+the+Individual%253A",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:GVTREGN_LON",
+      "label": "Location in the United Kingdom of the Household of the Individual (please calculate three-year averages - click on i for the correct method)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:GVTREGN_LON",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:TENHBAI",
+      "label": "Tenure Type of the Household of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:TENHBAI",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:CTBAND",
+      "label": "Council Tax Band of the Household of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:CTBAND",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:HHSHARE",
+      "label": "Household Status (conventional or shared) of the Household of the Individual",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:HHSHARE",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:HFS_STATUS",
+      "label": "Household Food Security Status for the Household of the Individual (please exclude shared households from analysis - click on i for the correct method)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:HBAI_SURVEY:V_F_HBAI_SURVEY:HFS_STATUS",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:HBAI_SURVEY:X_Food+Banks+used+by+the+Household+of+the+Individual%3A",
+      "label": "Food Banks used by the Household of the Individual:",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:HBAI_SURVEY:X_Food+Banks+used+by+the+Household+of+the+Individual%253A",
+      "type": "GROUP"
+    }
+  ]
+}

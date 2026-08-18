@@ -1,0 +1,121 @@
+{
+  "id": "str:database:UC_Households",
+  "label": "Households on Universal Credit",
+  "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:database:UC_Households",
+  "type": "DATABASE",
+  "lastModified": 1787060140337,
+  "recordViewEnabled": false,
+  "children": [
+    {
+      "id": "str:count:UC_Households:V_F_UC_HOUSEHOLDS",
+      "label": "Households on Universal Credit",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:count:UC_Households:V_F_UC_HOUSEHOLDS",
+      "type": "COUNT",
+      "functions": [
+        "COUNT"
+      ]
+    },
+    {
+      "id": "str:measure:UC_Households:V_F_UC_HOUSEHOLDS:HNTOTAL_PAYMENT_AMOUNT",
+      "label": "Payment Amount",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:UC_Households:V_F_UC_HOUSEHOLDS:HNTOTAL_PAYMENT_AMOUNT",
+      "type": "MEASURE",
+      "functions": [
+        "MEAN"
+      ]
+    },
+    {
+      "id": "str:measure:UC_Households:V_F_UC_HOUSEHOLDS:rsrs_deduction",
+      "label": "RSRS reduction",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:measure:UC_Households:V_F_UC_HOUSEHOLDS:rsrs_deduction",
+      "type": "MEASURE",
+      "functions": [
+        "MEAN"
+      ]
+    },
+    {
+      "id": "str:field:UC_Households:F_UC_HH_DATE:DATE_NAME",
+      "label": "Month",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:UC_Households:F_UC_HH_DATE:DATE_NAME",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:UC_Households:X_Geography+%28residence-based%29",
+      "label": "Geography (residence-based)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Geography+%2528residence-based%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Geography+%28Jobcentre+Plus%29",
+      "label": "Geography (Jobcentre Plus)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Geography+%2528Jobcentre+Plus%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Geography+%28postcode%29",
+      "label": "Geography (postcode)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Geography+%2528postcode%2529",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:UC_Households:V_F_UC_HOUSEHOLDS:hnfamily_type",
+      "label": "Family Type",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:UC_Households:V_F_UC_HOUSEHOLDS:hnfamily_type",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:UC_Households:X_Children+in+Universal+Credit+Households",
+      "label": "Children in Universal Credit Households",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Children+in+Universal+Credit+Households",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:field:UC_Households:V_F_UC_HOUSEHOLDS:HCPAYMENT",
+      "label": "Payment Indicator",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:UC_Households:V_F_UC_HOUSEHOLDS:HCPAYMENT",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:field:UC_Households:V_F_UC_HOUSEHOLDS:hnpayment_band",
+      "label": "Monthly Award Amount (bands)",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:field:UC_Households:V_F_UC_HOUSEHOLDS:hnpayment_band",
+      "type": "FIELD"
+    },
+    {
+      "id": "str:group:UC_Households:X_Universal+Credit+Entitlement",
+      "label": "Universal Credit Entitlement",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Universal+Credit+Entitlement",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Alternative+Payment+Arrangements",
+      "label": "Alternative Payment Arrangements",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Alternative+Payment+Arrangements",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Universal+Credit+Scottish+Choices",
+      "label": "Universal Credit Scottish Choices",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Universal+Credit+Scottish+Choices",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Payment+Timeliness",
+      "label": "Payment Timeliness",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Payment+Timeliness",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Removal+of+spare+room+subsidy",
+      "label": "Removal of spare room subsidy",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Removal+of+spare+room+subsidy",
+      "type": "GROUP"
+    },
+    {
+      "id": "str:group:UC_Households:X_Local+Housing+Allowance",
+      "label": "Local Housing Allowance",
+      "location": "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/str:group:UC_Households:X_Local+Housing+Allowance",
+      "type": "GROUP"
+    }
+  ]
+}
