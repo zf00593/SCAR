@@ -1,0 +1,332 @@
+ons_geography,ons_geography_code,lookup_parent_geography,nomis_geography,mapped,mapping_type,mapping_source
+Adur,E07000223,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Allerdale,E07000026,Cumberland,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+Amber Valley,E07000032,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Arun,E07000224,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Ashfield,E07000170,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Ashford,E07000105,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Babergh,E07000200,Suffolk,Suffolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Barking and Dagenham,E09000002,,Barking and Dagenham,True,direct_name_match,dataset_name_overlap
+Barnet,E09000003,,Barnet,True,direct_name_match,dataset_name_overlap
+Barnsley,E08000016,,Barnsley,True,direct_name_match,dataset_name_overlap
+Barrow-in-Furness,E07000027,Westmorland and Furness,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+Basildon,E07000066,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Basingstoke and Deane,E07000084,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bassetlaw,E07000171,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bath and North East Somerset,E06000022,,Bath and North East Somerset,True,direct_name_match,dataset_name_overlap
+Bedford,E06000055,,Bedfordshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bexley,E09000004,,Bexley,True,direct_name_match,dataset_name_overlap
+Birmingham,E08000025,,Birmingham,True,direct_name_match,dataset_name_overlap
+Blaby,E07000129,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Blackburn with Darwen,E06000008,,Blackburn with Darwen,True,direct_name_match,dataset_name_overlap
+Blackpool,E06000009,,Blackpool,True,direct_name_match,dataset_name_overlap
+Blaenau Gwent,W06000019,,Blaenau Gwent,True,direct_name_match,dataset_name_overlap
+Bolsover,E07000033,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bolton,E08000001,,Bolton,True,direct_name_match,dataset_name_overlap
+Boston,E07000136,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+"Bournemouth, Christchurch and Poole",E06000058,,Bournemouth|Poole,True,manual_one_to_many,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bracknell Forest,E06000036,,Bracknell Forest,True,direct_name_match,dataset_name_overlap
+Bradford,E08000032,,Bradford,True,direct_name_match,dataset_name_overlap
+Braintree,E07000067,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Breckland,E07000143,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Brent,E09000005,,Brent,True,direct_name_match,dataset_name_overlap
+Brentwood,E07000068,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bridgend,W06000013,,Bridgend,True,direct_name_match,dataset_name_overlap
+Brighton and Hove,E06000043,,Brighton and Hove,True,direct_name_match,dataset_name_overlap
+"Bristol, City of",E06000023,,Bristol,True,direct_name_match,dataset_name_overlap
+Broadland,E07000144,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bromley,E09000006,,Bromley,True,direct_name_match,dataset_name_overlap
+Bromsgrove,E07000234,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Broxbourne,E07000095,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Broxtowe,E07000172,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Buckinghamshire,E06000060,,Buckinghamshire,True,direct_name_match,dataset_name_overlap
+Burnley,E07000117,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Bury,E08000002,,Bury,True,direct_name_match,dataset_name_overlap
+Caerphilly,W06000018,,Caerphilly,True,direct_name_match,dataset_name_overlap
+Calderdale,E08000033,,Calderdale,True,direct_name_match,dataset_name_overlap
+Cambridge,E07000008,Cambridgeshire,Cambridgeshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Camden,E09000007,,Camden,True,direct_name_match,dataset_name_overlap
+Cannock Chase,E07000192,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Canterbury,E07000106,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cardiff,W06000015,,Cardiff,True,direct_name_match,dataset_name_overlap
+Carlisle,E07000028,Cumberland,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+Carmarthenshire,W06000010,,Carmarthenshire,True,direct_name_match,dataset_name_overlap
+Castle Point,E07000069,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Central Bedfordshire,E06000056,,Bedfordshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Ceredigion,W06000008,,Ceredigion,True,direct_name_match,dataset_name_overlap
+Charnwood,E07000130,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Chelmsford,E07000070,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cheltenham,E07000078,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cherwell,E07000177,Oxfordshire,Oxfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cheshire East,E06000049,,Cheshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cheshire West and Chester,E06000050,,Cheshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Chesterfield,E07000034,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Chichester,E07000225,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Chorley,E07000118,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+City of London,E09000001,,City of London,True,direct_name_match,dataset_name_overlap
+Colchester,E07000071,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Conwy,W06000003,,Conwy,True,direct_name_match,dataset_name_overlap
+Copeland,E07000029,Cumberland,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+Cornwall,E06000052,,Cornwall and Isles of Scilly,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Cotswold,E07000079,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+County Durham,E06000047,,Durham,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Coventry,E08000026,,Coventry,True,direct_name_match,dataset_name_overlap
+Craven,E07000163,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Crawley,E07000226,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Croydon,E09000008,,Croydon,True,direct_name_match,dataset_name_overlap
+Dacorum,E07000096,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Darlington,E06000005,,Darlington,True,direct_name_match,dataset_name_overlap
+Dartford,E07000107,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Denbighshire,W06000004,,Denbighshire,True,direct_name_match,dataset_name_overlap
+Derby,E06000015,,Derby City,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Derbyshire Dales,E07000035,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Doncaster,E08000017,,Doncaster,True,direct_name_match,dataset_name_overlap
+Dorset,E06000059,,Dorset,True,direct_name_match,dataset_name_overlap
+Dover,E07000108,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Dudley,E08000027,,Dudley,True,direct_name_match,dataset_name_overlap
+Ealing,E09000009,,Ealing,True,direct_name_match,dataset_name_overlap
+East Cambridgeshire,E07000009,Cambridgeshire,Cambridgeshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Devon,E07000040,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Hampshire,E07000085,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Hertfordshire,E07000242,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Lindsey,E07000137,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Riding of Yorkshire,E06000011,,East Riding of Yorkshire,True,direct_name_match,dataset_name_overlap
+East Staffordshire,E07000193,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+East Suffolk,E07000244,Suffolk,Suffolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Eastbourne,E07000061,East Sussex,East Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Eastleigh,E07000086,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Eden,E07000030,Westmorland and Furness,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+Elmbridge,E07000207,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Enfield,E09000010,,Enfield,True,direct_name_match,dataset_name_overlap
+Epping Forest,E07000072,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Epsom and Ewell,E07000208,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Erewash,E07000036,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Exeter,E07000041,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Fareham,E07000087,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Fenland,E07000010,Cambridgeshire,Cambridgeshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Flintshire,W06000005,,Flintshire,True,direct_name_match,dataset_name_overlap
+Folkestone and Hythe,E07000112,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Forest of Dean,E07000080,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Fylde,E07000119,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Gateshead,E08000037,,Gateshead,True,direct_name_match,dataset_name_overlap
+Gedling,E07000173,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Gloucester,E07000081,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Gosport,E07000088,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Gravesham,E07000109,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Great Yarmouth,E07000145,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Greenwich,E09000011,,Greenwich,True,direct_name_match,dataset_name_overlap
+Guildford,E07000209,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Gwynedd,W06000002,,Gwynedd,True,direct_name_match,dataset_name_overlap
+Hackney,E09000012,,Hackney,True,direct_name_match,dataset_name_overlap
+Halton,E06000006,,Halton,True,direct_name_match,dataset_name_overlap
+Hambleton,E07000164,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Hammersmith and Fulham,E09000013,,Hammersmith and Fulham,True,direct_name_match,dataset_name_overlap
+Harborough,E07000131,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Haringey,E09000014,,Haringey,True,direct_name_match,dataset_name_overlap
+Harlow,E07000073,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Harrogate,E07000165,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Harrow,E09000015,,Harrow,True,direct_name_match,dataset_name_overlap
+Hart,E07000089,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Hartlepool,E06000001,,Hartlepool,True,direct_name_match,dataset_name_overlap
+Hastings,E07000062,East Sussex,East Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Havant,E07000090,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Havering,E09000016,,Havering,True,direct_name_match,dataset_name_overlap
+"Herefordshire, County of",E06000019,,"Herefordshire, County of",True,direct_name_match,dataset_name_overlap
+Hertsmere,E07000098,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+High Peak,E07000037,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Hillingdon,E09000017,,Hillingdon,True,direct_name_match,dataset_name_overlap
+Hinckley and Bosworth,E07000132,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Horsham,E07000227,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Hounslow,E09000018,,Hounslow,True,direct_name_match,dataset_name_overlap
+Huntingdonshire,E07000011,Cambridgeshire,Cambridgeshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Hyndburn,E07000120,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Ipswich,E07000202,Suffolk,Suffolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Isle of Anglesey,W06000001,,Anglesey,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Isle of Wight,E06000046,,Isle of Wight,True,direct_name_match,dataset_name_overlap
+Isles of Scilly,E06000053,,Cornwall and Isles of Scilly,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Islington,E09000019,,Islington,True,direct_name_match,dataset_name_overlap
+Kensington and Chelsea,E09000020,,Kensington and Chelsea,True,direct_name_match,dataset_name_overlap
+King's Lynn and West Norfolk,E07000146,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+"Kingston upon Hull, City of",E06000010,,Kingston upon Hull,True,direct_name_match,dataset_name_overlap
+Kingston upon Thames,E09000021,,Kingston-upon-Thames,True,direct_name_match,dataset_name_overlap
+Kirklees,E08000034,,Kirklees,True,direct_name_match,dataset_name_overlap
+Knowsley,E08000011,,Knowsley,True,direct_name_match,dataset_name_overlap
+Lambeth,E09000022,,Lambeth,True,direct_name_match,dataset_name_overlap
+Lancaster,E07000121,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Leeds,E08000035,,Leeds,True,direct_name_match,dataset_name_overlap
+Leicester,E06000016,,Leicester City,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Lewes,E07000063,East Sussex,East Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Lewisham,E09000023,,Lewisham,True,direct_name_match,dataset_name_overlap
+Lichfield,E07000194,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Lincoln,E07000138,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Liverpool,E08000012,,Liverpool,True,direct_name_match,dataset_name_overlap
+Luton,E06000032,,Luton,True,direct_name_match,dataset_name_overlap
+Maidstone,E07000110,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Maldon,E07000074,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Malvern Hills,E07000235,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Manchester,E08000003,,Manchester,True,direct_name_match,dataset_name_overlap
+Mansfield,E07000174,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Medway,E06000035,,Medway,True,direct_name_match,dataset_name_overlap
+Melton,E07000133,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Mendip,E07000187,Somerset,Somerset,True,official_lookup_parent_match,manual_successor_override
+Merthyr Tydfil,W06000024,,Merthyr Tydfil,True,direct_name_match,dataset_name_overlap
+Merton,E09000024,,Merton,True,direct_name_match,dataset_name_overlap
+Mid Devon,E07000042,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Mid Suffolk,E07000203,Suffolk,Suffolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Mid Sussex,E07000228,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Middlesbrough,E06000002,,Middlesbrough,True,direct_name_match,dataset_name_overlap
+Milton Keynes,E06000042,,Milton Keynes,True,direct_name_match,dataset_name_overlap
+Mole Valley,E07000210,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Monmouthshire,W06000021,,Monmouthshire,True,direct_name_match,dataset_name_overlap
+Neath Port Talbot,W06000012,,Neath Port Talbot,True,direct_name_match,dataset_name_overlap
+New Forest,E07000091,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Newark and Sherwood,E07000175,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Newcastle upon Tyne,E08000021,,Newcastle-upon-Tyne,True,direct_name_match,dataset_name_overlap
+Newcastle-under-Lyme,E07000195,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Newham,E09000025,,Newham,True,direct_name_match,dataset_name_overlap
+Newport,W06000022,,Newport,True,direct_name_match,dataset_name_overlap
+North Devon,E07000043,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North East Derbyshire,E07000038,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North East Lincolnshire,E06000012,,North East Lincolnshire,True,direct_name_match,dataset_name_overlap
+North Hertfordshire,E07000099,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North Kesteven,E07000139,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North Lincolnshire,E06000013,,North Lincolnshire,True,direct_name_match,dataset_name_overlap
+North Norfolk,E07000147,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North Northamptonshire,E06000061,,Northamptonshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North Somerset,E06000024,,North Somerset,True,direct_name_match,dataset_name_overlap
+North Tyneside,E08000022,,North Tyneside,True,direct_name_match,dataset_name_overlap
+North Warwickshire,E07000218,Warwickshire,Warwickshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+North West Leicestershire,E07000134,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Northumberland,E06000057,,Northumberland,True,direct_name_match,dataset_name_overlap
+Norwich,E07000148,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Nottingham,E06000018,,Nottingham City,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Nuneaton and Bedworth,E07000219,Warwickshire,Warwickshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Oadby and Wigston,E07000135,Leicestershire,Leicestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Oldham,E08000004,,Oldham,True,direct_name_match,dataset_name_overlap
+Oxford,E07000178,Oxfordshire,Oxfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Pembrokeshire,W06000009,,Pembrokeshire,True,direct_name_match,dataset_name_overlap
+Pendle,E07000122,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Peterborough,E06000031,,Peterborough,True,direct_name_match,dataset_name_overlap
+Plymouth,E06000026,,Plymouth,True,direct_name_match,dataset_name_overlap
+Portsmouth,E06000044,,Portsmouth,True,direct_name_match,dataset_name_overlap
+Powys,W06000023,,Powys,True,direct_name_match,dataset_name_overlap
+Preston,E07000123,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Reading,E06000038,,Reading,True,direct_name_match,dataset_name_overlap
+Redbridge,E09000026,,Redbridge,True,direct_name_match,dataset_name_overlap
+Redcar and Cleveland,E06000003,,Redcar and Cleveland,True,direct_name_match,dataset_name_overlap
+Redditch,E07000236,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Reigate and Banstead,E07000211,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rhondda Cynon Taf,W06000016,,"Rhondda, Cynon, Taff",True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Ribble Valley,E07000124,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Richmond upon Thames,E09000027,,Richmond-upon-Thames,True,direct_name_match,dataset_name_overlap
+Richmondshire,E07000166,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Rochdale,E08000005,,Rochdale,True,direct_name_match,dataset_name_overlap
+Rochford,E07000075,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rossendale,E07000125,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rother,E07000064,East Sussex,East Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rotherham,E08000018,,Rotherham,True,direct_name_match,dataset_name_overlap
+Rugby,E07000220,Warwickshire,Warwickshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Runnymede,E07000212,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rushcliffe,E07000176,Nottinghamshire,Nottinghamshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rushmoor,E07000092,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Rutland,E06000017,,Rutland,True,direct_name_match,dataset_name_overlap
+Ryedale,E07000167,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Salford,E08000006,,Salford,True,direct_name_match,dataset_name_overlap
+Sandwell,E08000028,,Sandwell,True,direct_name_match,dataset_name_overlap
+Scarborough,E07000168,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Sedgemoor,E07000188,Somerset,Somerset,True,official_lookup_parent_match,manual_successor_override
+Sefton,E08000014,,Sefton,True,direct_name_match,dataset_name_overlap
+Selby,E07000169,North Yorkshire,North Yorkshire,True,official_lookup_parent_match,manual_successor_override
+Sevenoaks,E07000111,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Sheffield,E08000019,,Sheffield,True,direct_name_match,dataset_name_overlap
+Shropshire,E06000051,,Shropshire,True,direct_name_match,dataset_name_overlap
+Slough,E06000039,,Slough,True,direct_name_match,dataset_name_overlap
+Solihull,E08000029,,Solihull,True,direct_name_match,dataset_name_overlap
+Somerset West and Taunton,E07000246,Somerset,Somerset,True,official_lookup_parent_match,manual_successor_override
+South Cambridgeshire,E07000012,Cambridgeshire,Cambridgeshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Derbyshire,E07000039,Derbyshire,Derbyshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Gloucestershire,E06000025,,South Gloucestershire,True,direct_name_match,dataset_name_overlap
+South Hams,E07000044,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Holland,E07000140,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Kesteven,E07000141,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Lakeland,E07000031,Westmorland and Furness,Cumbria,True,lookup_parent_manual_one_to_one,manual_successor_override
+South Norfolk,E07000149,Norfolk,Norfolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Oxfordshire,E07000179,Oxfordshire,Oxfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Ribble,E07000126,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Somerset,E07000189,Somerset,Somerset,True,official_lookup_parent_match,manual_successor_override
+South Staffordshire,E07000196,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+South Tyneside,E08000023,,South Tyneside,True,direct_name_match,dataset_name_overlap
+Southampton,E06000045,,Southampton,True,direct_name_match,dataset_name_overlap
+Southend-on-Sea,E06000033,,Southend-on-sea,True,direct_name_match,dataset_name_overlap
+Southwark,E09000028,,Southwark,True,direct_name_match,dataset_name_overlap
+Spelthorne,E07000213,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+St Albans,E07000240,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+St. Helens,E08000013,,St Helens,True,direct_name_match,dataset_name_overlap
+Stafford,E07000197,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Staffordshire Moorlands,E07000198,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Stevenage,E07000243,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Stockport,E08000007,,Stockport,True,direct_name_match,dataset_name_overlap
+Stockton-on-Tees,E06000004,,Stockton on Tees,True,direct_name_match,dataset_name_overlap
+Stoke-on-Trent,E06000021,,Stoke on Trent,True,direct_name_match,dataset_name_overlap
+Stratford-on-Avon,E07000221,Warwickshire,Warwickshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Stroud,E07000082,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Sunderland,E08000024,,Sunderland,True,direct_name_match,dataset_name_overlap
+Surrey Heath,E07000214,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Sutton,E09000029,,Sutton,True,direct_name_match,dataset_name_overlap
+Swale,E07000113,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Swansea,W06000011,,Swansea,True,direct_name_match,dataset_name_overlap
+Swindon,E06000030,,Swindon,True,direct_name_match,dataset_name_overlap
+Tameside,E08000008,,Tameside,True,direct_name_match,dataset_name_overlap
+Tamworth,E07000199,Staffordshire,Staffordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Tandridge,E07000215,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Teignbridge,E07000045,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Telford and Wrekin,E06000020,,Telford and Wrekin,True,direct_name_match,dataset_name_overlap
+Tendring,E07000076,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Test Valley,E07000093,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Tewkesbury,E07000083,Gloucestershire,Gloucestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Thanet,E07000114,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Three Rivers,E07000102,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Thurrock,E06000034,,Thurrock,True,direct_name_match,dataset_name_overlap
+Tonbridge and Malling,E07000115,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Torbay,E06000027,,Torbay,True,direct_name_match,dataset_name_overlap
+Torfaen,W06000020,,Torfaen,True,direct_name_match,dataset_name_overlap
+Torridge,E07000046,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Tower Hamlets,E09000030,,Tower Hamlets,True,direct_name_match,dataset_name_overlap
+Trafford,E08000009,,Trafford,True,direct_name_match,dataset_name_overlap
+Tunbridge Wells,E07000116,Kent,Kent,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Uttlesford,E07000077,Essex,Essex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Vale of Glamorgan,W06000014,,Vale of Glamorgan,True,direct_name_match,dataset_name_overlap
+Vale of White Horse,E07000180,Oxfordshire,Oxfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wakefield,E08000036,,Wakefield,True,direct_name_match,dataset_name_overlap
+Walsall,E08000030,,Walsall,True,direct_name_match,dataset_name_overlap
+Waltham Forest,E09000031,,Waltham Forest,True,direct_name_match,dataset_name_overlap
+Wandsworth,E09000032,,Wandsworth,True,direct_name_match,dataset_name_overlap
+Warrington,E06000007,,Warrington,True,direct_name_match,dataset_name_overlap
+Warwick,E07000222,Warwickshire,Warwickshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Watford,E07000103,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Waverley,E07000216,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wealden,E07000065,East Sussex,East Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Welwyn Hatfield,E07000241,Hertfordshire,Hertfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Berkshire,E06000037,,West Berkshire,True,direct_name_match,dataset_name_overlap
+West Devon,E07000047,Devon,Devon,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Lancashire,E07000127,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Lindsey,E07000142,Lincolnshire,Lincolnshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Northamptonshire,E06000062,,Northamptonshire,True,manual_one_to_one,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Oxfordshire,E07000181,Oxfordshire,Oxfordshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+West Suffolk,E07000245,Suffolk,Suffolk,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Westminster,E09000033,,"Westminster, City of",True,direct_name_match,dataset_name_overlap
+Wigan,E08000010,,Wigan,True,direct_name_match,dataset_name_overlap
+Wiltshire,E06000054,,Wiltshire,True,direct_name_match,dataset_name_overlap
+Winchester,E07000094,Hampshire,Hampshire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Windsor and Maidenhead,E06000040,,Windsor and Maidenhead,True,direct_name_match,dataset_name_overlap
+Wirral,E08000015,,Wirral,True,direct_name_match,dataset_name_overlap
+Woking,E07000217,Surrey,Surrey,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wokingham,E06000041,,Wokingham,True,direct_name_match,dataset_name_overlap
+Wolverhampton,E08000031,,Wolverhampton,True,direct_name_match,dataset_name_overlap
+Worcester,E07000237,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Worthing,E07000229,West Sussex,West Sussex,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wrexham,W06000006,,Wrexham,True,direct_name_match,dataset_name_overlap
+Wychavon,E07000238,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wyre,E07000128,Lancashire,Lancashire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+Wyre Forest,E07000239,Worcestershire,Worcestershire,True,official_lookup_parent_match,https://ckan.publishing.service.gov.uk/dataset/local-authority-district-to-county-and-unitary-authority-december-2024-lookup-in-ew
+York,E06000014,,York,True,direct_name_match,dataset_name_overlap
