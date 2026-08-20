@@ -448,4 +448,278 @@ def sex_mapping():
 
     print(f"\nSaved to: {output_file}")
     
-sex_mapping()
+#sex_mapping()
+
+
+
+
+def nomis_ashe_workplace_region_mapping():
+
+    # ============================================================
+    # FILES
+    # ============================================================
+
+    data_file = "data\\nomis_ashe_resident_cities.csv"
+    lookup_file = "data\\LA_region_lookup.xlsx"
+    output_file = "data\\nomis_ashe_resident_cities.csv"
+
+
+    # ============================================================
+    # 1. LOAD NOMIS ASHE WORKPLACE DATA
+    # ============================================================
+
+    df = pd.read_csv(data_file)
+
+    print("Main data columns:")
+    print(df.columns.tolist())
+
+
+    # ============================================================
+    # 2. LOAD ONS LA -> REGION LOOKUP
+    #
+    # We deliberately load without headers because the ONS file
+    # has several rows above the actual lookup table.
+    # ============================================================
+
+    lookup_raw = pd.read_excel(
+        lookup_file,
+        header=None
+    )
+
+
+    # ============================================================
+    # 3. FIND THE HEADER ROW
+    #
+    # Look for the row containing "LA code".
+    # ============================================================
+
+    header_row = None
+
+    for i in range(len(lookup_raw)):
+
+        row = (
+            lookup_raw.iloc[i]
+            .astype(str)
+            .str.strip()
+            .tolist()
+        )
+
+        if "LA code" in row:
+            header_row = i
+            break
+
+
+    if header_row is None:
+        raise ValueError(
+            "Could not find the 'LA code' row in the lookup file."
+        )
+
+    print(f"\nLookup header found on row {header_row}")
+
+
+    # ============================================================
+    # 4. EXTRACT THE ACTUAL LOOKUP TABLE
+    #
+    # Based on the ONS lookup:
+    #
+    # Column 0 = LA code
+    # Column 1 = LA name
+    # Column 2 = Region code
+    # Column 3 = Region name
+    # ============================================================
+
+    lookup = lookup_raw.iloc[header_row + 1:].copy()
+
+    lookup = lookup.iloc[:, [0, 2, 3]]
+
+    lookup.columns = [
+        "GEOGRAPHY_CODE",
+        "GEOGRAPHY_CODE_REGION_CODE",
+        "GEOGRAPHY_CODE_REGION"
+    ]
+
+
+    # ============================================================
+    # 5. CLEAN THE CODES
+    # ============================================================
+
+    df["GEOGRAPHY_CODE"] = (
+        df["GEOGRAPHY_CODE"]
+        .astype(str)
+        .str.strip()
+    )
+
+    lookup["GEOGRAPHY_CODE"] = (
+        lookup["GEOGRAPHY_CODE"]
+        .astype(str)
+        .str.strip()
+    )
+
+    lookup["GEOGRAPHY_CODE_REGION_CODE"] = (
+        lookup["GEOGRAPHY_CODE_REGION_CODE"]
+        .astype(str)
+        .str.strip()
+    )
+
+    lookup["GEOGRAPHY_CODE_REGION"] = (
+        lookup["GEOGRAPHY_CODE_REGION"]
+        .astype(str)
+        .str.strip()
+    )
+
+
+    # ============================================================
+    # 6. REMOVE BLANK LOOKUP ROWS
+    # ============================================================
+
+    lookup = lookup[
+        lookup["GEOGRAPHY_CODE"].notna()
+    ]
+
+    lookup = lookup[
+        lookup["GEOGRAPHY_CODE"] != "nan"
+    ]
+
+    lookup = lookup[
+        lookup["GEOGRAPHY_CODE"] != ""
+    ]
+
+
+    # ============================================================
+    # 7. REMOVE DUPLICATE LA CODES
+    #
+    # Each local authority should map to one region.
+    # ============================================================
+
+    lookup = lookup.drop_duplicates(
+        subset=["GEOGRAPHY_CODE"]
+    )
+
+
+    # ============================================================
+    # 8. CHECK THE LOOKUP
+    # ============================================================
+
+    print("\nSample lookup:")
+
+    print(
+        lookup.head(20).to_string(index=False)
+    )
+
+
+    # ============================================================
+    # 9. MERGE REGION INFORMATION INTO NOMIS DATA
+    #
+    # IMPORTANT:
+    # We merge using the Nomis GEOGRAPHY_CODE.
+    #
+    # Example:
+    #
+    # E06000005 -> North East -> E12000001
+    # ============================================================
+
+    df = df.merge(
+        lookup[
+            [
+                "GEOGRAPHY_CODE",
+                "GEOGRAPHY_CODE_REGION",
+                "GEOGRAPHY_CODE_REGION_CODE"
+            ]
+        ],
+        on="GEOGRAPHY_CODE",
+        how="left",
+        validate="many_to_one"
+    )
+
+
+    # ============================================================
+    # 10. CHECK FOR UNMAPPED GEOGRAPHIES
+    # ============================================================
+
+    unmapped = (
+        df.loc[
+            df["GEOGRAPHY_CODE_REGION"].isna(),
+            [
+                "GEOGRAPHY_CODE",
+                "GEOGRAPHY_NAME"
+            ]
+        ]
+        .drop_duplicates()
+        .sort_values("GEOGRAPHY_CODE")
+    )
+
+
+    if not unmapped.empty:
+
+        print("\nWARNING - UNMAPPED GEOGRAPHIES:")
+
+        print(
+            unmapped.to_string(index=False)
+        )
+
+    else:
+
+        print(
+            "\nAll Nomis workplace geographies successfully mapped!"
+        )
+
+
+    # ============================================================
+    # 11. SHOW THE ACTUAL RESULT
+    # ============================================================
+
+    print("\nResult sample:")
+
+    print(
+        df[
+            [
+                "GEOGRAPHY_CODE",
+                "GEOGRAPHY_NAME",
+                "GEOGRAPHY_CODE_REGION",
+                "GEOGRAPHY_CODE_REGION_CODE"
+            ]
+        ]
+        .drop_duplicates()
+        .head(30)
+        .to_string(index=False)
+    )
+
+
+    # ============================================================
+    # 12. CHECK HOW MANY UNIQUE REGIONS WE HAVE
+    # ============================================================
+
+    print("\nRegions found:")
+
+    print(
+        df[
+            [
+                "GEOGRAPHY_CODE_REGION_CODE",
+                "GEOGRAPHY_CODE_REGION"
+            ]
+        ]
+        .drop_duplicates()
+        .sort_values("GEOGRAPHY_CODE_REGION_CODE")
+        .to_string(index=False)
+    )
+
+
+    # ============================================================
+    # 13. SAVE
+    # ============================================================
+
+    df.to_csv(
+        output_file,
+        index=False
+    )
+
+    print(
+        f"\nSaved to: {output_file}"
+    )
+
+
+# ================================================================
+# RUN
+# ================================================================
+
+nomis_ashe_workplace_region_mapping()
