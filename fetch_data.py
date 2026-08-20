@@ -191,7 +191,7 @@ NOMIS_ASHE = {
 NOMIS_YEARS_PER_REQUEST = 5
 
 NOMIS_PARAMS = {
-    "geography": "TYPE480",
+    "geography": "TYPE482",
     "sex": "8",
     "item": "2",
     "pay": "1",
@@ -208,13 +208,13 @@ NOMIS_DETAIL = False
 #   periods x geographies x sex x item x pay x measures
 # 29 x ~380 local authorities x 1 x 1 x 1 x 2 = ~22,000 rows for workplace.
 # Widening sex/item/pay multiplies that fast — see NOMIS_PARAMS_DETAIL below.
-GEOG_COUNT_ESTIMATE = {"TYPE480": 380, "TYPE499": 12, "TYPE460": 220}
+GEOG_COUNT_ESTIMATE = {"TYPE482": 300}
 
 # Wider pull: all sexes (5 male, 6 female, 8 total), all pay measures, all
 # items (mean/median/percentiles). Roughly 40x the rows — only worth it with a
 # NOMIS_UID key, and expect ~25 pages.
 NOMIS_PARAMS_DETAIL = {
-    "geography": "TYPE480",
+    "geography": "TYPE482",
     "sex": "5,6,8",
     "item": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
     "pay": "1,2,3,4,5,6,7",
