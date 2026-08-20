@@ -1,5 +1,8 @@
 source,file,rows,description,fetched_utc
-nomis,nomis_ashe_workplace_dates.csv,29,Every time period available in NM_99_1,2026-08-20T14:36:18.556237+00:00
-nomis,nomis_ashe_workplace.csv,3664,"ASHE ashe workplace (NM_99_1), all years",2026-08-20T14:36:18.556466+00:00
-nomis,nomis_ashe_resident_dates.csv,24,Every time period available in NM_30_1,2026-08-20T14:36:18.556812+00:00
-nomis,nomis_ashe_resident.csv,3664,"ASHE ashe resident (NM_30_1), all years",2026-08-20T14:36:18.556984+00:00
+ons,ons_data\ons_catalogue.csv,337,Index of every dataset on the ONS API,2026-08-20T15:17:29.183654+00:00
+ons,ons_data\ons_cpih01.csv,55754,"ONS cpih01, latest version",2026-08-20T15:17:29.183828+00:00
+ons,ons_data\ons_house_prices_local_authority.csv,794400,"ONS house-prices-local-authority, latest version",2026-08-20T15:17:29.183966+00:00
+nomis,nomis_data\nomis_ashe_workplace_dates.csv,29,Every time period available in NM_99_1,2026-08-20T15:17:50.350712+00:00
+nomis,nomis_data\nomis_ashe_workplace.csv,3664,"ASHE ashe workplace (NM_99_1), all years",2026-08-20T15:17:50.350891+00:00
+nomis,nomis_data\nomis_ashe_resident_dates.csv,24,Every time period available in NM_30_1,2026-08-20T15:17:50.351051+00:00
+nomis,nomis_data\nomis_ashe_resident.csv,3664,"ASHE ashe resident (NM_30_1), all years",2026-08-20T15:17:50.351214+00:00

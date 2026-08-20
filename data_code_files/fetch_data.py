@@ -57,6 +57,8 @@ import requests
 UA = "uk-cost-of-living-research/1.0 (+https://github.com/AmirH32)"
 TIMEOUT = 60
 OUT_DIR = "data"
+ONS_SUBDIR = "ons_data"
+NOMIS_SUBDIR = "nomis_data"
 
 # Per-source pause. These are free public services run on public money or
 # goodwill; hammering them is both rude and a good way to get blocked.
@@ -87,9 +89,10 @@ def _get(url, **kw):
     return r
 
 
-def _write(df: pd.DataFrame, name: str) -> str:
-    os.makedirs(OUT_DIR, exist_ok=True)
-    path = os.path.join(OUT_DIR, f"{name}.csv")
+def _write(df: pd.DataFrame, name: str, subdir: str | None = None) -> str:
+    base = os.path.join(OUT_DIR, subdir) if subdir else OUT_DIR
+    os.makedirs(base, exist_ok=True)
+    path = os.path.join(base, f"{name}.csv")
     df.to_csv(path, index=False)
     return path
 
@@ -158,13 +161,13 @@ def fetch_ons_dataset(dataset_id: str, rows: int) -> pd.DataFrame:
 def source_ons(rows: int):
     written = []
     df = fetch_ons_catalogue(rows=10_000)
-    written.append((_write(df, "ons_catalogue"), len(df),
+    written.append((_write(df, "ons_catalogue", subdir=ONS_SUBDIR), len(df),
                     "Index of every dataset on the ONS API"))
     for ds in ONS_DATASETS:
         time.sleep(PAUSE)
         try:
             d = fetch_ons_dataset(ds, rows)
-            written.append((_write(d, f"ons_{ds.replace('-', '_')}"), len(d),
+            written.append((_write(d, f"ons_{ds.replace('-', '_')}", subdir=ONS_SUBDIR), len(d),
                             f"ONS {ds}, latest version"))
         except Exception as e:
             print(f"    ! {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -273,16 +276,18 @@ def get_ons_common_years(out_dir: str) -> set[int] | None:
     if not os.path.isdir(out_dir):
         return None
 
-    candidates = []
-    for name in os.listdir(out_dir):
-        lower = name.lower()
-        if not lower.startswith("ons_") or not lower.endswith(".csv"):
-            continue
-        if "catalogue" in lower:
-            continue
-        candidates.append(os.path.join(out_dir, name))
+    candidates: list[str] = []
+    for root, _, files in os.walk(out_dir):
+        for name in files:
+            lower = name.lower()
+            if not lower.startswith("ons_") or not lower.endswith(".csv"):
+                continue
+            if "catalogue" in lower:
+                continue
+            candidates.append(os.path.join(root, name))
 
-    years_by_file: list[set[int]] = []
+    # Union years across split parts of the same dataset, then intersect datasets.
+    years_by_dataset: dict[str, set[int]] = {}
     for path in candidates:
         try:
             df = pd.read_csv(path, low_memory=False)
@@ -291,12 +296,15 @@ def get_ons_common_years(out_dir: str) -> set[int] | None:
         years = _extract_year_series_generic(df)
         if years is None or years.empty:
             continue
-        years_by_file.append(set(years.tolist()))
+        base = os.path.basename(path)
+        key = re.sub(r"\.part\d{3}\.csv$", "", base, flags=re.IGNORECASE)
+        key = re.sub(r"\.csv$", "", key, flags=re.IGNORECASE)
+        years_by_dataset.setdefault(key, set()).update(set(years.tolist()))
 
-    if len(years_by_file) < 2:
+    if len(years_by_dataset) < 2:
         return None
 
-    common = set.intersection(*years_by_file)
+    common = set.intersection(*years_by_dataset.values())
     if not common:
         return None
     return common
@@ -585,7 +593,7 @@ def source_nomis(rows: int):
         try:
             st = fetch_nomis_structure(ds)
             if not st.empty:
-                written.append((_write(st, f"nomis_{name}_codes"), len(st),
+                written.append((_write(st, f"nomis_{name}_codes", subdir=NOMIS_SUBDIR), len(st),
                                 f"Dimension code lookup for {ds}"))
         except Exception as e:
             print(f"    ! codes for {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -594,7 +602,7 @@ def source_nomis(rows: int):
         try:
             dates = fetch_nomis_dates(ds)
             if not dates.empty:
-                written.append((_write(dates, f"nomis_{name}_dates"), len(dates),
+                written.append((_write(dates, f"nomis_{name}_dates", subdir=NOMIS_SUBDIR), len(dates),
                                 f"Every time period available in {ds}"))
                 print(f"    {ds}: {len(dates)} periods "
                       f"({dates['date'].iloc[0]}..{dates['date'].iloc[-1]})")
@@ -614,7 +622,7 @@ def source_nomis(rows: int):
                 year_max=year_max,
                 allowed_years=allowed_years,
             )
-            written.append((_write(df, f"nomis_{name}"), len(df),
+            written.append((_write(df, f"nomis_{name}", subdir=NOMIS_SUBDIR), len(df),
                             f"ASHE {name.replace('_', ' ')} ({ds}), all years"))
         except Exception as e:
             print(f"    ! {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -689,11 +697,12 @@ class FetchDataPipeline:
         candidates = []
         for row in manifest_rows:
             file_name = row["file"]
+            base_name = os.path.basename(file_name)
             if file_name == "_manifest.csv":
                 continue
-            if any(k in file_name for k in ("catalogue", "_codes")):
+            if any(k in base_name for k in ("catalogue", "_codes")):
                 continue
-            if not file_name.endswith(".csv"):
+            if not base_name.endswith(".csv"):
                 continue
             candidates.append(os.path.join(self.out_dir, file_name))
 
@@ -758,7 +767,8 @@ class FetchDataPipeline:
         split_any = False
         for row in manifest_rows:
             file_name = row.get("file", "")
-            if file_name not in target_set or file_name in seen:
+            base_name = os.path.basename(file_name)
+            if (file_name not in target_set and base_name not in target_set) or file_name in seen:
                 continue
             seen.add(file_name)
 
@@ -808,7 +818,8 @@ class FetchDataPipeline:
             try:
                 for path, n, note in fn(fetch_rows):
                     print(f"    {path}  ({n:,} rows)")
-                    manifest.append({"source": name, "file": os.path.basename(path),
+                    manifest.append({"source": name,
+                                     "file": os.path.relpath(path, self.out_dir),
                                      "rows": n, "description": note,
                                      "fetched_utc": datetime.now(timezone.utc).isoformat()})
             except Skip as e:
