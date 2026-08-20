@@ -46,6 +46,7 @@ import argparse
 import io
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -56,6 +57,8 @@ import requests
 UA = "uk-cost-of-living-research/1.0 (+https://github.com/AmirH32)"
 TIMEOUT = 60
 OUT_DIR = "data"
+ONS_SUBDIR = "ons_data"
+NOMIS_SUBDIR = "nomis_data"
 
 # Per-source pause. These are free public services run on public money or
 # goodwill; hammering them is both rude and a good way to get blocked.
@@ -86,9 +89,10 @@ def _get(url, **kw):
     return r
 
 
-def _write(df: pd.DataFrame, name: str) -> str:
-    os.makedirs(OUT_DIR, exist_ok=True)
-    path = os.path.join(OUT_DIR, f"{name}.csv")
+def _write(df: pd.DataFrame, name: str, subdir: str | None = None) -> str:
+    base = os.path.join(OUT_DIR, subdir) if subdir else OUT_DIR
+    os.makedirs(base, exist_ok=True)
+    path = os.path.join(base, f"{name}.csv")
     df.to_csv(path, index=False)
     return path
 
@@ -157,13 +161,13 @@ def fetch_ons_dataset(dataset_id: str, rows: int) -> pd.DataFrame:
 def source_ons(rows: int):
     written = []
     df = fetch_ons_catalogue(rows=10_000)
-    written.append((_write(df, "ons_catalogue"), len(df),
+    written.append((_write(df, "ons_catalogue", subdir=ONS_SUBDIR), len(df),
                     "Index of every dataset on the ONS API"))
     for ds in ONS_DATASETS:
         time.sleep(PAUSE)
         try:
             d = fetch_ons_dataset(ds, rows)
-            written.append((_write(d, f"ons_{ds.replace('-', '_')}"), len(d),
+            written.append((_write(d, f"ons_{ds.replace('-', '_')}", subdir=ONS_SUBDIR), len(d),
                             f"ONS {ds}, latest version"))
         except Exception as e:
             print(f"    ! {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -214,6 +218,7 @@ NOMIS_PARAMS = {
 # for every year x every local authority exceeds the guest cap, so paginate.
 NOMIS_PAGE = 24_000
 NOMIS_DETAIL = False
+NOMIS_MATCH_ONS_RANGE = True
 
 # Rough row count for a full pull, so you can see before you fetch whether the
 # guest cap will force many pages:
@@ -234,6 +239,77 @@ NOMIS_PARAMS_DETAIL = {
 }
 
 
+def _extract_year_series_generic(df: pd.DataFrame) -> pd.Series | None:
+    """Extract year values from known time columns."""
+    if "DATE_NAME" in df.columns:
+        s = pd.to_numeric(df["DATE_NAME"], errors="coerce").dropna().astype(int)
+        return s if not s.empty else None
+    if "DATE" in df.columns:
+        s = pd.to_numeric(df["DATE"], errors="coerce").dropna().astype(int)
+        return s if not s.empty else None
+    if "Year" in df.columns:
+        s = pd.to_numeric(df["Year"], errors="coerce").dropna().astype(int)
+        return s if not s.empty else None
+    if "calendar-years" in df.columns:
+        s = pd.to_numeric(df["calendar-years"], errors="coerce").dropna().astype(int)
+        return s if not s.empty else None
+    if "Time" in df.columns:
+        t = df["Time"].astype(str).str.strip()
+        parsed = pd.to_datetime(t, format="%b-%y", errors="coerce")
+        if parsed.notna().any():
+            return parsed.dt.year.dropna().astype(int)
+        numeric = pd.to_numeric(t, errors="coerce").dropna().astype(int)
+        return numeric if not numeric.empty else None
+    return None
+
+
+def _nomis_period_year(value: str) -> int | None:
+    """Extract a 4-digit year from a Nomis period token, if present."""
+    m = re.search(r"(19|20)\d{2}", str(value))
+    if not m:
+        return None
+    return int(m.group(0))
+
+
+def get_ons_common_years(out_dir: str) -> set[int] | None:
+    """Find overlapping year values across fetched ONS time-series CSVs."""
+    if not os.path.isdir(out_dir):
+        return None
+
+    candidates: list[str] = []
+    for root, _, files in os.walk(out_dir):
+        for name in files:
+            lower = name.lower()
+            if not lower.startswith("ons_") or not lower.endswith(".csv"):
+                continue
+            if "catalogue" in lower:
+                continue
+            candidates.append(os.path.join(root, name))
+
+    # Union years across split parts of the same dataset, then intersect datasets.
+    years_by_dataset: dict[str, set[int]] = {}
+    for path in candidates:
+        try:
+            df = pd.read_csv(path, low_memory=False)
+        except Exception:
+            continue
+        years = _extract_year_series_generic(df)
+        if years is None or years.empty:
+            continue
+        base = os.path.basename(path)
+        key = re.sub(r"\.part\d{3}\.csv$", "", base, flags=re.IGNORECASE)
+        key = re.sub(r"\.csv$", "", key, flags=re.IGNORECASE)
+        years_by_dataset.setdefault(key, set()).update(set(years.tolist()))
+
+    if len(years_by_dataset) < 2:
+        return None
+
+    common = set.intersection(*years_by_dataset.values())
+    if not common:
+        return None
+    return common
+
+
 def fetch_nomis_dates(dataset: str) -> pd.DataFrame:
     """Every time period the dataset holds.
 
@@ -252,7 +328,14 @@ def fetch_nomis_dates(dataset: str) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def fetch_nomis_all_years(dataset: str, rows: int, detail: bool = False) -> pd.DataFrame:
+def fetch_nomis_all_years(
+    dataset: str,
+    rows: int,
+    detail: bool = False,
+    year_min: int | None = None,
+    year_max: int | None = None,
+    allowed_years: set[int] | None = None,
+) -> pd.DataFrame:
     """Every year Nomis holds, fetched in small explicit batches.
 
     Reads the time codelist, then requests years in groups of
@@ -267,6 +350,44 @@ def fetch_nomis_all_years(dataset: str, rows: int, detail: bool = False) -> pd.D
 
     years = [str(y) for y in dates["date"].tolist()]
     print(f"      {len(years)} periods: {years[0]}..{years[-1]}")
+
+    if allowed_years is not None:
+        allowed = set(allowed_years)
+        filtered_years = []
+        for y in years:
+            y_int = _nomis_period_year(y)
+            if y_int is None:
+                continue
+            if y_int in allowed:
+                filtered_years.append(y)
+        years = filtered_years
+        if not years:
+            if allowed:
+                print(f"      no Nomis periods within ONS years "
+                      f"{min(allowed)}-{max(allowed)}")
+            else:
+                print("      no Nomis periods within ONS years set")
+            return pd.DataFrame()
+        print(
+            f"      filtered to ONS years set ({len(allowed)} years): "
+            f"{years[0]}..{years[-1]}"
+        )
+    elif year_min is not None and year_max is not None:
+        filtered_years = []
+        for y in years:
+            y_int = _nomis_period_year(y)
+            if y_int is None:
+                continue
+            if year_min <= y_int <= year_max:
+                filtered_years.append(y)
+        years = filtered_years
+        if not years:
+            print(f"      no Nomis periods within ONS range {year_min}-{year_max}")
+            return pd.DataFrame()
+        print(
+            f"      filtered to ONS range {year_min}-{year_max}: "
+            f"{len(years)} periods ({years[0]}..{years[-1]})"
+        )
 
     frames, failures = [], []
     for i in range(0, len(years), NOMIS_YEARS_PER_REQUEST):
@@ -450,6 +571,19 @@ def nomis_probe(dataset: str):
 
 def source_nomis(rows: int):
     written = []
+    year_min, year_max = None, None
+    allowed_years = None
+    if NOMIS_MATCH_ONS_RANGE:
+        ons_years = get_ons_common_years(OUT_DIR)
+        if ons_years is None:
+            print("    note: no usable ONS overlapping year range found; "
+                  "Nomis will fetch all available periods")
+        else:
+            allowed_years = set(ons_years)
+            year_min, year_max = min(allowed_years), max(allowed_years)
+            print(f"    note: limiting Nomis to ONS overlapping range "
+                  f"{year_min}-{year_max} ({len(allowed_years)} exact years)")
+
     if not os.environ.get("NOMIS_UID"):
         print("    note: NOMIS_UID unset — capped at ~25,000 rows per call "
               "(free key raises this to ~100,000)", file=sys.stderr)
@@ -459,7 +593,7 @@ def source_nomis(rows: int):
         try:
             st = fetch_nomis_structure(ds)
             if not st.empty:
-                written.append((_write(st, f"nomis_{name}_codes"), len(st),
+                written.append((_write(st, f"nomis_{name}_codes", subdir=NOMIS_SUBDIR), len(st),
                                 f"Dimension code lookup for {ds}"))
         except Exception as e:
             print(f"    ! codes for {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -468,7 +602,7 @@ def source_nomis(rows: int):
         try:
             dates = fetch_nomis_dates(ds)
             if not dates.empty:
-                written.append((_write(dates, f"nomis_{name}_dates"), len(dates),
+                written.append((_write(dates, f"nomis_{name}_dates", subdir=NOMIS_SUBDIR), len(dates),
                                 f"Every time period available in {ds}"))
                 print(f"    {ds}: {len(dates)} periods "
                       f"({dates['date'].iloc[0]}..{dates['date'].iloc[-1]})")
@@ -480,8 +614,15 @@ def source_nomis(rows: int):
             if not _is_unlimited(rows) and rows < est:
                 print(f"    WARNING: --rows {rows:,} will cut this short. "
                       f"Use --rows {est * 2:,} to be safe.")
-            df = fetch_nomis_all_years(ds, rows, detail=NOMIS_DETAIL)
-            written.append((_write(df, f"nomis_{name}"), len(df),
+            df = fetch_nomis_all_years(
+                ds,
+                rows,
+                detail=NOMIS_DETAIL,
+                year_min=year_min,
+                year_max=year_max,
+                allowed_years=allowed_years,
+            )
+            written.append((_write(df, f"nomis_{name}", subdir=NOMIS_SUBDIR), len(df),
                             f"ASHE {name.replace('_', ' ')} ({ds}), all years"))
         except Exception as e:
             print(f"    ! {ds}: {type(e).__name__}: {e}", file=sys.stderr)
@@ -556,11 +697,12 @@ class FetchDataPipeline:
         candidates = []
         for row in manifest_rows:
             file_name = row["file"]
+            base_name = os.path.basename(file_name)
             if file_name == "_manifest.csv":
                 continue
-            if any(k in file_name for k in ("catalogue", "_codes")):
+            if any(k in base_name for k in ("catalogue", "_codes")):
                 continue
-            if not file_name.endswith(".csv"):
+            if not base_name.endswith(".csv"):
                 continue
             candidates.append(os.path.join(self.out_dir, file_name))
 
@@ -625,7 +767,8 @@ class FetchDataPipeline:
         split_any = False
         for row in manifest_rows:
             file_name = row.get("file", "")
-            if file_name not in target_set or file_name in seen:
+            base_name = os.path.basename(file_name)
+            if (file_name not in target_set and base_name not in target_set) or file_name in seen:
                 continue
             seen.add(file_name)
 
@@ -675,7 +818,8 @@ class FetchDataPipeline:
             try:
                 for path, n, note in fn(fetch_rows):
                     print(f"    {path}  ({n:,} rows)")
-                    manifest.append({"source": name, "file": os.path.basename(path),
+                    manifest.append({"source": name,
+                                     "file": os.path.relpath(path, self.out_dir),
                                      "rows": n, "description": note,
                                      "fetched_utc": datetime.now(timezone.utc).isoformat()})
             except Skip as e:
@@ -718,6 +862,9 @@ def main():
                    help="diagnose an empty Nomis response, e.g. NM_99_1")
     p.add_argument("--nomis-detail", action="store_true",
                    help="all sexes, items and pay measures (~40x rows; needs a key)")
+    p.add_argument("--nomis-match-ons-range", action=argparse.BooleanOptionalAction,
+                   default=True,
+                   help="limit Nomis periods to overlapping ONS fetched-year range")
     p.add_argument("--align-time-range", action=argparse.BooleanOptionalAction,
                    default=True,
                    help="align fetched time-series to shared overlapping years")
@@ -743,9 +890,10 @@ def main():
             print(f"{k:<14}{key:<15}{desc}")
         return
 
-    global OUT_DIR, NOMIS_DETAIL
+    global OUT_DIR, NOMIS_DETAIL, NOMIS_MATCH_ONS_RANGE
     OUT_DIR = args.out_dir
     NOMIS_DETAIL = args.nomis_detail
+    NOMIS_MATCH_ONS_RANGE = args.nomis_match_ons_range
 
     if args.nomis_probe:
         nomis_probe(args.nomis_probe)
