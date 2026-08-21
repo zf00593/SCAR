@@ -80,13 +80,18 @@ MANUAL_TARGETS = {
 
     # Current authorities that need broadening back to the older Nomis area.
     "bedford": "Bedfordshire",
+    "buckinghamshire": "Aylesbury Vale|Chiltern|South Bucks|Wycombe",
     "central bedfordshire": "Bedfordshire",
     "cheshire east": "Cheshire",
     "cheshire west and chester": "Cheshire",
+    "dorset": "East Dorset|North Dorset|Purbeck|West Dorset|Weymouth and Portland",
     "cornwall": "Cornwall and Isles of Scilly",
     "cumberland": "Cumbria",
-    "north northamptonshire": "Northamptonshire",
-    "west northamptonshire": "Northamptonshire",
+    "east suffolk": "Suffolk Coastal|Waveney",
+    "north northamptonshire": "Corby|East Northamptonshire|Kettering|Wellingborough",
+    "somerset west and taunton": "Taunton Deane|West Somerset",
+    "west northamptonshire": "Daventry|Northampton|South Northamptonshire",
+    "west suffolk": "Forest Heath|St Edmundsbury",
     "westmorland and furness": "Cumbria",
 
     # Areas merged after the Nomis geography set used in this repo.
