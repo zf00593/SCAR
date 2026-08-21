@@ -12,7 +12,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT_DIR / "data"
 ONS_DATA_DIR = DATA_DIR / "ons_data"
 MAPPING_PATH = DATA_DIR / "geography_mapping" / "ons_to_nomis_geography_mapping.csv"
-HOUSE_PRICE_GLOB = "ons_house_prices_local_authority_fixed.part*.csv"
+HOUSE_PRICE_GLOB = "ons_house_prices_local_authority.part*.csv"
 OUTPUT_PATH = DATA_DIR / "city_house_prices_latest.csv"
 
 UK_CITY_LIST = [
@@ -217,20 +217,20 @@ def keep_city_only_rows(city_prices: pd.DataFrame) -> pd.DataFrame:
         for parent in row["Parent_Set"]:
             parent_city_map.setdefault(parent, set()).add(str(row["Canonical_City"]))
 
-    def assign_target(row: pd.Series) -> str | None:
+    def assign_target(row: pd.Series) -> tuple[str | None, str]:
         if pd.notna(row["Canonical_City"]):
-            return str(row["Canonical_City"])
+            return str(row["Canonical_City"]), "direct_or_alias"
 
         norm_city = str(row["Norm_City"])
         if norm_city in AREA_TO_CITY:
-            return AREA_TO_CITY[norm_city]
+            return AREA_TO_CITY[norm_city], "area_to_city"
 
         city_candidates: set[str] = set()
         for parent in row["Parent_Set"]:
             city_candidates.update(parent_city_map.get(parent, set()))
 
         if len(city_candidates) == 1:
-            return next(iter(city_candidates))
+            return next(iter(city_candidates)), "parent_single_city"
 
         # Keep non-city fallback only when this row is already an aggregate area.
         if (
@@ -238,10 +238,13 @@ def keep_city_only_rows(city_prices: pd.DataFrame) -> pd.DataFrame:
             and pd.to_numeric(row["Source_ONS_Geography_Count"], errors="coerce") > 1
             and is_county_like(str(row["City"]))
         ):
-            return str(row["City"]).strip()
-        return None
+            return str(row["City"]).strip(), "county_fallback"
+        return None, "unmapped"
 
-    frame["Target_City"] = frame.apply(assign_target, axis=1)
+    assigned = frame.apply(assign_target, axis=1)
+    frame["Target_City"] = assigned.map(lambda value: value[0])
+    frame["Proxy_Source"] = assigned.map(lambda value: value[1])
+    frame["Proxy_Flag"] = frame["Proxy_Source"].ne("direct_or_alias")
     frame = frame.dropna(subset=["Target_City"]).copy()
 
     frame["Mean_Price"] = pd.to_numeric(frame["Mean_Price"], errors="coerce")
@@ -268,6 +271,8 @@ def keep_city_only_rows(city_prices: pd.DataFrame) -> pd.DataFrame:
                 "Source_ONS_Geography_Count": int(group["Source_ONS_Geography_Count"].sum()),
                 "Source_Nomis_Geography_Count": int(group["Source_Nomis_Geography_Count"].sum()),
                 "Mapping_Source": "|".join(sorted({str(value) for value in group["Mapping_Source"].dropna().astype(str)})),
+                "Proxy_Flag": bool(group["Proxy_Flag"].any()),
+                "Proxy_Source": "|".join(sorted({str(value) for value in group["Proxy_Source"].dropna().astype(str)})),
                 "Mean_Price": weighted_value(group["Mean_Price"], sales),
                 "Median_Price": weighted_value(group["Median_Price"], sales),
                 "Sales_Count": float(sales.fillna(0).sum()),
@@ -293,6 +298,8 @@ def keep_city_only_rows(city_prices: pd.DataFrame) -> pd.DataFrame:
                                 "Source_ONS_Geography_Count": int(boroughs["Source_ONS_Geography_Count"].sum()),
                                 "Source_Nomis_Geography_Count": int(boroughs["Source_Nomis_Geography_Count"].sum()),
                                 "Mapping_Source": "derived_london_borough_rollup",
+                                "Proxy_Flag": True,
+                                "Proxy_Source": "derived_london_borough_rollup",
                                 "Mean_Price": weighted_value(boroughs["Mean_Price"], sales),
                                 "Median_Price": weighted_value(boroughs["Median_Price"], sales),
                                 "Sales_Count": float(sales.fillna(0).sum()),

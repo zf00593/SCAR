@@ -18,8 +18,6 @@ WORKPLACE_PATH = NOMIS_DIR / "nomis_ashe_workplace.csv"
 
 OUT_RESIDENT = NOMIS_DIR / "nomis_ashe_resident_cities.csv"
 OUT_WORKPLACE = NOMIS_DIR / "nomis_ashe_workplace_cities.csv"
-OUT_RESIDENT_ONLY = NOMIS_DIR / "nomis_ashe_resident_city_only.csv"
-OUT_WORKPLACE_ONLY = NOMIS_DIR / "nomis_ashe_workplace_city_only.csv"
 
 UK_CITY_LIST = [
     "Bath", "Birmingham", "Bradford", "Brighton and Hove", "Bristol", "Cambridge",
@@ -145,7 +143,7 @@ def build_parent_maps() -> tuple[dict[str, set[str]], dict[str, int]]:
     return nomis_to_parents, nomis_to_ons_count
 
 
-def aggregate_nomis_to_city(path: Path, out_path: Path, out_city_only_path: Path) -> None:
+def aggregate_nomis_to_city(path: Path, out_path: Path) -> None:
     if not path.exists():
         raise FileNotFoundError(f"Missing file: {path}")
 
@@ -165,31 +163,34 @@ def aggregate_nomis_to_city(path: Path, out_path: Path, out_city_only_path: Path
         for parent in row["Parent_Set"]:
             parent_city_map.setdefault(parent, set()).add(str(row["Canonical_City"]))
 
-    def assign_target(row: pd.Series) -> str | None:
+    def assign_target(row: pd.Series) -> tuple[str | None, str]:
         if pd.notna(row["Canonical_City"]):
-            return str(row["Canonical_City"])
+            return str(row["Canonical_City"]), "direct_or_alias"
 
         norm = str(row["Norm_Geog"])
         if norm in AREA_TO_CITY:
-            return AREA_TO_CITY[norm]
+            return AREA_TO_CITY[norm], "area_to_city"
 
         city_candidates: set[str] = set()
         for parent in row["Parent_Set"]:
             city_candidates.update(parent_city_map.get(parent, set()))
 
         if len(city_candidates) == 1:
-            return next(iter(city_candidates))
+            return next(iter(city_candidates)), "parent_single_city"
 
         if len(city_candidates) == 0 and nomis_to_ons_count.get(norm, 0) > 1 and is_county_like(str(row["GEOGRAPHY_NAME"])):
-            return str(row["GEOGRAPHY_NAME"]).strip()
-        return None
+            return str(row["GEOGRAPHY_NAME"]).strip(), "county_fallback"
+        return None, "unmapped"
 
-    frame["Target_City"] = frame.apply(assign_target, axis=1)
+    assigned = frame.apply(assign_target, axis=1)
+    frame["Target_City"] = assigned.map(lambda value: value[0])
+    frame["Proxy_Source"] = assigned.map(lambda value: value[1])
+    frame["Proxy_Flag"] = frame["Proxy_Source"].ne("direct_or_alias")
     frame = frame.dropna(subset=["Target_City"]).copy()
 
     group_cols = [
         "nomis_dataset", "DATE", "DATE_NAME", "SEX", "SEX_NAME", "PAY", "PAY_NAME",
-        "ITEM", "ITEM_NAME", "MEASURES", "MEASURES_NAME", "Target_City",
+        "ITEM", "ITEM_NAME", "MEASURES", "MEASURES_NAME", "Target_City", "Proxy_Flag", "Proxy_Source",
     ]
 
     agg = (
@@ -205,19 +206,14 @@ def aggregate_nomis_to_city(path: Path, out_path: Path, out_city_only_path: Path
     agg["GEOGRAPHY"] = agg["GEOGRAPHY_NAME"]
     agg = agg.sort_values(["DATE_NAME", "GEOGRAPHY_NAME"]).reset_index(drop=True)
 
-    city_norms = set(build_city_lookup().keys())
-    city_only = agg[agg["GEOGRAPHY_NAME"].astype(str).map(normalize_name).isin(city_norms)].copy()
-
     agg.to_csv(out_path, index=False)
-    city_only.to_csv(out_city_only_path, index=False)
 
     print(f"Wrote: {out_path} ({len(agg):,} rows)")
-    print(f"Wrote: {out_city_only_path} ({len(city_only):,} rows)")
 
 
 def main() -> None:
-    aggregate_nomis_to_city(RESIDENT_PATH, OUT_RESIDENT, OUT_RESIDENT_ONLY)
-    aggregate_nomis_to_city(WORKPLACE_PATH, OUT_WORKPLACE, OUT_WORKPLACE_ONLY)
+    aggregate_nomis_to_city(RESIDENT_PATH, OUT_RESIDENT)
+    aggregate_nomis_to_city(WORKPLACE_PATH, OUT_WORKPLACE)
 
 
 if __name__ == "__main__":
