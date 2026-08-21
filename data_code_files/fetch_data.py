@@ -47,9 +47,11 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
 import pandas as pd
 import requests
@@ -639,6 +641,54 @@ SOURCES = {
 }
 
 
+def run_transformations_and_cleanup(cleanup_intermediate: bool = True) -> None:
+    """Build final city-level outputs from fetched source CSV files."""
+    root = Path(__file__).resolve().parents[1]
+    script_dir = Path(__file__).resolve().parent
+
+    nomis_resident = root / "data" / "nomis_data" / "nomis_ashe_resident.csv"
+    nomis_workplace = root / "data" / "nomis_data" / "nomis_ashe_workplace.csv"
+    ons_parts = sorted((root / "data" / "ons_data").glob("ons_house_prices_local_authority.part*.csv"))
+
+    if not (nomis_resident.exists() and nomis_workplace.exists() and ons_parts):
+        print("\n[transform] Skipping post-fetch transforms: required source files missing")
+        return
+
+    transform_scripts = [
+        script_dir / "map_ons_to_nomis_geographies.py",
+        script_dir / "aggregate_nomis_by_city.py",
+        script_dir / "aggregate_house_prices_by_city.py",
+        script_dir / "build_city_model_dataset.py",
+    ]
+
+    for script in transform_scripts:
+        print(f"[transform] Running {script.name}")
+        subprocess.run([sys.executable, str(script)], cwd=str(root), check=True)
+
+    if not cleanup_intermediate:
+        return
+
+    print("[transform] Cleaning intermediate transformation files")
+    cleanup_patterns = [
+        root / "data" / "ons_data" / "ons_house_prices_local_authority_fixed.part*.csv",
+        root / "data" / "ons_data" / "ons_house_prices_local_authority_fixed_aggregated.part*.csv",
+        root / "data" / "ons_data" / "ons_house_prices_local_authority_final.part*.csv",
+        root / "data" / "nomis_data" / "nomis_ashe_resident_city_only.csv",
+        root / "data" / "nomis_data" / "nomis_ashe_workplace_city_only.csv",
+        root / "data" / "geography_mapping" / "nomis_unique_geographies.csv",
+        root / "data" / "geography_mapping" / "ons_unique_geographies.csv",
+        root / "data" / "geography_mapping" / "unmapped_ons_geographies.csv",
+    ]
+
+    removed = 0
+    for pattern in cleanup_patterns:
+        for path in pattern.parent.glob(pattern.name):
+            if path.exists():
+                path.unlink()
+                removed += 1
+    print(f"[transform] Removed {removed} intermediate files")
+
+
 class FetchDataPipeline:
     """Class-based runner for source pulls and post-fetch harmonization."""
 
@@ -845,6 +895,8 @@ class FetchDataPipeline:
                     split_rows=args.split_rows,
                     delete_original=args.split_delete_original,
                 )
+            if args.run_transforms:
+                run_transformations_and_cleanup(cleanup_intermediate=args.cleanup_intermediate)
         if skipped:
             print(f"Skipped: {', '.join(skipped)}")
 
@@ -882,6 +934,12 @@ def main():
     p.add_argument("--split-delete-original", action=argparse.BooleanOptionalAction,
                    default=True,
                    help="delete original file after successful split")
+    p.add_argument("--run-transforms", action=argparse.BooleanOptionalAction,
+                   default=True,
+                   help="run city-level normalization and fallback transformations")
+    p.add_argument("--cleanup-intermediate", action=argparse.BooleanOptionalAction,
+                   default=True,
+                   help="remove intermediate transformation CSV files and keep source+final outputs")
     args = p.parse_args()
 
     if args.list:
