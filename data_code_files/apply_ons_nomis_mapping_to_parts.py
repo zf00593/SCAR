@@ -8,9 +8,9 @@ original ONS geography columns are retained and Nomis-mapped geography columns
 are appended.
 
 Outputs:
-  data/ons_data/ons_house_prices_local_authority_fixed.part001.csv
-  data/ons_data/ons_house_prices_local_authority_fixed.part002.csv
-  ...
+    data/ons_data/ons_house_prices_local_authority_fixed.part001.csv
+    data/ons_data/ons_house_prices_local_authority_fixed.part002.csv
+    ...
 """
 
 from __future__ import annotations
@@ -26,10 +26,11 @@ ONS_DIR = DATA_DIR / "ons_data"
 MAPPING_PATH = DATA_DIR / "geography_mapping" / "ons_to_nomis_geography_mapping.csv"
 NOMIS_UNIQUE_PATH = DATA_DIR / "geography_mapping" / "nomis_unique_geographies.csv"
 AGGREGATED_PREFIX = "ons_house_prices_local_authority_fixed_aggregated"
-CITY_REGION_PREFIX = "ons_house_prices_local_authority_fixed_city_regions"
+CITY_REGION_PREFIX = "ons_house_prices_local_authority_final"
 SPLIT_ROWS = 200_000
 LONDON_CODE = "E12000007"
 LONDON_NAME = "London"
+EXCLUDED_CITY_REGION_SERIES = {"Lower quartile price", "Tenth percentile price"}
 
 # Official where available, curated otherwise:
 # - Greater Manchester metropolitan county / combined authority -> Manchester
@@ -231,6 +232,11 @@ def build_city_region_frame(fixed_frames: list[pd.DataFrame]) -> pd.DataFrame:
 
     combined = pd.concat(fixed_frames, ignore_index=True)
 
+    if "HouseSalesAndPrices" in combined.columns:
+        combined = combined.loc[~combined["HouseSalesAndPrices"].isin(EXCLUDED_CITY_REGION_SERIES)].copy()
+    elif "house-sales-and-prices" in combined.columns:
+        combined = combined.loc[~combined["house-sales-and-prices"].isin(EXCLUDED_CITY_REGION_SERIES)].copy()
+
     expanded = combined.copy()
     expanded["nomis_geography"] = expanded["nomis_geography"].astype(str).str.split("|")
     expanded["nomis_geography_code"] = expanded["nomis_geography_code"].astype(str).str.split("|")
@@ -354,7 +360,7 @@ def main() -> None:
     print("Wrote aggregated fixed ONS part files:")
     for name, rows in aggregated_written:
         print(f"  {name} ({rows:,} rows)")
-    print("Wrote city-region fixed ONS part files:")
+    print("Wrote final city-region ONS part files:")
     for name, rows in city_region_written:
         print(f"  {name} ({rows:,} rows)")
 
