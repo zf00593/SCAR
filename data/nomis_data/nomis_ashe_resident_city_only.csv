@@ -1,0 +1,1085 @@
+nomis_dataset,DATE,DATE_NAME,SEX,SEX_NAME,PAY,PAY_NAME,ITEM,ITEM_NAME,MEASURES,MEASURES_NAME,GEOGRAPHY_NAME,OBS_VALUE,Source_Geography_Count,GEOGRAPHY_CODE,GEOGRAPHY
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,559.0,1,S12000033,Aberdeen
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,3.9,1,S12000033,Aberdeen
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,434.0,1,W06000002,Bangor
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,7.0,1,W06000002,Bangor
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,522.3,1,E06000022,Bath
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,5.4,1,E06000022,Bath
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,488.2,1,E08000025,Birmingham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.0,1,E08000025,Birmingham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,449.5,1,E08000032,Bradford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,3.1,1,E08000032,Bradford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,542.9,1,E06000043,Brighton and Hove
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.1,1,E06000043,Brighton and Hove
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,506.3,1,E06000023,Bristol
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.8,1,E06000023,Bristol
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,583.3,1,E07000008,Cambridge
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,6.0,1,E07000008,Cambridge
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,582.0,1,E07000106,Canterbury
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,7.3,1,E07000106,Canterbury
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,519.0,1,W06000015,Cardiff
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,4.4,1,W06000015,Cardiff
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,429.8,1,E07000028,Carlisle
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,5.0,1,E07000028,Carlisle
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,601.1,1,E07000070,Chelmsford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,5.5,1,E07000070,Chelmsford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,525.5,1,E06000050,Chester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,4.3,1,E06000050,Chester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,542.6,1,E07000225,Chichester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,6.8,1,E07000225,Chichester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,530.5,1,E07000071,Colchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,4.4,1,E07000071,Colchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,509.7,1,E08000026,Coventry
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,4.2,1,E08000026,Coventry
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,518.2,1,E06000015,Derby
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.8,1,E06000015,Derby
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,467.0,1,E08000017,Doncaster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,4.5,1,E08000017,Doncaster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,463.1,1,S12000042,Dundee
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,5.4,1,S12000042,Dundee
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,481.1,1,E06000047,Durham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,2.7,1,E06000047,Durham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,555.3,1,S12000036,Edinburgh
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,2.7,1,S12000036,Edinburgh
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,566.5,1,E07000009,Ely
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,7.7,1,E07000009,Ely
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,473.9,1,E07000041,Exeter
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,6.2,1,E07000041,Exeter
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,514.9,1,S12000046,Glasgow
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,2.5,1,S12000046,Glasgow
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,471.8,1,E07000081,Gloucester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,4.3,1,E07000081,Gloucester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,454.7,1,E06000019,Hereford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,4.8,1,E06000019,Hereford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,490.7,1,S12000017,Inverness
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,4.8,1,S12000017,Inverness
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,443.6,1,E06000010,Kingston upon Hull
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.6,1,E06000010,Kingston upon Hull
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,494.3,1,E07000121,Lancaster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,6.6,1,E07000121,Lancaster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,498.4,1,E08000035,Leeds
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.3,1,E08000035,Leeds
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,421.7,1,E06000016,Leicester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,3.0,1,E06000016,Leicester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,593.9,1,E07000194,Lichfield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,8.2,1,E07000194,Lichfield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,470.8,1,E07000138,Lincoln
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,6.7,1,E07000138,Lincoln
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,480.8,1,E08000012,Liverpool
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,4.0,1,E08000012,Liverpool
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,479.8,1,E08000003,Manchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,3.4,1,E08000003,Manchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,533.6,1,E06000042,Milton Keynes
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,5.1,1,E06000042,Milton Keynes
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,495.9,1,E08000021,Newcastle upon Tyne
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,3.4,1,E08000021,Newcastle upon Tyne
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,463.2,1,W06000022,Newport
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,6.4,1,W06000022,Newport
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,465.8,1,E07000148,Norwich
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,8.2,1,E07000148,Norwich
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,434.8,1,E06000018,Nottingham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.6,1,E06000018,Nottingham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,556.8,1,E07000178,Oxford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,3.9,1,E07000178,Oxford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,516.2,1,S12000024,Perth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,4.7,1,S12000024,Perth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,460.5,1,E06000031,Peterborough
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,4.7,1,E06000031,Peterborough
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,483.9,1,E06000026,Plymouth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,3.1,1,E06000026,Plymouth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,513.4,1,E06000044,Portsmouth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,3.8,1,E06000044,Portsmouth
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,434.9,1,E07000123,Preston
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,6.4,1,E07000123,Preston
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,518.7,1,E07000165,Ripon
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,6.7,1,E07000165,Ripon
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,474.7,1,E08000006,Salford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,3.2,1,E08000006,Salford
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,517.7,1,E06000054,Salisbury
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.0,1,E06000054,Salisbury
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,485.1,1,E08000019,Sheffield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,2.9,1,E08000019,Sheffield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,502.4,1,E06000045,Southampton
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,4.1,1,E06000045,Southampton
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,541.2,1,E06000033,Southend-on-Sea
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,4.5,1,E06000033,Southend-on-Sea
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,700.5,1,E07000240,St Albans
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,6.0,1,E07000240,St Albans
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,429.9,1,W06000004,St Asaph
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,7.6,1,W06000004,St Asaph
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,466.2,1,W06000009,St Davids
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,9.0,1,W06000009,St Davids
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,512.0,1,S12000030,Stirling
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,8.3,1,S12000030,Stirling
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,434.5,1,E06000021,Stoke on Trent
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.2,1,E06000021,Stoke on Trent
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,460.0,1,E08000024,Sunderland
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,4.6,1,E08000024,Sunderland
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,489.4,1,W06000011,Swansea
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,5.7,1,W06000011,Swansea
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,440.5,1,E06000052,Truro
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,3.1,1,E06000052,Truro
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,461.0,1,E08000036,Wakefield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.1,1,E08000036,Wakefield
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,496.14,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,8.620000000000001,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,766.5,1,E09000033,Westminster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,6.3,1,E09000033,Westminster
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,639.3,1,E07000094,Winchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,7.6,1,E07000094,Winchester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,434.2,1,E08000031,Wolverhampton
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,3.5,1,E08000031,Wolverhampton
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,528.1,1,E07000237,Worcester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,5.1,1,E07000237,Worcester
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,488.1,1,W06000006,Wrexham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,3.9,1,W06000006,Wrexham
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,495.6,1,E06000014,York
+NM_30_1,2015,2015,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,4.7,1,E06000014,York
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,557.4,1,S12000033,Aberdeen
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,4.4,1,S12000033,Aberdeen
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,445.3,1,W06000002,Bangor
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,8.1,1,W06000002,Bangor
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,564.1,1,E06000022,Bath
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,6.1,1,E06000022,Bath
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,495.0,1,E08000025,Birmingham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.3,1,E08000025,Birmingham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,471.6,1,E08000032,Bradford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,3.0,1,E08000032,Bradford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,561.2,1,E06000043,Brighton and Hove
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.3,1,E06000043,Brighton and Hove
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,524.0,1,E06000023,Bristol
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.9,1,E06000023,Bristol
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,589.1,1,E07000008,Cambridge
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,4.6,1,E07000008,Cambridge
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,558.4,1,E07000106,Canterbury
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,6.5,1,E07000106,Canterbury
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,534.4,1,W06000015,Cardiff
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,4.8,1,W06000015,Cardiff
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,459.9,1,E07000028,Carlisle
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,4.9,1,E07000028,Carlisle
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,607.2,1,E07000070,Chelmsford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,6.3,1,E07000070,Chelmsford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,548.1,1,E06000050,Chester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,3.8,1,E06000050,Chester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,577.5,1,E07000225,Chichester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,8.3,1,E07000225,Chichester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,566.4,1,E07000071,Colchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,5.2,1,E07000071,Colchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,531.8,1,E08000026,Coventry
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,3.7,1,E08000026,Coventry
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,551.6,1,E06000015,Derby
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.7,1,E06000015,Derby
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,479.1,1,E08000017,Doncaster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,5.0,1,E08000017,Doncaster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,484.0,1,S12000042,Dundee
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,4.8,1,S12000042,Dundee
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,488.4,1,E06000047,Durham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,2.7,1,E06000047,Durham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,559.7,1,S12000036,Edinburgh
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,2.8,1,S12000036,Edinburgh
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,564.7,1,E07000009,Ely
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,7.3,1,E07000009,Ely
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,525.4,1,E07000041,Exeter
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,6.8,1,E07000041,Exeter
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,522.2,1,S12000046,Glasgow
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,2.8,1,S12000046,Glasgow
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,499.9,1,E07000081,Gloucester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,4.2,1,E07000081,Gloucester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,460.0,1,E06000019,Hereford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,3.9,1,E06000019,Hereford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,529.6,1,S12000017,Inverness
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,3.9,1,S12000017,Inverness
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,452.0,1,E06000010,Kingston upon Hull
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.5,1,E06000010,Kingston upon Hull
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,523.1,1,E07000121,Lancaster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,4.9,1,E07000121,Lancaster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,527.9,1,E08000035,Leeds
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.5,1,E08000035,Leeds
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,433.0,1,E06000016,Leicester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,3.2,1,E06000016,Leicester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,660.5,1,E07000194,Lichfield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,7.9,1,E07000194,Lichfield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,448.4,1,E07000138,Lincoln
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,7.3,1,E07000138,Lincoln
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,496.6,1,E08000012,Liverpool
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,2.9,1,E08000012,Liverpool
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,London,1034.1,1,E09000001,London
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,London,20.0,1,E09000001,London
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,471.5,1,E08000003,Manchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,3.0,1,E08000003,Manchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,556.0,1,E06000042,Milton Keynes
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,4.4,1,E06000042,Milton Keynes
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,508.8,1,E08000021,Newcastle upon Tyne
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,3.5,1,E08000021,Newcastle upon Tyne
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,471.2,1,W06000022,Newport
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,5.5,1,W06000022,Newport
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,460.0,1,E07000148,Norwich
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,6.1,1,E07000148,Norwich
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,448.2,1,E06000018,Nottingham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,4.0,1,E06000018,Nottingham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,589.1,1,E07000178,Oxford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,3.6,1,E07000178,Oxford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,527.8,1,S12000024,Perth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,5.8,1,S12000024,Perth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,466.3,1,E06000031,Peterborough
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,3.8,1,E06000031,Peterborough
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,481.9,1,E06000026,Plymouth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,4.0,1,E06000026,Plymouth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,510.2,1,E06000044,Portsmouth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,4.9,1,E06000044,Portsmouth
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,479.1,1,E07000123,Preston
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,6.8,1,E07000123,Preston
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,543.8,1,E07000165,Ripon
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,7.3,1,E07000165,Ripon
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,479.1,1,E08000006,Salford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,4.2,1,E08000006,Salford
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,519.8,1,E06000054,Salisbury
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.2,1,E06000054,Salisbury
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,504.3,1,E08000019,Sheffield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,2.7,1,E08000019,Sheffield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,498.3,1,E06000045,Southampton
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,4.0,1,E06000045,Southampton
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,561.9,1,E06000033,Southend-on-Sea
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,5.6,1,E06000033,Southend-on-Sea
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,767.3,1,E07000240,St Albans
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,8.0,1,E07000240,St Albans
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,471.7,1,W06000004,St Asaph
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,7.7,1,W06000004,St Asaph
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,456.7,1,W06000009,St Davids
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,8.9,1,W06000009,St Davids
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,574.6,1,S12000030,Stirling
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,8.2,1,S12000030,Stirling
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,445.9,1,E06000021,Stoke on Trent
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.9,1,E06000021,Stoke on Trent
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,484.6,1,E08000024,Sunderland
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,4.4,1,E08000024,Sunderland
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,473.7,1,W06000011,Swansea
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,3.9,1,W06000011,Swansea
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,467.6,1,E06000052,Truro
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,3.3,1,E06000052,Truro
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,479.8,1,E08000036,Wakefield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.1,1,E08000036,Wakefield
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,488.8,4,E07000187|E07000188|E07000189|E07000190,Wells
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,6.324999999999999,4,E07000187|E07000188|E07000189|E07000190,Wells
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,781.8,1,E09000033,Westminster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,6.1,1,E09000033,Westminster
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,665.9,1,E07000094,Winchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,8.1,1,E07000094,Winchester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,442.3,1,E08000031,Wolverhampton
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,4.2,1,E08000031,Wolverhampton
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,546.7,1,E07000237,Worcester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,6.3,1,E07000237,Worcester
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,500.2,1,W06000006,Wrexham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,5.2,1,W06000006,Wrexham
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,508.1,1,E06000014,York
+NM_30_1,2016,2016,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,4.8,1,E06000014,York
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,546.3,1,S12000033,Aberdeen
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,3.9,1,S12000033,Aberdeen
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,431.2,1,W06000002,Bangor
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,6.7,1,W06000002,Bangor
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,544.2,1,E06000022,Bath
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,5.8,1,E06000022,Bath
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,523.1,1,E08000025,Birmingham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.4,1,E08000025,Birmingham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,475.7,1,E08000032,Bradford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,2.8,1,E08000032,Bradford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,577.9,1,E06000043,Brighton and Hove
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.5,1,E06000043,Brighton and Hove
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,539.5,1,E06000023,Bristol
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.7,1,E06000023,Bristol
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,595.6,1,E07000008,Cambridge
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,4.2,1,E07000008,Cambridge
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,555.8,1,E07000106,Canterbury
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,7.3,1,E07000106,Canterbury
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,539.2,1,W06000015,Cardiff
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,3.6,1,W06000015,Cardiff
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,459.9,1,E07000028,Carlisle
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,4.6,1,E07000028,Carlisle
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,595.0,1,E07000070,Chelmsford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,5.3,1,E07000070,Chelmsford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,554.8,1,E06000050,Chester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,3.8,1,E06000050,Chester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,583.3,1,E07000225,Chichester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,6.8,1,E07000225,Chichester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,581.3,1,E07000071,Colchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,4.1,1,E07000071,Colchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,535.8,1,E08000026,Coventry
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,4.1,1,E08000026,Coventry
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,546.2,1,E06000015,Derby
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.8,1,E06000015,Derby
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,480.0,1,E08000017,Doncaster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,4.5,1,E08000017,Doncaster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,523.3,1,S12000042,Dundee
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,4.9,1,S12000042,Dundee
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,504.4,1,E06000047,Durham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,3.0,1,E06000047,Durham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,583.8,1,S12000036,Edinburgh
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,3.0,1,S12000036,Edinburgh
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,605.2,1,E07000009,Ely
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,7.8,1,E07000009,Ely
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,507.0,1,E07000041,Exeter
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,5.5,1,E07000041,Exeter
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,519.7,1,S12000046,Glasgow
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,2.4,1,S12000046,Glasgow
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,502.0,1,E07000081,Gloucester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,3.6,1,E07000081,Gloucester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,465.7,1,E06000019,Hereford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,4.3,1,E06000019,Hereford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,544.5,1,S12000017,Inverness
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,4.1,1,S12000017,Inverness
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,447.8,1,E06000010,Kingston upon Hull
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.4,1,E06000010,Kingston upon Hull
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,512.3,1,E07000121,Lancaster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,5.5,1,E07000121,Lancaster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,536.6,1,E08000035,Leeds
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.2,1,E08000035,Leeds
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,439.6,1,E06000016,Leicester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,3.7,1,E06000016,Leicester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,612.1,1,E07000194,Lichfield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,6.4,1,E07000194,Lichfield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,452.2,1,E07000138,Lincoln
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,6.2,1,E07000138,Lincoln
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,509.7,1,E08000012,Liverpool
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,2.8,1,E08000012,Liverpool
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,478.6,1,E08000003,Manchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,2.4,1,E08000003,Manchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,576.2,1,E06000042,Milton Keynes
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,4.6,1,E06000042,Milton Keynes
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,532.8,1,E08000021,Newcastle upon Tyne
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,4.2,1,E08000021,Newcastle upon Tyne
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,482.0,1,W06000022,Newport
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,5.3,1,W06000022,Newport
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,494.9,1,E07000148,Norwich
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,4.9,1,E07000148,Norwich
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,452.5,1,E06000018,Nottingham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.8,1,E06000018,Nottingham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,631.6,1,E07000178,Oxford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,4.5,1,E07000178,Oxford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,551.3,1,S12000024,Perth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,5.1,1,S12000024,Perth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,460.0,1,E06000031,Peterborough
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,2.6,1,E06000031,Peterborough
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,512.8,1,E06000026,Plymouth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,4.0,1,E06000026,Plymouth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,503.1,1,E06000044,Portsmouth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,4.3,1,E06000044,Portsmouth
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,459.8,1,E07000123,Preston
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,6.0,1,E07000123,Preston
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,536.8,1,E07000165,Ripon
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,8.5,1,E07000165,Ripon
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,489.3,1,E08000006,Salford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,3.8,1,E08000006,Salford
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,553.3,1,E06000054,Salisbury
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,2.7,1,E06000054,Salisbury
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,524.0,1,E08000019,Sheffield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,2.9,1,E08000019,Sheffield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,521.0,1,E06000045,Southampton
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,4.2,1,E06000045,Southampton
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,573.6,1,E06000033,Southend-on-Sea
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,5.7,1,E06000033,Southend-on-Sea
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,761.9,1,E07000240,St Albans
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,6.4,1,E07000240,St Albans
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,469.7,1,W06000004,St Asaph
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,7.6,1,W06000004,St Asaph
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,458.0,1,W06000009,St Davids
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,8.6,1,W06000009,St Davids
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,596.2,1,S12000030,Stirling
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,7.2,1,S12000030,Stirling
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,465.5,1,E06000021,Stoke on Trent
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,2.9,1,E06000021,Stoke on Trent
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,485.8,1,E08000024,Sunderland
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.4,1,E08000024,Sunderland
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,499.7,1,W06000011,Swansea
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,4.6,1,W06000011,Swansea
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,479.1,1,E06000052,Truro
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,3.4,1,E06000052,Truro
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,484.0,1,E08000036,Wakefield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,2.9,1,E08000036,Wakefield
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,491.68,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,9.14,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,807.4,1,E09000033,Westminster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,5.8,1,E09000033,Westminster
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,682.5,1,E07000094,Winchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,6.7,1,E07000094,Winchester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,445.8,1,E08000031,Wolverhampton
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,3.7,1,E08000031,Wolverhampton
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,546.2,1,E07000237,Worcester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,5.4,1,E07000237,Worcester
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,486.9,1,W06000006,Wrexham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,5.2,1,W06000006,Wrexham
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,519.9,1,E06000014,York
+NM_30_1,2017,2017,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,4.8,1,E06000014,York
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,575.3,1,S12000033,Aberdeen
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,4.6,1,S12000033,Aberdeen
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,473.0,1,W06000002,Bangor
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,7.3,1,W06000002,Bangor
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,610.0,1,E06000022,Bath
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,6.9,1,E06000022,Bath
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,531.5,1,E08000025,Birmingham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.8,1,E08000025,Birmingham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,488.7,1,E08000032,Bradford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,2.6,1,E08000032,Bradford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,584.0,1,E06000043,Brighton and Hove
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,3.6,1,E06000043,Brighton and Hove
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,556.2,1,E06000023,Bristol
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.6,1,E06000023,Bristol
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,633.3,1,E07000008,Cambridge
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,4.8,1,E07000008,Cambridge
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,582.5,1,E07000106,Canterbury
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,9.5,1,E07000106,Canterbury
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,536.6,1,W06000015,Cardiff
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,4.2,1,W06000015,Cardiff
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,479.5,1,E07000028,Carlisle
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,4.9,1,E07000028,Carlisle
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,625.5,1,E07000070,Chelmsford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,5.2,1,E07000070,Chelmsford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,562.6,1,E06000050,Chester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,4.0,1,E06000050,Chester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,586.7,1,E07000225,Chichester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,9.1,1,E07000225,Chichester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,574.9,1,E07000071,Colchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,4.8,1,E07000071,Colchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,561.2,1,E08000026,Coventry
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,4.0,1,E08000026,Coventry
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,578.6,1,E06000015,Derby
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.1,1,E06000015,Derby
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,520.9,1,E08000017,Doncaster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,3.5,1,E08000017,Doncaster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,508.5,1,S12000042,Dundee
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,5.1,1,S12000042,Dundee
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,513.1,1,E06000047,Durham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,2.5,1,E06000047,Durham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,578.9,1,S12000036,Edinburgh
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,3.0,1,S12000036,Edinburgh
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,572.2,1,E07000009,Ely
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,6.8,1,E07000009,Ely
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,526.5,1,E07000041,Exeter
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,5.7,1,E07000041,Exeter
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,549.7,1,S12000046,Glasgow
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,2.7,1,S12000046,Glasgow
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,506.0,1,E07000081,Gloucester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,4.3,1,E07000081,Gloucester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,486.4,1,E06000019,Hereford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,4.9,1,E06000019,Hereford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,559.6,1,S12000017,Inverness
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,3.3,1,S12000017,Inverness
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,459.9,1,E06000010,Kingston upon Hull
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.4,1,E06000010,Kingston upon Hull
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,521.5,1,E07000121,Lancaster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,5.3,1,E07000121,Lancaster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,545.5,1,E08000035,Leeds
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.1,1,E08000035,Leeds
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,439.5,1,E06000016,Leicester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,3.5,1,E06000016,Leicester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,638.6,1,E07000194,Lichfield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,6.3,1,E07000194,Lichfield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,452.3,1,E07000138,Lincoln
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,6.9,1,E07000138,Lincoln
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,530.3,1,E08000012,Liverpool
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,3.6,1,E08000012,Liverpool
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,London,1032.2,1,E09000001,London
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,London,19.0,1,E09000001,London
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,497.3,1,E08000003,Manchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,2.5,1,E08000003,Manchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,588.0,1,E06000042,Milton Keynes
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,3.3,1,E06000042,Milton Keynes
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,536.3,1,E08000021,Newcastle upon Tyne
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,4.4,1,E08000021,Newcastle upon Tyne
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,520.7,1,W06000022,Newport
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,5.1,1,W06000022,Newport
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,475.3,1,E07000148,Norwich
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,5.3,1,E07000148,Norwich
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,460.0,1,E06000018,Nottingham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.0,1,E06000018,Nottingham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,623.8,1,E07000178,Oxford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,5.5,1,E07000178,Oxford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,569.8,1,S12000024,Perth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,5.7,1,S12000024,Perth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,481.1,1,E06000031,Peterborough
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,3.3,1,E06000031,Peterborough
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,524.7,1,E06000026,Plymouth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,3.4,1,E06000026,Plymouth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,512.7,1,E06000044,Portsmouth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,5.0,1,E06000044,Portsmouth
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,501.7,1,E07000123,Preston
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,5.7,1,E07000123,Preston
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,603.6,1,E07000165,Ripon
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,6.1,1,E07000165,Ripon
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,500.0,1,E08000006,Salford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,3.3,1,E08000006,Salford
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,560.7,1,E06000054,Salisbury
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.3,1,E06000054,Salisbury
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,532.2,1,E08000019,Sheffield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,2.9,1,E08000019,Sheffield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,527.1,1,E06000045,Southampton
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,3.2,1,E06000045,Southampton
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,593.4,1,E06000033,Southend-on-Sea
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,5.7,1,E06000033,Southend-on-Sea
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,811.6,1,E07000240,St Albans
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,6.2,1,E07000240,St Albans
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,489.5,1,W06000004,St Asaph
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,7.4,1,W06000004,St Asaph
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,460.4,1,W06000009,St Davids
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,10.0,1,W06000009,St Davids
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,592.8,1,S12000030,Stirling
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,7.2,1,S12000030,Stirling
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,477.3,1,E06000021,Stoke on Trent
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.0,1,E06000021,Stoke on Trent
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,502.8,1,E08000024,Sunderland
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.6,1,E08000024,Sunderland
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,534.8,1,W06000011,Swansea
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,3.6,1,W06000011,Swansea
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,474.6,1,E06000052,Truro
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,3.2,1,E06000052,Truro
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,511.1,1,E08000036,Wakefield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.2,1,E08000036,Wakefield
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,518.74,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,8.18,5,E07000187|E07000188|E07000189|E07000190|E07000191,Wells
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,833.7,1,E09000033,Westminster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,6.0,1,E09000033,Westminster
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,723.3,1,E07000094,Winchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,4.9,1,E07000094,Winchester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,488.0,1,E08000031,Wolverhampton
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,3.8,1,E08000031,Wolverhampton
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,539.5,1,E07000237,Worcester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,4.7,1,E07000237,Worcester
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,531.5,1,W06000006,Wrexham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,5.1,1,W06000006,Wrexham
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,512.9,1,E06000014,York
+NM_30_1,2018,2018,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,3.5,1,E06000014,York
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,599.5,1,S12000033,Aberdeen
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,4.2,1,S12000033,Aberdeen
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,479.0,1,W06000002,Bangor
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,5.6,1,W06000002,Bangor
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,613.3,1,E06000022,Bath
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,6.1,1,E06000022,Bath
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,536.6,1,E08000025,Birmingham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.4,1,E08000025,Birmingham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,503.7,1,E08000032,Bradford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,2.9,1,E08000032,Bradford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,610.9,1,E06000043,Brighton and Hove
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.0,1,E06000043,Brighton and Hove
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,594.1,1,E06000023,Bristol
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.5,1,E06000023,Bristol
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,632.1,1,E07000008,Cambridge
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,4.3,1,E07000008,Cambridge
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,626.5,1,E07000106,Canterbury
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,7.1,1,E07000106,Canterbury
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,582.6,1,W06000015,Cardiff
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,3.6,1,W06000015,Cardiff
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,519.2,1,E07000028,Carlisle
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,5.4,1,E07000028,Carlisle
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,637.7,1,E07000070,Chelmsford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,5.9,1,E07000070,Chelmsford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,611.3,1,E06000050,Chester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,3.6,1,E06000050,Chester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,658.8,1,E07000225,Chichester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,7.7,1,E07000225,Chichester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,602.7,1,E07000071,Colchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,5.0,1,E07000071,Colchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,540.7,1,E08000026,Coventry
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,3.3,1,E08000026,Coventry
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,586.3,1,E06000015,Derby
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.3,1,E06000015,Derby
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,525.9,1,E08000017,Doncaster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,3.3,1,E08000017,Doncaster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,542.8,1,S12000042,Dundee
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,4.4,1,S12000042,Dundee
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,544.5,1,E06000047,Durham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,2.9,1,E06000047,Durham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,617.6,1,S12000036,Edinburgh
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,3.2,1,S12000036,Edinburgh
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,614.6,1,E07000009,Ely
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,6.4,1,E07000009,Ely
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,570.6,1,E07000041,Exeter
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,5.5,1,E07000041,Exeter
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,566.9,1,S12000046,Glasgow
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,2.5,1,S12000046,Glasgow
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,549.7,1,E07000081,Gloucester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,5.4,1,E07000081,Gloucester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,518.6,1,E06000019,Hereford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,4.1,1,E06000019,Hereford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,575.7,1,S12000017,Inverness
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,3.4,1,S12000017,Inverness
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,479.9,1,E06000010,Kingston upon Hull
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.4,1,E06000010,Kingston upon Hull
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,546.7,1,E07000121,Lancaster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,6.6,1,E07000121,Lancaster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,557.2,1,E08000035,Leeds
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.1,1,E08000035,Leeds
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,458.4,1,E06000016,Leicester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,2.6,1,E06000016,Leicester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,671.0,1,E07000194,Lichfield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,7.7,1,E07000194,Lichfield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,520.8,1,E07000138,Lincoln
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,7.3,1,E07000138,Lincoln
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,554.1,1,E08000012,Liverpool
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,3.2,1,E08000012,Liverpool
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,535.8,1,E08000003,Manchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,2.8,1,E08000003,Manchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,636.8,1,E06000042,Milton Keynes
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,3.8,1,E06000042,Milton Keynes
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,560.3,1,E08000021,Newcastle upon Tyne
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,4.4,1,E08000021,Newcastle upon Tyne
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,535.2,1,W06000022,Newport
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,6.0,1,W06000022,Newport
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,504.0,1,E07000148,Norwich
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,6.2,1,E07000148,Norwich
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,480.0,1,E06000018,Nottingham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.7,1,E06000018,Nottingham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,636.3,1,E07000178,Oxford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,4.5,1,E07000178,Oxford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,566.4,1,S12000024,Perth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,5.1,1,S12000024,Perth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,525.0,1,E06000031,Peterborough
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,4.2,1,E06000031,Peterborough
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,506.2,1,E06000026,Plymouth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,4.0,1,E06000026,Plymouth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,563.9,1,E06000044,Portsmouth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,4.8,1,E06000044,Portsmouth
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,506.0,1,E07000123,Preston
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,4.6,1,E07000123,Preston
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,643.2,1,E07000165,Ripon
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,6.2,1,E07000165,Ripon
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,517.4,1,E08000006,Salford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,4.2,1,E08000006,Salford
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,564.8,1,E06000054,Salisbury
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.4,1,E06000054,Salisbury
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,542.8,1,E08000019,Sheffield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,3.1,1,E08000019,Sheffield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,553.1,1,E06000045,Southampton
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,3.3,1,E06000045,Southampton
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,614.4,1,E06000033,Southend-on-Sea
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,4.8,1,E06000033,Southend-on-Sea
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,766.6,1,E07000240,St Albans
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,7.1,1,E07000240,St Albans
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,479.8,1,W06000004,St Asaph
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,7.9,1,W06000004,St Asaph
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,488.5,1,W06000009,St Davids
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,7.2,1,W06000009,St Davids
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,653.0,1,S12000030,Stirling
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,6.0,1,S12000030,Stirling
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,500.5,1,E06000021,Stoke on Trent
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.7,1,E06000021,Stoke on Trent
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,497.6,1,E08000024,Sunderland
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.4,1,E08000024,Sunderland
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,563.9,1,W06000011,Swansea
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,4.6,1,W06000011,Swansea
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,504.4,1,E06000052,Truro
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,2.6,1,E06000052,Truro
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,518.5,1,E08000036,Wakefield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.0,1,E08000036,Wakefield
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,565.1,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,6.6000000000000005,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,812.8,1,E09000033,Westminster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,6.6,1,E09000033,Westminster
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,690.7,1,E07000094,Winchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,6.4,1,E07000094,Winchester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,499.7,1,E08000031,Wolverhampton
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,3.7,1,E08000031,Wolverhampton
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,546.3,1,E07000237,Worcester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,5.6,1,E07000237,Worcester
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,579.4,1,W06000006,Wrexham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,4.6,1,W06000006,Wrexham
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,573.8,1,E06000014,York
+NM_30_1,2019,2019,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,5.4,1,E06000014,York
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,577.7,1,S12000033,Aberdeen
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,5.1,1,S12000033,Aberdeen
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,499.9,1,W06000002,Bangor
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,8.4,1,W06000002,Bangor
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,576.2,1,E06000022,Bath
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,7.7,1,E06000022,Bath
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,551.6,1,E08000025,Birmingham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,3.5,1,E08000025,Birmingham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,536.6,1,E08000032,Bradford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,3.5,1,E08000032,Bradford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,630.6,1,E06000043,Brighton and Hove
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.5,1,E06000043,Brighton and Hove
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,603.7,1,E06000023,Bristol
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,3.1,1,E06000023,Bristol
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,660.2,1,E07000008,Cambridge
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,5.0,1,E07000008,Cambridge
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,598.4,1,E07000106,Canterbury
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,9.0,1,E07000106,Canterbury
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,550.6,1,W06000015,Cardiff
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,3.6,1,W06000015,Cardiff
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,550.4,1,E07000028,Carlisle
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,6.3,1,E07000028,Carlisle
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,630.6,1,E07000070,Chelmsford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,8.3,1,E07000070,Chelmsford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,601.2,1,E06000050,Chester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,3.4,1,E06000050,Chester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,520.7,1,E07000225,Chichester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,10.0,1,E07000225,Chichester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,600.1,1,E07000071,Colchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,6.4,1,E07000071,Colchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,565.9,1,E08000026,Coventry
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,4.8,1,E08000026,Coventry
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,586.7,1,E06000015,Derby
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,5.7,1,E06000015,Derby
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,553.9,1,E08000017,Doncaster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,3.3,1,E08000017,Doncaster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,575.4,1,S12000042,Dundee
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,5.6,1,S12000042,Dundee
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,529.5,1,E06000047,Durham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,3.5,1,E06000047,Durham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,639.4,1,S12000036,Edinburgh
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,3.6,1,S12000036,Edinburgh
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,579.4,1,E07000009,Ely
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,8.7,1,E07000009,Ely
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,557.0,1,E07000041,Exeter
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,6.5,1,E07000041,Exeter
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,592.5,1,S12000046,Glasgow
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,3.2,1,S12000046,Glasgow
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,515.4,1,E07000081,Gloucester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,7.1,1,E07000081,Gloucester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,526.1,1,E06000019,Hereford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,5.8,1,E06000019,Hereford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,585.1,1,S12000017,Inverness
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,4.8,1,S12000017,Inverness
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,469.3,1,E06000010,Kingston upon Hull
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,4.4,1,E06000010,Kingston upon Hull
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,561.7,1,E07000121,Lancaster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,6.8,1,E07000121,Lancaster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,574.9,1,E08000035,Leeds
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.3,1,E08000035,Leeds
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,486.8,1,E06000016,Leicester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,4.7,1,E06000016,Leicester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,642.5,1,E07000194,Lichfield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,9.7,1,E07000194,Lichfield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,544.4,1,E07000138,Lincoln
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,9.4,1,E07000138,Lincoln
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,570.0,1,E08000012,Liverpool
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,3.8,1,E08000012,Liverpool
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,536.2,1,E08000003,Manchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,3.5,1,E08000003,Manchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,613.3,1,E06000042,Milton Keynes
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,5.2,1,E06000042,Milton Keynes
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,544.6,1,E08000021,Newcastle upon Tyne
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,4.8,1,E08000021,Newcastle upon Tyne
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,564.9,1,W06000022,Newport
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,5.7,1,W06000022,Newport
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,517.6,1,E07000148,Norwich
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,6.6,1,E07000148,Norwich
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,501.0,1,E06000018,Nottingham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,4.9,1,E06000018,Nottingham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,663.1,1,E07000178,Oxford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,5.9,1,E07000178,Oxford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,571.0,1,S12000024,Perth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,6.8,1,S12000024,Perth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,537.9,1,E06000031,Peterborough
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,4.5,1,E06000031,Peterborough
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,512.7,1,E06000026,Plymouth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,3.9,1,E06000026,Plymouth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,538.5,1,E06000044,Portsmouth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,5.6,1,E06000044,Portsmouth
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,509.8,1,E07000123,Preston
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,7.0,1,E07000123,Preston
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,602.4,1,E07000165,Ripon
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,8.0,1,E07000165,Ripon
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,536.9,1,E08000006,Salford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,4.8,1,E08000006,Salford
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,571.6,1,E06000054,Salisbury
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.5,1,E06000054,Salisbury
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,543.0,1,E08000019,Sheffield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,3.1,1,E08000019,Sheffield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,561.0,1,E06000045,Southampton
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,4.6,1,E06000045,Southampton
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,638.0,1,E06000033,Southend-on-Sea
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,8.2,1,E06000033,Southend-on-Sea
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,840.8,1,E07000240,St Albans
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,7.6,1,E07000240,St Albans
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,524.3,1,W06000004,St Asaph
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,6.3,1,W06000004,St Asaph
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,499.5,1,W06000009,St Davids
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,7.3,1,W06000009,St Davids
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,583.8,1,S12000030,Stirling
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,7.6,1,S12000030,Stirling
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,511.4,1,E06000021,Stoke on Trent
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.9,1,E06000021,Stoke on Trent
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,496.7,1,E08000024,Sunderland
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.1,1,E08000024,Sunderland
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,541.1,1,W06000011,Swansea
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,3.9,1,W06000011,Swansea
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,493.8,1,E06000052,Truro
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,4.0,1,E06000052,Truro
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,498.1,1,E08000036,Wakefield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.9,1,E08000036,Wakefield
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,543.3000000000001,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,6.666666666666667,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,817.3,1,E09000033,Westminster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,8.8,1,E09000033,Westminster
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,688.6,1,E07000094,Winchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,6.1,1,E07000094,Winchester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,499.4,1,E08000031,Wolverhampton
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,4.3,1,E08000031,Wolverhampton
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,523.4,1,E07000237,Worcester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,6.9,1,E07000237,Worcester
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,560.5,1,W06000006,Wrexham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,4.6,1,W06000006,Wrexham
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,576.5,1,E06000014,York
+NM_30_1,2020,2020,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,7.6,1,E06000014,York
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,587.8,1,S12000033,Aberdeen
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,4.0,1,S12000033,Aberdeen
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,518.2,1,W06000002,Bangor
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,7.8,1,W06000002,Bangor
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,583.4,1,E06000022,Bath
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,6.3,1,E06000022,Bath
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,562.7,1,E08000025,Birmingham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,2.6,1,E08000025,Birmingham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,546.1,1,E08000032,Bradford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,2.4,1,E08000032,Bradford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,617.8,1,E06000043,Brighton and Hove
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.5,1,E06000043,Brighton and Hove
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,622.8,1,E06000023,Bristol
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.9,1,E06000023,Bristol
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,728.9,1,E07000008,Cambridge
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,5.7,1,E07000008,Cambridge
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,577.6,1,E07000106,Canterbury
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,6.9,1,E07000106,Canterbury
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,574.9,1,W06000015,Cardiff
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,3.4,1,W06000015,Cardiff
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Carlisle,548.6,1,E07000028,Carlisle
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Carlisle,5.9,1,E07000028,Carlisle
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,659.2,1,E07000070,Chelmsford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,7.0,1,E07000070,Chelmsford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,608.8,1,E06000050,Chester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,4.1,1,E06000050,Chester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,654.9,1,E07000225,Chichester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,7.3,1,E07000225,Chichester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,590.2,1,E07000071,Colchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,6.1,1,E07000071,Colchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,602.6,1,E08000026,Coventry
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,5.6,1,E08000026,Coventry
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,579.0,1,E06000015,Derby
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.1,1,E06000015,Derby
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,568.8,1,E08000017,Doncaster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,2.6,1,E08000017,Doncaster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,566.6,1,S12000042,Dundee
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,4.7,1,S12000042,Dundee
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,548.5,1,E06000047,Durham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,3.0,1,E06000047,Durham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,635.4,1,S12000036,Edinburgh
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,4.0,1,S12000036,Edinburgh
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,625.6,1,E07000009,Ely
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,8.8,1,E07000009,Ely
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,591.8,1,E07000041,Exeter
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,6.2,1,E07000041,Exeter
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Glasgow,620.4,1,S12000046,Glasgow
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Glasgow,3.1,1,S12000046,Glasgow
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,532.1,1,E07000081,Gloucester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,5.4,1,E07000081,Gloucester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,565.5,1,E06000019,Hereford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,4.3,1,E06000019,Hereford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,605.7,1,S12000017,Inverness
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,5.4,1,S12000017,Inverness
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,517.7,1,E06000010,Kingston upon Hull
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,4.3,1,E06000010,Kingston upon Hull
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,611.8,1,E07000121,Lancaster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,4.7,1,E07000121,Lancaster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,596.3,1,E08000035,Leeds
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.5,1,E08000035,Leeds
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,512.7,1,E06000016,Leicester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,2.9,1,E06000016,Leicester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,684.3,1,E07000194,Lichfield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,7.8,1,E07000194,Lichfield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,560.3,1,E07000138,Lincoln
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,8.5,1,E07000138,Lincoln
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,586.7,1,E08000012,Liverpool
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,3.4,1,E08000012,Liverpool
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,531.3,1,E08000003,Manchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,3.3,1,E08000003,Manchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,642.1,1,E06000042,Milton Keynes
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,6.1,1,E06000042,Milton Keynes
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,601.9,1,E08000021,Newcastle upon Tyne
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,5.6,1,E08000021,Newcastle upon Tyne
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,570.3,1,W06000022,Newport
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,6.0,1,W06000022,Newport
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,601.2,1,E07000148,Norwich
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,6.7,1,E07000148,Norwich
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,490.6,1,E06000018,Nottingham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.6,1,E06000018,Nottingham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,667.3,1,E07000178,Oxford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,6.6,1,E07000178,Oxford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Perth,579.1,1,S12000024,Perth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Perth,5.9,1,S12000024,Perth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,564.7,1,E06000031,Peterborough
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,3.9,1,E06000031,Peterborough
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,522.0,1,E06000026,Plymouth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,4.3,1,E06000026,Plymouth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,604.0,1,E06000044,Portsmouth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,5.4,1,E06000044,Portsmouth
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,534.5,1,E07000123,Preston
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,6.3,1,E07000123,Preston
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ripon,651.7,1,E07000165,Ripon
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ripon,6.0,1,E07000165,Ripon
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,552.6,1,E08000006,Salford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,4.4,1,E08000006,Salford
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,608.6,1,E06000054,Salisbury
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,3.2,1,E06000054,Salisbury
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,590.8,1,E08000019,Sheffield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,3.9,1,E08000019,Sheffield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,608.2,1,E06000045,Southampton
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,4.0,1,E06000045,Southampton
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,667.3,1,E06000033,Southend-on-Sea
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,6.6,1,E06000033,Southend-on-Sea
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,862.4,1,E07000240,St Albans
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,7.0,1,E07000240,St Albans
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,518.9,1,W06000004,St Asaph
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,6.2,1,W06000004,St Asaph
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,569.4,1,W06000009,St Davids
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,7.9,1,W06000009,St Davids
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,652.4,1,S12000030,Stirling
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,6.9,1,S12000030,Stirling
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,518.2,1,E06000021,Stoke on Trent
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,3.1,1,E06000021,Stoke on Trent
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,484.5,1,E08000024,Sunderland
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.3,1,E08000024,Sunderland
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,554.6,1,W06000011,Swansea
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,3.6,1,W06000011,Swansea
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,517.2,1,E06000052,Truro
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,2.9,1,E06000052,Truro
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,523.7,1,E08000036,Wakefield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,3.5,1,E08000036,Wakefield
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wells,566.1,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wells,5.2,3,E07000187|E07000188|E07000189,Wells
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,840.5,1,E09000033,Westminster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,5.3,1,E09000033,Westminster
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,695.6,1,E07000094,Winchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,5.5,1,E07000094,Winchester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,562.1,1,E08000031,Wolverhampton
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,4.3,1,E08000031,Wolverhampton
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,579.2,1,E07000237,Worcester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,7.3,1,E07000237,Worcester
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,574.9,1,W06000006,Wrexham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,3.7,1,W06000006,Wrexham
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,600.5,1,E06000014,York
+NM_30_1,2021,2021,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,6.0,1,E06000014,York
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Aberdeen,637.4,1,S12000033,Aberdeen
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Aberdeen,3.5,1,S12000033,Aberdeen
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bangor,542.6,1,W06000002,Bangor
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bangor,8.1,1,W06000002,Bangor
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bath,697.0,1,E06000022,Bath
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bath,7.3,1,E06000022,Bath
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Birmingham,599.9,1,E08000025,Birmingham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Birmingham,3.0,1,E08000025,Birmingham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bradford,570.1,1,E08000032,Bradford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bradford,3.1,1,E08000032,Bradford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Brighton and Hove,644.4,1,E06000043,Brighton and Hove
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Brighton and Hove,4.9,1,E06000043,Brighton and Hove
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Bristol,649.7,1,E06000023,Bristol
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Bristol,2.7,1,E06000023,Bristol
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cambridge,748.7,1,E07000008,Cambridge
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cambridge,4.5,1,E07000008,Cambridge
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Canterbury,654.3,1,E07000106,Canterbury
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Canterbury,7.5,1,E07000106,Canterbury
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Cardiff,626.6,1,W06000015,Cardiff
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Cardiff,3.5,1,W06000015,Cardiff
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chelmsford,692.8,1,E07000070,Chelmsford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chelmsford,6.0,1,E07000070,Chelmsford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chester,650.5,1,E06000050,Chester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chester,4.7,1,E06000050,Chester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Chichester,638.3,1,E07000225,Chichester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Chichester,8.3,1,E07000225,Chichester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Colchester,706.6,1,E07000071,Colchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Colchester,5.4,1,E07000071,Colchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Coventry,632.4,1,E08000026,Coventry
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Coventry,4.4,1,E08000026,Coventry
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Derby,598.4,1,E06000015,Derby
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Derby,4.3,1,E06000015,Derby
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Doncaster,594.3,1,E08000017,Doncaster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Doncaster,3.0,1,E08000017,Doncaster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Dundee,586.7,1,S12000042,Dundee
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Dundee,4.6,1,S12000042,Dundee
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Durham,574.9,1,E06000047,Durham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Durham,3.2,1,E06000047,Durham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Edinburgh,658.0,1,S12000036,Edinburgh
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Edinburgh,2.5,1,S12000036,Edinburgh
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Ely,638.2,1,E07000009,Ely
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Ely,6.8,1,E07000009,Ely
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Exeter,629.4,1,E07000041,Exeter
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Exeter,7.2,1,E07000041,Exeter
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Gloucester,572.2,1,E07000081,Gloucester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Gloucester,5.9,1,E07000081,Gloucester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Hereford,563.0,1,E06000019,Hereford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Hereford,5.0,1,E06000019,Hereford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Inverness,666.5,1,S12000017,Inverness
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Inverness,3.6,1,S12000017,Inverness
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Kingston upon Hull,536.6,1,E06000010,Kingston upon Hull
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Kingston upon Hull,3.2,1,E06000010,Kingston upon Hull
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lancaster,593.8,1,E07000121,Lancaster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lancaster,5.4,1,E07000121,Lancaster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leeds,621.3,1,E08000035,Leeds
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leeds,2.5,1,E08000035,Leeds
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Leicester,529.1,1,E06000016,Leicester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Leicester,2.5,1,E06000016,Leicester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lichfield,706.0,1,E07000194,Lichfield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lichfield,7.3,1,E07000194,Lichfield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Lincoln,608.5,1,E07000138,Lincoln
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Lincoln,5.3,1,E07000138,Lincoln
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Liverpool,607.7,1,E08000012,Liverpool
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Liverpool,3.1,1,E08000012,Liverpool
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,London,1013.7,1,E09000001,London
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,London,20.0,1,E09000001,London
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Manchester,574.9,1,E08000003,Manchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Manchester,2.8,1,E08000003,Manchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Milton Keynes,690.9,1,E06000042,Milton Keynes
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Milton Keynes,4.5,1,E06000042,Milton Keynes
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newcastle upon Tyne,620.3,1,E08000021,Newcastle upon Tyne
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newcastle upon Tyne,4.1,1,E08000021,Newcastle upon Tyne
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Newport,622.2,1,W06000022,Newport
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Newport,4.5,1,W06000022,Newport
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Norwich,594.4,1,E07000148,Norwich
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Norwich,8.0,1,E07000148,Norwich
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Nottingham,535.4,1,E06000018,Nottingham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Nottingham,3.5,1,E06000018,Nottingham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Oxford,692.2,1,E07000178,Oxford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Oxford,5.5,1,E07000178,Oxford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Peterborough,590.1,1,E06000031,Peterborough
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Peterborough,4.8,1,E06000031,Peterborough
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Plymouth,550.6,1,E06000026,Plymouth
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Plymouth,4.1,1,E06000026,Plymouth
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Portsmouth,628.2,1,E06000044,Portsmouth
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Portsmouth,4.6,1,E06000044,Portsmouth
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Preston,574.9,1,E07000123,Preston
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Preston,6.7,1,E07000123,Preston
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salford,613.3,1,E08000006,Salford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salford,3.4,1,E08000006,Salford
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Salisbury,647.9,1,E06000054,Salisbury
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Salisbury,2.8,1,E06000054,Salisbury
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sheffield,594.4,1,E08000019,Sheffield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sheffield,3.0,1,E08000019,Sheffield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southampton,642.8,1,E06000045,Southampton
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southampton,3.4,1,E06000045,Southampton
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Southend-on-Sea,701.0,1,E06000033,Southend-on-Sea
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Southend-on-Sea,7.2,1,E06000033,Southend-on-Sea
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Albans,852.0,1,E07000240,St Albans
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Albans,6.0,1,E07000240,St Albans
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Asaph,540.9,1,W06000004,St Asaph
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Asaph,5.9,1,W06000004,St Asaph
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,St Davids,612.6,1,W06000009,St Davids
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,St Davids,9.5,1,W06000009,St Davids
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stirling,631.3,1,S12000030,Stirling
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stirling,7.0,1,S12000030,Stirling
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Stoke on Trent,554.9,1,E06000021,Stoke on Trent
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Stoke on Trent,2.6,1,E06000021,Stoke on Trent
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Sunderland,536.6,1,E08000024,Sunderland
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Sunderland,3.6,1,E08000024,Sunderland
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Swansea,594.8,1,W06000011,Swansea
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Swansea,2.9,1,W06000011,Swansea
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Truro,573.3,1,E06000052,Truro
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Truro,2.8,1,E06000052,Truro
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wakefield,573.5,1,E08000036,Wakefield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wakefield,4.4,1,E08000036,Wakefield
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Westminster,871.9,1,E09000033,Westminster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Westminster,6.7,1,E09000033,Westminster
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Winchester,741.4,1,E07000094,Winchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Winchester,7.5,1,E07000094,Winchester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wolverhampton,571.3,1,E08000031,Wolverhampton
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wolverhampton,3.7,1,E08000031,Wolverhampton
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Worcester,639.4,1,E07000237,Worcester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Worcester,8.8,1,E07000237,Worcester
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,Wrexham,619.5,1,W06000006,Wrexham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,Wrexham,4.5,1,W06000006,Wrexham
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20100,Value,York,611.0,1,E06000014,York
+NM_30_1,2022,2022,8,Full Time Workers,1,Weekly pay - gross,2,Median,20701,Confidence,York,4.8,1,E06000014,York
