@@ -525,6 +525,23 @@ def save_forecast_plot(history: pd.DataFrame, forecast: pd.DataFrame, out_path: 
             deduped.append(city)
     top_cities = deduped
 
+    # Always keep these cities highlighted when available.
+    must_highlight = []
+    if highest_northern_city and highest_northern_city in history["City"].values:
+        must_highlight.append(highest_northern_city)
+    if "Sheffield" in history["City"].values:
+        must_highlight.append("Sheffield")
+
+    for city in must_highlight:
+        if city not in top_cities:
+            top_cities.append(city)
+
+    deduped = []
+    for city in top_cities:
+        if city not in deduped:
+            deduped.append(city)
+    top_cities = deduped
+
     plt.figure(figsize=(14, 8))
 
     # Show all city trajectories lightly for context.
@@ -534,10 +551,11 @@ def save_forecast_plot(history: pd.DataFrame, forecast: pd.DataFrame, out_path: 
         plt.plot(grp["Year"], grp["City_CPIH_Proxy"], color="#d9d9d9", linewidth=0.9, alpha=0.45, linestyle="--")
 
     colors = ["#0b4f6c", "#5f0f40", "#9a031e", "#fb8b24", "#3c6e71", "#2a9d8f"]
+    sheffield_color = "#6a00f4"
     for i, city in enumerate(top_cities):
         h = history[history["City"] == city].sort_values("Year")
         f = forecast[forecast["City"] == city].sort_values("Year")
-        color = colors[i % len(colors)]
+        color = sheffield_color if city == "Sheffield" else colors[i % len(colors)]
         plt.plot(h["Year"], h["City_CPIH_Proxy"], color=color, linewidth=2.2, label=f"{city} (hist)")
         if not f.empty:
             plt.plot(f["Year"], f["City_CPIH_Proxy"], color=color, linewidth=2.2, linestyle="--", label=f"{city} (fcst)")
