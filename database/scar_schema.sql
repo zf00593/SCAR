@@ -7,11 +7,21 @@ USE scar_city;
 CREATE TABLE IF NOT EXISTS dim_city (
   city_key BIGINT NOT NULL AUTO_INCREMENT,
   city_name VARCHAR(128) NOT NULL,
-  city_code VARCHAR(64) NULL,
   region_name VARCHAR(128) NULL,
   PRIMARY KEY (city_key),
-  UNIQUE KEY uq_city_name (city_name),
-  KEY ix_city_code (city_code)
+  UNIQUE KEY uq_city_name (city_name)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS dim_city_geo (
+  city_geo_key BIGINT NOT NULL AUTO_INCREMENT,
+  city_key BIGINT NOT NULL,
+  latitude DECIMAL(10, 7) NOT NULL,
+  longitude DECIMAL(10, 7) NOT NULL,
+  geocode_source VARCHAR(64) NULL,
+  PRIMARY KEY (city_geo_key),
+  UNIQUE KEY uq_city_geo_city (city_key),
+  KEY ix_city_geo_lat_lon (latitude, longitude),
+  CONSTRAINT fk_city_geo_city FOREIGN KEY (city_key) REFERENCES dim_city(city_key)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS dim_year (
@@ -41,27 +51,19 @@ CREATE TABLE IF NOT EXISTS dim_category (
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS raw_city_house_prices_latest (
-  city_code VARCHAR(64),
   city_name VARCHAR(128),
   date_label VARCHAR(32),
-  source_ons_geography_count VARCHAR(32),
-  source_nomis_geography_count VARCHAR(32),
   mapping_source VARCHAR(128),
-  proxy_flag VARCHAR(16),
-  proxy_source VARCHAR(64),
   mean_price VARCHAR(64),
   median_price VARCHAR(64),
   sales_count VARCHAR(64)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS raw_city_cpiu_proxy_2022 (
-  city_code VARCHAR(64),
   city_name VARCHAR(128),
   date_label VARCHAR(32),
   mean_price VARCHAR(64),
   sales_count VARCHAR(64),
-  national_cpiu_2022 VARCHAR(64),
-  uk_weighted_mean_city_price_2022 VARCHAR(64),
   city_cpiu_proxy_2022 VARCHAR(64)
 ) ENGINE=InnoDB;
 
@@ -78,10 +80,7 @@ CREATE TABLE IF NOT EXISTS raw_nomis_city_earnings (
   measures_code VARCHAR(16),
   measures_name VARCHAR(64),
   geography_name VARCHAR(128),
-  proxy_flag VARCHAR(16),
-  proxy_source VARCHAR(64),
   obs_value VARCHAR(64),
-  source_geography_count VARCHAR(32),
   geography_code VARCHAR(256),
   geography_city_name VARCHAR(128),
   work_residence_basis VARCHAR(16)
@@ -92,11 +91,7 @@ CREATE TABLE IF NOT EXISTS raw_city_demographics (
   region_name VARCHAR(128),
   category_code VARCHAR(64),
   category_name VARCHAR(128),
-  proxy_flag VARCHAR(16),
-  proxy_source VARCHAR(64),
   observation_value VARCHAR(64),
-  source_area_count VARCHAR(32),
-  source_areas VARCHAR(512),
   demographic_domain VARCHAR(32)
 ) ENGINE=InnoDB;
 
@@ -107,12 +102,7 @@ CREATE TABLE IF NOT EXISTS fact_city_house_prices (
   mean_price DECIMAL(18,4) NULL,
   median_price DECIMAL(18,4) NULL,
   sales_count INT NULL,
-  source_ons_geography_count INT NULL,
-  source_nomis_geography_count INT NULL,
   mapping_source VARCHAR(128) NULL,
-  proxy_flag TINYINT(1) NULL,
-  proxy_source VARCHAR(64) NULL,
-  load_batch_ts_utc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (fact_city_house_prices_key),
   UNIQUE KEY uq_house_price_city_year (city_key, year_key),
   KEY ix_house_prices_city_year (city_key, year_key),
@@ -126,15 +116,22 @@ CREATE TABLE IF NOT EXISTS fact_city_cpiu_proxy (
   year_key BIGINT NOT NULL,
   mean_price DECIMAL(18,4) NULL,
   sales_count INT NULL,
-  national_cpiu_2022 DECIMAL(12,6) NULL,
-  uk_weighted_mean_city_price_2022 DECIMAL(18,6) NULL,
   city_cpiu_proxy_2022 DECIMAL(12,6) NULL,
-  load_batch_ts_utc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (fact_city_cpiu_proxy_key),
   UNIQUE KEY uq_cpiu_city_year (city_key, year_key),
   KEY ix_cpiu_city_year (city_key, year_key),
   CONSTRAINT fk_cpiu_city FOREIGN KEY (city_key) REFERENCES dim_city(city_key),
   CONSTRAINT fk_cpiu_year FOREIGN KEY (year_key) REFERENCES dim_year(year_key)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS fact_cpiu_reference (
+  fact_cpiu_reference_key BIGINT NOT NULL AUTO_INCREMENT,
+  year_key BIGINT NOT NULL,
+  national_cpiu DECIMAL(12,6) NOT NULL,
+  uk_weighted_mean_city_price DECIMAL(18,6) NOT NULL,
+  PRIMARY KEY (fact_cpiu_reference_key),
+  UNIQUE KEY uq_cpiu_reference_year (year_key),
+  CONSTRAINT fk_cpiu_ref_year FOREIGN KEY (year_key) REFERENCES dim_year(year_key)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS fact_city_earnings (
@@ -147,11 +144,6 @@ CREATE TABLE IF NOT EXISTS fact_city_earnings (
   measure_key BIGINT NULL,
   work_residence_basis VARCHAR(16) NOT NULL,
   obs_value DECIMAL(14,4) NULL,
-  proxy_flag TINYINT(1) NULL,
-  proxy_source VARCHAR(64) NULL,
-  source_geography_count INT NULL,
-  geography_code_raw VARCHAR(256) NULL,
-  load_batch_ts_utc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (fact_city_earnings_key),
   UNIQUE KEY uq_earnings_city_grain (
     city_key, year_key, sex_category_key, pay_category_key, item_category_key, measure_key, work_residence_basis
@@ -171,14 +163,30 @@ CREATE TABLE IF NOT EXISTS fact_city_demographic (
   category_key BIGINT NOT NULL,
   demographic_domain VARCHAR(32) NOT NULL,
   observation_value BIGINT NULL,
-  proxy_flag TINYINT(1) NULL,
-  proxy_source VARCHAR(64) NULL,
-  source_area_count INT NULL,
-  source_areas VARCHAR(512) NULL,
-  load_batch_ts_utc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (fact_city_demographic_key),
   UNIQUE KEY uq_city_demo_grain (city_key, category_key, demographic_domain),
   KEY ix_city_demo_city_domain (city_key, demographic_domain),
   CONSTRAINT fk_cd_city FOREIGN KEY (city_key) REFERENCES dim_city(city_key),
   CONSTRAINT fk_cd_category FOREIGN KEY (category_key) REFERENCES dim_category(category_key)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS fact_city_similarity_cluster (
+  fact_city_similarity_cluster_key BIGINT NOT NULL AUTO_INCREMENT,
+  city_key BIGINT NOT NULL,
+  year_key BIGINT NULL,
+  model_version VARCHAR(64) NOT NULL,
+  k_value SMALLINT NOT NULL,
+  cluster_id SMALLINT NOT NULL,
+  pay_resident DECIMAL(14,4) NULL,
+  pay_workplace DECIMAL(14,4) NULL,
+  pay_diff_pct DECIMAL(10,4) NULL,
+  house_price DECIMAL(18,4) NULL,
+  pca_x DECIMAL(16,8) NULL,
+  pca_y DECIMAL(16,8) NULL,
+  PRIMARY KEY (fact_city_similarity_cluster_key),
+  UNIQUE KEY uq_city_cluster_model (city_key, model_version),
+  KEY ix_cluster_city (city_key),
+  KEY ix_cluster_id (cluster_id),
+  CONSTRAINT fk_fcs_city FOREIGN KEY (city_key) REFERENCES dim_city(city_key),
+  CONSTRAINT fk_fcs_year FOREIGN KEY (year_key) REFERENCES dim_year(year_key)
 ) ENGINE=InnoDB;
