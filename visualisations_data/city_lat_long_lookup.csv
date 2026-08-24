@@ -1,1 +1,63 @@
 city_name,latitude,longitude,geocode_source
+Bangor,53.2277163,-4.1268822,nominatim
+Bath,51.3813864,-2.3596963,nominatim
+Birmingham,52.4948994,-1.8518439,nominatim
+Bradford,53.7944229,-1.7519186,nominatim
+Brighton and Hove,50.8454126,-0.1497239,nominatim
+Bristol,51.4430141,-2.5816622,nominatim
+Cambridge,52.1975846,0.1391537,nominatim
+Canterbury,51.2800275,1.0802533,nominatim
+Cardiff,51.4816546,-3.1791934,nominatim
+Carlisle,54.8948478,-2.9362311,nominatim
+Chelmsford,51.7345329,0.4730532,nominatim
+Chester,53.1908873,-2.8908955,nominatim
+Chichester,50.8364862,-0.7791721,nominatim
+Colchester,51.8896903,0.8994651,nominatim
+Coventry,52.4081812,-1.510477,nominatim
+Derby,52.9142235,-1.4719885,nominatim
+Doncaster,53.5227681,-1.1335312,nominatim
+Durham,54.666667,-1.75,nominatim
+Ely,52.3990199,0.262039,nominatim
+Exeter,50.7256138,-3.5269209,nominatim
+Gloucester,51.8653705,-2.2458192,nominatim
+Hereford,52.0553813,-2.7151735,nominatim
+Kingston upon Hull,53.7623863,-0.3301214,nominatim
+Lancaster,54.0488219,-2.8013499,nominatim
+Leeds,53.7974185,-1.5437941,nominatim
+Leicester,52.6362,-1.1331969,nominatim
+Lichfield,52.6843696,-1.8275286,nominatim
+Lincoln,53.2293545,-0.5404819,nominatim
+Liverpool,53.3933411,-2.9166389,nominatim
+London,51.5074456,-0.1277653,nominatim
+Manchester,53.4424618,-2.2324547,nominatim
+Milton Keynes,52.0406502,-0.7594092,nominatim
+Newcastle upon Tyne,54.9738474,-1.6131572,nominatim
+Newport,51.5718862,-2.9752462,nominatim
+Norwich,52.6285576,1.2923954,nominatim
+Nottingham,52.9534193,-1.1496461,nominatim
+Oxford,51.7520131,-1.2578499,nominatim
+Peterborough,52.5725769,-0.2427336,nominatim
+Plymouth,50.3714122,-4.1424451,nominatim
+Portsmouth,50.800031,-1.0906023,nominatim
+Preston,53.7593363,-2.6992717,nominatim
+Ripon,54.1362169,-1.5238006,nominatim
+Salford,53.4877463,-2.2891921,nominatim
+Salisbury,51.0690613,-1.7954134,nominatim
+Sheffield,53.3806626,-1.4702278,nominatim
+Southampton,50.9025349,-1.404189,nominatim
+Southend-on-Sea,51.5388241,0.7128137,nominatim
+St Albans,51.753051,-0.3379675,nominatim
+St Asaph,53.2575614,-3.4438607,nominatim
+St Davids,51.8810599,-5.2658485,nominatim
+Stoke on Trent,53.0162014,-2.1812607,nominatim
+Sunderland,54.9058512,-1.3828727,nominatim
+Swansea,51.6195955,-3.9459248,nominatim
+Truro,50.2633173,-5.0518107,nominatim
+Wakefield,53.6829541,-1.4967286,nominatim
+Wells,51.2094511,-2.6451203,nominatim
+Westminster,51.5004439,-0.1265398,nominatim
+Winchester,51.0612766,-1.3131692,nominatim
+Wolverhampton,52.5847651,-2.127567,nominatim
+Worcester,52.1965281,-2.2095608,nominatim
+Wrexham,53.0465084,-2.9937869,nominatim
+York,53.9656579,-1.0743052,nominatim
