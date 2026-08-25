@@ -1,0 +1,489 @@
+City,Year,Weekly_Pay,Type
+Bangor,2015,434.0,historical
+Bangor,2016,445.3,historical
+Bangor,2017,431.2,historical
+Bangor,2018,473.0,historical
+Bangor,2019,479.0,historical
+Bangor,2020,499.9,historical
+Bangor,2021,518.2,historical
+Bangor,2022,542.6,historical
+Bath,2015,522.3,historical
+Bath,2016,564.1,historical
+Bath,2017,544.2,historical
+Bath,2018,610.0,historical
+Bath,2019,613.3,historical
+Bath,2020,576.2,historical
+Bath,2021,583.4,historical
+Bath,2022,697.0,historical
+Birmingham,2015,488.2,historical
+Birmingham,2016,495.0,historical
+Birmingham,2017,523.1,historical
+Birmingham,2018,531.5,historical
+Birmingham,2019,536.6,historical
+Birmingham,2020,551.6,historical
+Birmingham,2021,562.7,historical
+Birmingham,2022,599.9,historical
+Bradford,2015,449.5,historical
+Bradford,2016,471.6,historical
+Bradford,2017,475.7,historical
+Bradford,2018,488.7,historical
+Bradford,2019,503.7,historical
+Bradford,2020,536.6,historical
+Bradford,2021,546.1,historical
+Bradford,2022,570.1,historical
+Brighton and Hove,2015,542.9,historical
+Brighton and Hove,2016,561.2,historical
+Brighton and Hove,2017,577.9,historical
+Brighton and Hove,2018,584.0,historical
+Brighton and Hove,2019,610.9,historical
+Brighton and Hove,2020,630.6,historical
+Brighton and Hove,2021,617.8,historical
+Brighton and Hove,2022,644.4,historical
+Bristol,2015,506.3,historical
+Bristol,2016,524.0,historical
+Bristol,2017,539.5,historical
+Bristol,2018,556.2,historical
+Bristol,2019,594.1,historical
+Bristol,2020,603.7,historical
+Bristol,2021,622.8,historical
+Bristol,2022,649.7,historical
+Cambridge,2015,583.3,historical
+Cambridge,2016,589.1,historical
+Cambridge,2017,595.6,historical
+Cambridge,2018,633.3,historical
+Cambridge,2019,632.1,historical
+Cambridge,2020,660.2,historical
+Cambridge,2021,728.9,historical
+Cambridge,2022,748.7,historical
+Canterbury,2015,582.0,historical
+Canterbury,2016,558.4,historical
+Canterbury,2017,555.8,historical
+Canterbury,2018,582.5,historical
+Canterbury,2019,626.5,historical
+Canterbury,2020,598.4,historical
+Canterbury,2021,577.6,historical
+Canterbury,2022,654.3,historical
+Cardiff,2015,519.0,historical
+Cardiff,2016,534.4,historical
+Cardiff,2017,539.2,historical
+Cardiff,2018,536.6,historical
+Cardiff,2019,582.6,historical
+Cardiff,2020,550.6,historical
+Cardiff,2021,574.9,historical
+Cardiff,2022,626.6,historical
+Carlisle,2015,429.8,historical
+Carlisle,2016,459.9,historical
+Carlisle,2017,459.9,historical
+Carlisle,2018,479.5,historical
+Carlisle,2019,519.2,historical
+Carlisle,2020,550.4,historical
+Carlisle,2021,548.6,historical
+Chelmsford,2015,601.1,historical
+Chelmsford,2016,607.2,historical
+Chelmsford,2017,595.0,historical
+Chelmsford,2018,625.5,historical
+Chelmsford,2019,637.7,historical
+Chelmsford,2020,630.6,historical
+Chelmsford,2021,659.2,historical
+Chelmsford,2022,692.8,historical
+Chester,2015,525.5,historical
+Chester,2016,548.1,historical
+Chester,2017,554.8,historical
+Chester,2018,562.6,historical
+Chester,2019,611.3,historical
+Chester,2020,601.2,historical
+Chester,2021,608.8,historical
+Chester,2022,650.5,historical
+Chichester,2015,542.6,historical
+Chichester,2016,577.5,historical
+Chichester,2017,583.3,historical
+Chichester,2018,586.7,historical
+Chichester,2019,658.8,historical
+Chichester,2020,520.7,historical
+Chichester,2021,654.9,historical
+Chichester,2022,638.3,historical
+Colchester,2015,530.5,historical
+Colchester,2016,566.4,historical
+Colchester,2017,581.3,historical
+Colchester,2018,574.9,historical
+Colchester,2019,602.7,historical
+Colchester,2020,600.1,historical
+Colchester,2021,590.2,historical
+Colchester,2022,706.6,historical
+Coventry,2015,509.7,historical
+Coventry,2016,531.8,historical
+Coventry,2017,535.8,historical
+Coventry,2018,561.2,historical
+Coventry,2019,540.7,historical
+Coventry,2020,565.9,historical
+Coventry,2021,602.6,historical
+Coventry,2022,632.4,historical
+Derby,2015,518.2,historical
+Derby,2016,551.6,historical
+Derby,2017,546.2,historical
+Derby,2018,578.6,historical
+Derby,2019,586.3,historical
+Derby,2020,586.7,historical
+Derby,2021,579.0,historical
+Derby,2022,598.4,historical
+Doncaster,2015,467.0,historical
+Doncaster,2016,479.1,historical
+Doncaster,2017,480.0,historical
+Doncaster,2018,520.9,historical
+Doncaster,2019,525.9,historical
+Doncaster,2020,553.9,historical
+Doncaster,2021,568.8,historical
+Doncaster,2022,594.3,historical
+Durham,2015,481.1,historical
+Durham,2016,488.4,historical
+Durham,2017,504.4,historical
+Durham,2018,513.1,historical
+Durham,2019,544.5,historical
+Durham,2020,529.5,historical
+Durham,2021,548.5,historical
+Durham,2022,574.9,historical
+Ely,2015,566.5,historical
+Ely,2016,564.7,historical
+Ely,2017,605.2,historical
+Ely,2018,572.2,historical
+Ely,2019,614.6,historical
+Ely,2020,579.4,historical
+Ely,2021,625.6,historical
+Ely,2022,638.2,historical
+Exeter,2015,473.9,historical
+Exeter,2016,525.4,historical
+Exeter,2017,507.0,historical
+Exeter,2018,526.5,historical
+Exeter,2019,570.6,historical
+Exeter,2020,557.0,historical
+Exeter,2021,591.8,historical
+Exeter,2022,629.4,historical
+Gloucester,2015,471.8,historical
+Gloucester,2016,499.9,historical
+Gloucester,2017,502.0,historical
+Gloucester,2018,506.0,historical
+Gloucester,2019,549.7,historical
+Gloucester,2020,515.4,historical
+Gloucester,2021,532.1,historical
+Gloucester,2022,572.2,historical
+Hereford,2015,454.7,historical
+Hereford,2016,460.0,historical
+Hereford,2017,465.7,historical
+Hereford,2018,486.4,historical
+Hereford,2019,518.6,historical
+Hereford,2020,526.1,historical
+Hereford,2021,565.5,historical
+Hereford,2022,563.0,historical
+Kingston upon Hull,2015,443.6,historical
+Kingston upon Hull,2016,452.0,historical
+Kingston upon Hull,2017,447.8,historical
+Kingston upon Hull,2018,459.9,historical
+Kingston upon Hull,2019,479.9,historical
+Kingston upon Hull,2020,469.3,historical
+Kingston upon Hull,2021,517.7,historical
+Kingston upon Hull,2022,536.6,historical
+Lancaster,2015,494.3,historical
+Lancaster,2016,523.1,historical
+Lancaster,2017,512.3,historical
+Lancaster,2018,521.5,historical
+Lancaster,2019,546.7,historical
+Lancaster,2020,561.7,historical
+Lancaster,2021,611.8,historical
+Lancaster,2022,593.8,historical
+Leeds,2015,498.4,historical
+Leeds,2016,527.9,historical
+Leeds,2017,536.6,historical
+Leeds,2018,545.5,historical
+Leeds,2019,557.2,historical
+Leeds,2020,574.9,historical
+Leeds,2021,596.3,historical
+Leeds,2022,621.3,historical
+Leicester,2015,421.7,historical
+Leicester,2016,433.0,historical
+Leicester,2017,439.6,historical
+Leicester,2018,439.5,historical
+Leicester,2019,458.4,historical
+Leicester,2020,486.8,historical
+Leicester,2021,512.7,historical
+Leicester,2022,529.1,historical
+Lichfield,2015,593.9,historical
+Lichfield,2016,660.5,historical
+Lichfield,2017,612.1,historical
+Lichfield,2018,638.6,historical
+Lichfield,2019,671.0,historical
+Lichfield,2020,642.5,historical
+Lichfield,2021,684.3,historical
+Lichfield,2022,706.0,historical
+Lincoln,2015,470.8,historical
+Lincoln,2016,448.4,historical
+Lincoln,2017,452.2,historical
+Lincoln,2018,452.3,historical
+Lincoln,2019,520.8,historical
+Lincoln,2020,544.4,historical
+Lincoln,2021,560.3,historical
+Lincoln,2022,608.5,historical
+Liverpool,2015,480.8,historical
+Liverpool,2016,496.6,historical
+Liverpool,2017,509.7,historical
+Liverpool,2018,530.3,historical
+Liverpool,2019,554.1,historical
+Liverpool,2020,570.0,historical
+Liverpool,2021,586.7,historical
+Liverpool,2022,607.7,historical
+London,2016,1034.1,historical
+London,2018,1032.2,historical
+London,2022,1013.7,historical
+Manchester,2015,479.8,historical
+Manchester,2016,471.5,historical
+Manchester,2017,478.6,historical
+Manchester,2018,497.3,historical
+Manchester,2019,535.8,historical
+Manchester,2020,536.2,historical
+Manchester,2021,531.3,historical
+Manchester,2022,574.9,historical
+Milton Keynes,2015,533.6,historical
+Milton Keynes,2016,556.0,historical
+Milton Keynes,2017,576.2,historical
+Milton Keynes,2018,588.0,historical
+Milton Keynes,2019,636.8,historical
+Milton Keynes,2020,613.3,historical
+Milton Keynes,2021,642.1,historical
+Milton Keynes,2022,690.9,historical
+Newcastle upon Tyne,2015,495.9,historical
+Newcastle upon Tyne,2016,508.8,historical
+Newcastle upon Tyne,2017,532.8,historical
+Newcastle upon Tyne,2018,536.3,historical
+Newcastle upon Tyne,2019,560.3,historical
+Newcastle upon Tyne,2020,544.6,historical
+Newcastle upon Tyne,2021,601.9,historical
+Newcastle upon Tyne,2022,620.3,historical
+Newport,2015,463.2,historical
+Newport,2016,471.2,historical
+Newport,2017,482.0,historical
+Newport,2018,520.7,historical
+Newport,2019,535.2,historical
+Newport,2020,564.9,historical
+Newport,2021,570.3,historical
+Newport,2022,622.2,historical
+Norwich,2015,465.8,historical
+Norwich,2016,460.0,historical
+Norwich,2017,494.9,historical
+Norwich,2018,475.3,historical
+Norwich,2019,504.0,historical
+Norwich,2020,517.6,historical
+Norwich,2021,601.2,historical
+Norwich,2022,594.4,historical
+Nottingham,2015,434.8,historical
+Nottingham,2016,448.2,historical
+Nottingham,2017,452.5,historical
+Nottingham,2018,460.0,historical
+Nottingham,2019,480.0,historical
+Nottingham,2020,501.0,historical
+Nottingham,2021,490.6,historical
+Nottingham,2022,535.4,historical
+Oxford,2015,556.8,historical
+Oxford,2016,589.1,historical
+Oxford,2017,631.6,historical
+Oxford,2018,623.8,historical
+Oxford,2019,636.3,historical
+Oxford,2020,663.1,historical
+Oxford,2021,667.3,historical
+Oxford,2022,692.2,historical
+Peterborough,2015,460.5,historical
+Peterborough,2016,466.3,historical
+Peterborough,2017,460.0,historical
+Peterborough,2018,481.1,historical
+Peterborough,2019,525.0,historical
+Peterborough,2020,537.9,historical
+Peterborough,2021,564.7,historical
+Peterborough,2022,590.1,historical
+Plymouth,2015,483.9,historical
+Plymouth,2016,481.9,historical
+Plymouth,2017,512.8,historical
+Plymouth,2018,524.7,historical
+Plymouth,2019,506.2,historical
+Plymouth,2020,512.7,historical
+Plymouth,2021,522.0,historical
+Plymouth,2022,550.6,historical
+Portsmouth,2015,513.4,historical
+Portsmouth,2016,510.2,historical
+Portsmouth,2017,503.1,historical
+Portsmouth,2018,512.7,historical
+Portsmouth,2019,563.9,historical
+Portsmouth,2020,538.5,historical
+Portsmouth,2021,604.0,historical
+Portsmouth,2022,628.2,historical
+Preston,2015,434.9,historical
+Preston,2016,479.1,historical
+Preston,2017,459.8,historical
+Preston,2018,501.7,historical
+Preston,2019,506.0,historical
+Preston,2020,509.8,historical
+Preston,2021,534.5,historical
+Preston,2022,574.9,historical
+Ripon,2015,518.7,historical
+Ripon,2016,543.8,historical
+Ripon,2017,536.8,historical
+Ripon,2018,603.6,historical
+Ripon,2019,643.2,historical
+Ripon,2020,602.4,historical
+Ripon,2021,651.7,historical
+Salford,2015,474.7,historical
+Salford,2016,479.1,historical
+Salford,2017,489.3,historical
+Salford,2018,500.0,historical
+Salford,2019,517.4,historical
+Salford,2020,536.9,historical
+Salford,2021,552.6,historical
+Salford,2022,613.3,historical
+Salisbury,2015,517.7,historical
+Salisbury,2016,519.8,historical
+Salisbury,2017,553.3,historical
+Salisbury,2018,560.7,historical
+Salisbury,2019,564.8,historical
+Salisbury,2020,571.6,historical
+Salisbury,2021,608.6,historical
+Salisbury,2022,647.9,historical
+Sheffield,2015,485.1,historical
+Sheffield,2016,504.3,historical
+Sheffield,2017,524.0,historical
+Sheffield,2018,532.2,historical
+Sheffield,2019,542.8,historical
+Sheffield,2020,543.0,historical
+Sheffield,2021,590.8,historical
+Sheffield,2022,594.4,historical
+Southampton,2015,502.4,historical
+Southampton,2016,498.3,historical
+Southampton,2017,521.0,historical
+Southampton,2018,527.1,historical
+Southampton,2019,553.1,historical
+Southampton,2020,561.0,historical
+Southampton,2021,608.2,historical
+Southampton,2022,642.8,historical
+Southend-on-Sea,2015,541.2,historical
+Southend-on-Sea,2016,561.9,historical
+Southend-on-Sea,2017,573.6,historical
+Southend-on-Sea,2018,593.4,historical
+Southend-on-Sea,2019,614.4,historical
+Southend-on-Sea,2020,638.0,historical
+Southend-on-Sea,2021,667.3,historical
+Southend-on-Sea,2022,701.0,historical
+St Albans,2015,700.5,historical
+St Albans,2016,767.3,historical
+St Albans,2017,761.9,historical
+St Albans,2018,811.6,historical
+St Albans,2019,766.6,historical
+St Albans,2020,840.8,historical
+St Albans,2021,862.4,historical
+St Albans,2022,852.0,historical
+St Asaph,2015,429.9,historical
+St Asaph,2016,471.7,historical
+St Asaph,2017,469.7,historical
+St Asaph,2018,489.5,historical
+St Asaph,2019,479.8,historical
+St Asaph,2020,524.3,historical
+St Asaph,2021,518.9,historical
+St Asaph,2022,540.9,historical
+St Davids,2015,466.2,historical
+St Davids,2016,456.7,historical
+St Davids,2017,458.0,historical
+St Davids,2018,460.4,historical
+St Davids,2019,488.5,historical
+St Davids,2020,499.5,historical
+St Davids,2021,569.4,historical
+St Davids,2022,612.6,historical
+Stoke on Trent,2015,434.5,historical
+Stoke on Trent,2016,445.9,historical
+Stoke on Trent,2017,465.5,historical
+Stoke on Trent,2018,477.3,historical
+Stoke on Trent,2019,500.5,historical
+Stoke on Trent,2020,511.4,historical
+Stoke on Trent,2021,518.2,historical
+Stoke on Trent,2022,554.9,historical
+Sunderland,2015,460.0,historical
+Sunderland,2016,484.6,historical
+Sunderland,2017,485.8,historical
+Sunderland,2018,502.8,historical
+Sunderland,2019,497.6,historical
+Sunderland,2020,496.7,historical
+Sunderland,2021,484.5,historical
+Sunderland,2022,536.6,historical
+Swansea,2015,489.4,historical
+Swansea,2016,473.7,historical
+Swansea,2017,499.7,historical
+Swansea,2018,534.8,historical
+Swansea,2019,563.9,historical
+Swansea,2020,541.1,historical
+Swansea,2021,554.6,historical
+Swansea,2022,594.8,historical
+Truro,2015,440.5,historical
+Truro,2016,467.6,historical
+Truro,2017,479.1,historical
+Truro,2018,474.6,historical
+Truro,2019,504.4,historical
+Truro,2020,493.8,historical
+Truro,2021,517.2,historical
+Truro,2022,573.3,historical
+Wakefield,2015,461.0,historical
+Wakefield,2016,479.8,historical
+Wakefield,2017,484.0,historical
+Wakefield,2018,511.1,historical
+Wakefield,2019,518.5,historical
+Wakefield,2020,498.1,historical
+Wakefield,2021,523.7,historical
+Wakefield,2022,573.5,historical
+Wells,2015,496.14,historical
+Wells,2016,488.8,historical
+Wells,2017,491.68,historical
+Wells,2018,518.74,historical
+Wells,2019,565.1,historical
+Wells,2020,543.3000000000001,historical
+Wells,2021,566.1,historical
+Westminster,2015,766.5,historical
+Westminster,2016,781.8,historical
+Westminster,2017,807.4,historical
+Westminster,2018,833.7,historical
+Westminster,2019,812.8,historical
+Westminster,2020,817.3,historical
+Westminster,2021,840.5,historical
+Westminster,2022,871.9,historical
+Winchester,2015,639.3,historical
+Winchester,2016,665.9,historical
+Winchester,2017,682.5,historical
+Winchester,2018,723.3,historical
+Winchester,2019,690.7,historical
+Winchester,2020,688.6,historical
+Winchester,2021,695.6,historical
+Winchester,2022,741.4,historical
+Wolverhampton,2015,434.2,historical
+Wolverhampton,2016,442.3,historical
+Wolverhampton,2017,445.8,historical
+Wolverhampton,2018,488.0,historical
+Wolverhampton,2019,499.7,historical
+Wolverhampton,2020,499.4,historical
+Wolverhampton,2021,562.1,historical
+Wolverhampton,2022,571.3,historical
+Worcester,2015,528.1,historical
+Worcester,2016,546.7,historical
+Worcester,2017,546.2,historical
+Worcester,2018,539.5,historical
+Worcester,2019,546.3,historical
+Worcester,2020,523.4,historical
+Worcester,2021,579.2,historical
+Worcester,2022,639.4,historical
+Wrexham,2015,488.1,historical
+Wrexham,2016,500.2,historical
+Wrexham,2017,486.9,historical
+Wrexham,2018,531.5,historical
+Wrexham,2019,579.4,historical
+Wrexham,2020,560.5,historical
+Wrexham,2021,574.9,historical
+Wrexham,2022,619.5,historical
+York,2015,495.6,historical
+York,2016,508.1,historical
+York,2017,519.9,historical
+York,2018,512.9,historical
+York,2019,573.8,historical
+York,2020,576.5,historical
+York,2021,600.5,historical
+York,2022,611.0,historical
