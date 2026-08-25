@@ -22,6 +22,37 @@ from sklearn.preprocessing import StandardScaler
 OUTPUT_REL_PATH = Path("visualisations_data") / "city_kmeans_clusters.csv"
 
 
+CITY_ALIASES = {
+    "city of london": "london",
+    "city of westminster": "westminster",
+    "kingston upon hull city of": "kingston upon hull",
+    "bristol city of": "bristol",
+    "bath and north east somerset": "bath",
+    "herefordshire county of": "hereford",
+    "cheshire west and chester": "chester",
+    "durham county": "durham",
+}
+
+
+def normalize_name(value: str | None) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip().lower()
+    if not text:
+        return None
+    text = text.replace("&", " and ")
+    text = text.replace("-", " ")
+    text = " ".join(text.split())
+    return text
+
+
+def canonical_city(value: str | None) -> str | None:
+    norm = normalize_name(value)
+    if norm is None:
+        return None
+    return CITY_ALIASES.get(norm, norm)
+
+
 def to_year(value: str | int | float | None) -> int | None:
     if value is None:
         return None
@@ -50,18 +81,29 @@ def read_city_pay(path: Path, pay_col_name: str) -> pd.DataFrame:
     df = df[df["_year"] == latest_year].copy()
 
     out = df[["GEOGRAPHY_NAME", "OBS_VALUE"]].copy()
+    out["city_key"] = out["GEOGRAPHY_NAME"].map(canonical_city)
     out[pay_col_name] = pd.to_numeric(out["OBS_VALUE"], errors="coerce") * 52.0
-    out = out.dropna(subset=[pay_col_name])
+    out = out.dropna(subset=["city_key", pay_col_name])
 
-    return out.groupby("GEOGRAPHY_NAME", as_index=False)[pay_col_name].mean(), latest_year
+    return (
+        out.groupby("city_key", as_index=False)
+        .agg(
+            GEOGRAPHY_NAME=("GEOGRAPHY_NAME", "first"),
+            **{pay_col_name: (pay_col_name, "mean")},
+        ),
+        latest_year,
+    )
 
 
 def read_city_house_prices(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path, low_memory=False)
-    out = df[["City", "Mean_Price"]].copy()
-    out = out.rename(columns={"City": "GEOGRAPHY_NAME", "Mean_Price": "House_Price"})
+    value_col = "Median_Price" if "Median_Price" in df.columns else "Mean_Price"
+    out = df[["City", value_col]].copy()
+    out = out.rename(columns={value_col: "House_Price"})
+    out["city_key"] = out["City"].map(canonical_city)
     out["House_Price"] = pd.to_numeric(out["House_Price"], errors="coerce")
-    return out.dropna(subset=["GEOGRAPHY_NAME", "House_Price"])
+    out = out.dropna(subset=["city_key", "House_Price"])
+    return out.groupby("city_key", as_index=False)["House_Price"].mean()
 
 
 def build_clusters(base_dir: Path, k_value: int) -> pd.DataFrame:
@@ -77,12 +119,12 @@ def build_clusters(base_dir: Path, k_value: int) -> pd.DataFrame:
     workplace, workplace_year = read_city_pay(workplace_path, "Pay_Workplace")
     salary_year = resident_year if resident_year <= workplace_year else workplace_year
 
-    pay = resident.merge(workplace, on="GEOGRAPHY_NAME", how="inner")
+    pay = resident.merge(workplace[["city_key", "Pay_Workplace"]], on="city_key", how="inner")
     pay["Pay_Diff_Pct"] = (pay["Pay_Workplace"] - pay["Pay_Resident"]) / pay["Pay_Resident"] * 100.0
 
     house = read_city_house_prices(house_price_path)
 
-    model_df = pay.merge(house, on="GEOGRAPHY_NAME", how="inner").dropna().reset_index(drop=True)
+    model_df = pay.merge(house, on="city_key", how="inner").dropna().reset_index(drop=True)
     if len(model_df) < k_value:
         raise ValueError(f"Not enough rows ({len(model_df)}) for k={k_value} clustering")
 
